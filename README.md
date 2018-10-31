@@ -58,4 +58,4 @@ Aby przesłać nam rozwiązane zadania należy zrobić:
   * stworzyć pull request do `daftcode/ror4beginners2018`
 
 ## Pytania / kontakt
-Jak macie jakieś pytania, albo coś nie działa, dajcie znać na szymon.chorobski@daftcode.pl.
+Jak macie jakieś pytania, albo coś nie działa, dajcie znać na ror@daftacademy.pl.
