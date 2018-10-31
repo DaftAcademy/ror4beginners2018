@@ -8,6 +8,7 @@ Zaimplementuj metody w pliku `main.rb`, tak aby:
 W części 1 i 2 dane wejściowe składają się z małych liter, które mogą być oddzielone spacjami, ale nie muszą.
 
 Przykładowy input dla zadań:
+
 1.
 ```ruby
 sort_letters('dcba') #=> 'abcd'
