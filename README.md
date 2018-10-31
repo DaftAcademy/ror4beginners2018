@@ -19,6 +19,23 @@ Jeśli masz system z rodziny Unix sprawa jest dosyć prosta - wystarczy wywoła�
 2.5.1 :001 > 
 ```
 
+Jeśli jednak tak się nie stało, a komenda `which ruby` nic nie zwraca, postępuj zgodnie z instukcjami w linku:
+
+Debian lub Ubuntu:
+https://www.ruby-lang.org/pl/documentation/installation/#apt
+
+OS X:
+https://www.ruby-lang.org/pl/documentation/installation/#homebrew
+
+Arch Linux:
+https://www.ruby-lang.org/pl/documentation/installation/#pacman
+
+Gentoo:
+https://www.ruby-lang.org/pl/documentation/installation/#gentoo
+
+CentOS, Fedora lub RHEL:
+https://www.ruby-lang.org/pl/documentation/installation/#yum
+
 #### Windows
 
 ![alt text](https://i.gifer.com/1EAo.gif)
@@ -38,4 +55,4 @@ Aby przesłać nam rozwiązane zadania należy zrobić:
 
 #### Wybór edytora tekstu
 
-Programowanie w Rubym nie wymaga żadnych specjalistycznych narzędzi - wystarczy korzystać z edytora tekstu. Na zajęciach możesz korzystać z dowolnego edytora. Jeżeli nie wiesz co wybrać, polecamy Sublime Text https://www.sublimetext.com/.
+Programowanie w Rubym nie wymaga żadnych specjalistycznych narzędzi - wystarczy korzystać z edytora tekstu. Na zajęciach możesz korzystać z dowolnego edytora. Jeżeli nie wiesz co wybrać, polecamy VS Code https://code.visualstudio.com/.
