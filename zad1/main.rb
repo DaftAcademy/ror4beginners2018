@@ -1,13 +1,15 @@
-def sort_letters(string)
+#Zadanie 1
 
+def sort_letters(string)
+	string.chars.sort.join
 end
 
 def count_vowels(string)
-
+	string.count('aeiouy')
 end
 
 def filter_odd(array)
-
+	array.select(&:odd?) 
 end
 
 sort_letters('dcba') #=> 'abcd'
