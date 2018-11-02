@@ -1,13 +1,25 @@
 def sort_letters(string)
-
+	string.chars.sort.join
 end
 
 def count_vowels(string)
-
+	result = 0
+	string.each_char do |x|
+		if['a', 'e', 'i', 'o', 'u', 'y'].include? x
+			result += 1
+		end
+	end
+	result
 end
 
 def filter_odd(array)
-
+	result = []
+	array.each do |x|
+		if x.odd?
+			result.append x
+		end
+	end
+	result
 end
 
 sort_letters('dcba') #=> 'abcd'
