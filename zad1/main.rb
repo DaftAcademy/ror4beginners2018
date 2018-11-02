@@ -1,13 +1,18 @@
 def sort_letters(string)
-
+   return ((string.split('')).sort).join('')
 end
 
 def count_vowels(string)
-
+    sum = 0
+    ['a','e','i','o','u','y'].each{|s| sum += string.count(s)}
+    return sum
 end
 
 def filter_odd(array)
-
+    array.each do |t|
+        array.delete(t) if t%2 == 0
+    end
+    return array
 end
 
 sort_letters('dcba') #=> 'abcd'
