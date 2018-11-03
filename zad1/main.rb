@@ -3,7 +3,7 @@ def sort_letters(string)
 end
 
 def count_vowels(string)
-  string.split('').count{|v| ['a','e','o','u','i'].include? v}
+  string.count 'aeoui'
 end
 
 def filter_odd(array)
