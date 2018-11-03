@@ -1,21 +1,21 @@
-def sort_letters(k)
-p= k.chars.sort.join
+def sort_letters(string)
+p= string.chars.sort.join
     return p
 end
 
-def count_vowels(k)
+def count_vowels(string)
     sum=0
-    (0...k.size).each do |i|
-        sum+=1 if k[i][/[aeiou]/]
+    (0...string.size).each do |i|
+        sum+=1 if string[i][/[aeiou]/]
     end
     return sum
 end
 
-def filter_odd (a)
+def filter_odd (array)
     k=[]
     j=-1;
-    (0...a.size).each do |i|
-        k[j+=1]=a[i] if a[i].odd?
+    (0...array.size).each do |i|
+        k[j+=1]=array[i] if array[i].odd?
     end
     return k
 end
