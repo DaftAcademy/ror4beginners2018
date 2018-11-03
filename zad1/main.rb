@@ -1,13 +1,13 @@
 def sort_letters(string)
-
+  string.chars.sort.join
 end
 
 def count_vowels(string)
-
+  string.downcase.count('eyuioaęóą')
 end
 
 def filter_odd(array)
-
+  array.select { |n| n % 2 == 1 }
 end
 
 sort_letters('dcba') #=> 'abcd'
