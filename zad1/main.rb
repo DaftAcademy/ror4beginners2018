@@ -1,21 +1,39 @@
-def sort_letters(string)
-
+def sort_letters(str)
+  i=0
+  while i<(str.length-1)
+    j=0
+    while j<(str.length-i-1)
+      if str[j]>str[j+1]
+        str[j],str[j+1]=str[j+1],str[j]
+      end
+      j+=1
+    end
+    i+=1
+  end
+  return str
 end
 
-def count_vowels(string)
-
+def count_vowels(str)
+  i=0
+  amt=0
+  while i<str.length
+    case str[i]
+    when 'a', 'e', 'i', 'o', 'u', 'y'
+      amt+=1
+    end
+    i+=1
+  end
+  return amt
 end
 
-def filter_odd(array)
-
+def filter_odd(t)
+  i=0
+  w = []
+  for el in t
+    if (el%2)==1
+      w[i]=el
+      i+=1
+    end
+  end
+  return w
 end
-
-sort_letters('dcba') #=> 'abcd'
-sort_letters('zyx') #=> 'xyz'
-
-count_vowels('mmmm') #=> 0
-count_vowels('super') #=> 2
-count_vowels('super extra') #=> 4
-
-filter_odd([1, 2, 3, 4, 5]) #=> [1, 3, 5]
-filter_odd([6, 7, 9, 2, 6, 5]) #=> [7, 9, 5]
