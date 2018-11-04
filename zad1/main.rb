@@ -7,7 +7,7 @@ def count_vowels(string)
 end
 
 def filter_odd(array)
-
+  array.select { |n| n%2==1 }
 end
 
 sort_letters('dcba') #=> 'abcd'
