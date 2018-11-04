@@ -3,7 +3,7 @@ def sort_letters(string)
 end
 
 def count_vowels(string)
-
+  string.downcase.count('aeiouy')
 end
 
 def filter_odd(array)
