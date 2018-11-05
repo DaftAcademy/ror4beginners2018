@@ -1,5 +1,5 @@
 def sort_letters(string)
-    return string.split('').sort().join('')
+    return string.split('').sort().join('').delete(' ')
 end
 
 def count_vowels(string)
