@@ -1,3 +1,4 @@
+#!/usr/bin/ruby
 def sort_letters(string)
 	return string.chars.sort.join
 end
