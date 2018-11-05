@@ -1,15 +1,13 @@
 def sort_letters(string)
-puts string.chars.sort.join
+  puts string.chars.sort.join
 end
 
 def count_vowels(string)
-
-print string.count('aeiou')
-
+  print string.count('aeiou')
 end
 
 def filter_odd(array)
-print array.find_all { |i| i % 2 == 1}
+  print array.find_all { |i| i % 2 == 1}
 end
 
 
