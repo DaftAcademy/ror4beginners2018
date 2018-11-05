@@ -1,13 +1,13 @@
 def sort_letters(string)
-
+	p string.chars.sort(&:casecmp).join
 end
 
 def count_vowels(string)
-
+	p string.downcase.count("aeiouy")
 end
 
 def filter_odd(array)
-
+	p array.delete_if{|e| e.class != Integer || e.even?}
 end
 
 sort_letters('dcba') #=> 'abcd'
