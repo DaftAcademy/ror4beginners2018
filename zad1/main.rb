@@ -3,8 +3,8 @@ def sort_letters(string)
 end
 
 def count_vowels(string)
-    print("\"",string,"\"",' zawiera: ',string.scan(/[aeiou]/).count,' samoglosek',"\n")
-    #puts(string.scan(/[aeiou]/).count)
+    print("\"",string,"\"",' zawiera: ',string.scan(/[aeiouy]/).count,' samoglosek',"\n")
+    #puts(string.scan(/[aeiouy]/).count)
 end
 
 def filter_odd(array)
