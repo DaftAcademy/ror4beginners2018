@@ -1,14 +1,15 @@
 def sort_letters(string)
-
+    return string.split('').sort().join('')
 end
 
 def count_vowels(string)
-
+    return string.split('').count {|x| 'aeiouy'.include? x}
 end
 
 def filter_odd(array)
-
+    return array.select { |x| x % 2 == 1 }
 end
+
 
 sort_letters('dcba') #=> 'abcd'
 sort_letters('zyx') #=> 'xyz'
