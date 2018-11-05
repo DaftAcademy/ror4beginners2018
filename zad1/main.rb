@@ -6,10 +6,11 @@ def count_vowels(string)
   string.scan(/[aeiouy]/).count
 end
 
-def filter_odd(array)
-array.keep_if{|element| element.is_a?(Integer)}
-arrayy.keep_if(&:odd?)
-end
+
+def filter_odd (array)
+  array.keep_if{ |n| n.is_a?(Integer) }.keep_if(&:odd?)
+  end
+
 
 sort_letters('dcba') #=> 'abcd'
 sort_letters('zyx') #=> 'xyz'
