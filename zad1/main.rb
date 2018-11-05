@@ -1,21 +1,26 @@
-def sort_letters(string)
 
-end
+
+
+def sort_letters(string)
+    splittedInput = string.split("")
+    splittedInput = splittedInput.sort
+    splittedInput.delete_if{|char| char == ' '}
+    splittedInput = splittedInput.join
+    return splittedInput
+end 
 
 def count_vowels(string)
-
+    vowels = ['a','e','i','o','u','y']
+    return string.chars.count{|char| vowels.include?(char) }   
 end
 
-def filter_odd(array)
-
+def filter_odd(arrayOfNumbers)
+    arrayOfNumbers.delete_if {|arrayElement| arrayElement%2==0}
+    return arrayOfNumbers
 end
 
-sort_letters('dcba') #=> 'abcd'
-sort_letters('zyx') #=> 'xyz'
+ 
+printf("%s \n", sort_letters('dcbafdgrexvc adf g'))
+printf("%s \n", count_vowels('super aaa'))
+printf("%s \n", filter_odd([6, 7, 9, 2, 6, 5,123,61,23,32]))
 
-count_vowels('mmmm') #=> 0
-count_vowels('super') #=> 2
-count_vowels('super extra') #=> 4
-
-filter_odd([1, 2, 3, 4, 5]) #=> [1, 3, 5]
-filter_odd([6, 7, 9, 2, 6, 5]) #=> [7, 9, 5]
