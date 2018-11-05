@@ -1,13 +1,13 @@
 def sort_letters(string)
-
+    string.chars.sort_by(&:downcase).join 
 end
 
 def count_vowels(string)
-
+    string.count("ouiae")
 end
 
 def filter_odd(array)
-
+    array.each { |value| puts value if value.to_f%2!=0}
 end
 
 sort_letters('dcba') #=> 'abcd'
