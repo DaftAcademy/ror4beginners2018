@@ -1,6 +1,9 @@
 # Zadanie 2
 # Warriors
 
+![Gif from Gladiator movie](https://media.giphy.com/media/3Z22MN0dHCa1W/giphy.gif)
+
+
 ## Założenia:
   - Istnieją dwa rodzaje postaci: Wojownicy i Potwory.
   - Każda postać znajduje się na określonym poziomie, którego wartość mieści się w przedziale od 1 do 99.
