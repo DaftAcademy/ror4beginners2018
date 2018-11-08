@@ -84,8 +84,13 @@ end
 class BattleArena
   attr_accessor :first_character, :second_character
   def initialize(first_character, second_character)
-    self.first_character = first_character
-    self.second_character = second_character
+    # TODO: Add error handling for wrong types?
+    if (first_character.class <= Character && second_character.class <= Character)
+      self.first_character = first_character
+      self.second_character = second_character
+    else
+      puts "Can't work with those types: #{first_character.class} #{second_character.class}"
+    end
   end
 
   ##
@@ -103,13 +108,13 @@ class BattleArena
     puts "#{first_name} attacked #{second_name} with #{first_damage}"
     puts "#{second_name} attacked #{first_name} with #{second_damage}"
 
-    # TODO: Check if a figher is a warrior as only they can recive exp
+    # Thought of implementation with first declaring winner with ternary operator but how to handle draw with it
     if first_damage > second_damage
       puts "#{first_name} won"
-      self.first_character.gain_exp(self.second_character)
+      self.first_character.gain_exp(self.second_character) if first_character.class == Warrior
     elsif second_damage > first_damage
       puts "#{second_name} won"
-      self.second_character.gain_exp(self.first_character)
+      self.second_character.gain_exp(self.first_character) if second_character.class == Warrior
     else 
       # TODO: Implement smt more on a draw?
       puts "it's a draw!"
@@ -139,3 +144,10 @@ arena.battle!
 puts "-- Second round results --"
 puts warrior1.card
 puts warrior2.card
+
+arena = BattleArena.new(warrior1, monster1)
+arena.battle!
+
+puts "-- Third round results --"
+puts warrior1.card
+puts monster1.card
