@@ -8,11 +8,11 @@ class Character
 
   ##
   # Level defines the character level but is also used as it's base damge value
-  attr_accessor :level
+  attr_reader :level
 
-  def initialize(name, level)
-    self.name = name
-    self.level = level
+  def initialize(name: nil, level: nil)
+    @name = name
+    @level = level_valid?(level)
   end
 
   ##
@@ -21,17 +21,44 @@ class Character
     level + [*1..12].sample
   end
 
+  def level=(new_level)
+    @level = level_valid?(new_level)
+  end
+
+  protected
+
+  # Defines min level character can have
+  def self.MIN_LEVEL
+    1
+  end
+
+  # Defines max level character can have
+  def self.MAX_LEVEL
+    99
+  end
+
+  ##
+  # Checks if level is valid by first checking if its in described range and if not and var was nil asings MIN_LEVEL as starter level
+  def level_valid?(new_level)
+    new_level.between?(Character.MIN_LEVEL, Character.MAX_LEVEL) ? new_level : @level ||= Character.MIN_LEVEL
+  end
+
 end
 
 
 
-
-class Warrior
-  def initialize(name:, level:)
+class Warrior < Character
+  def initialize(name: nil, level: nil)
+    super(name: name, level: level)
   end
 
-  def strength
+end
+
+class Monster < Character
+  def initialize(name: nil, level: nil)
+    super(name: name, level: level)
   end
+
 end
 
 class BattleArena
