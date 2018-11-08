@@ -1,4 +1,5 @@
 require 'faker'
+require 'ordinalize'
 
 # Base class for characters
 class Character
@@ -11,12 +12,16 @@ class Character
     validate!
   end
 
-  def strength
-    @level + rand(1..12)
+  def strength(dice_roll)
+    @level + dice_roll
   end
 
   def card
     "#{@name} (lvl #{@level})"
+  end
+
+  def roll_1k12
+    rand(1..12)
   end
 
   private
@@ -45,50 +50,64 @@ class BattleArena
   end
 
   def battle!
-    first_character_strength = @first_character.strength
-    second_character_strength = @second_character.strength
+    strength = set_strength
 
-    puts "#{@first_character.name} attacked #{@second_character.name} with #{first_character_strength} strength"
-    puts "#{@second_character.name} attacked #{@first_character.name} with #{second_character_strength} strength"
+    puts "#{@first_character.name} attacked #{@second_character.name} with #{strength[:first]} strength"
+    puts "#{@second_character.name} attacked #{@first_character.name} with #{strength[:second]} strength"
 
-    if first_character_strength > second_character_strength
-      winner = @first_character
-      loser = @second_character
-    elsif first_character_strength < second_character_strength
-      winner = @second_character
-      loser = @first_character
-    else
-      winner = nil
-    end
+    winner, loser = results(strength)
 
     winner ? puts("The winner is #{winner.name}!") : puts('Tie!')
 
     winner.level_up!(loser.level) if winner.class == Warrior &&
                                      winner.level <= loser.level
   end
+
+  private
+
+  def set_strength
+    { first: @first_character.strength(@first_character.roll_1k12),
+      second: @second_character.strength(@second_character.roll_1k12) }
+  end
+
+  def results(strength)
+    case strength[:first] <=> strength[:second]
+    when 1 then [@first_character, @second_character]
+    when -1 then [@second_character, @first_character]
+    end
+  end
 end
 
 # Game engine
 class Game
+  @@battle_no = 1
+
   def play
-    warrior1 = Warrior.new(name: Faker::Witcher.witcher, level: rand(1..5))
-    warrior2 = Warrior.new(name: Faker::Witcher.witcher, level: rand(1..5))
-    monster1 = Monster.new(name: Faker::Witcher.monster, level: rand(5..10))
+    warrior1 = create_warrior
+    warrior2 = create_warrior
+    monster1 = create_monster
 
     puts 'Combatants:'
     [warrior1, warrior2, monster1].each { |character| puts character.card }
 
-    puts "\nFirst battle: #{warrior1.card} vs. #{warrior2.card}"
-    arena = BattleArena.new(warrior1, warrior2)
-    arena.battle!
+    2.times { set_battle(warrior1, warrior2) }
+    set_battle(warrior1, monster1)
+  end
 
-    puts "\nSecond battle: #{warrior1.card} vs. #{warrior2.card}"
-    arena = BattleArena.new(warrior1, warrior2)
-    arena.battle!
+  private
 
-    puts "\nThird battle: #{warrior1.card} vs. #{monster1.card}"
-    arena = BattleArena.new(warrior1, monster1)
-    arena.battle!
+  def create_warrior
+    Warrior.new(name: Faker::Witcher.witcher, level: rand(1..5))
+  end
+
+  def create_monster
+    Monster.new(name: Faker::Witcher.monster, level: rand(5..10))
+  end
+
+  def set_battle(first_char, second_char)
+    puts "\n#{@@battle_no.ordinalize.capitalize} battle: #{first_char.card} vs. #{second_char.card}"
+    BattleArena.new(first_char, second_char).battle!
+    @@battle_no += 1
   end
 end
 
