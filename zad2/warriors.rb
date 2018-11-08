@@ -151,3 +151,17 @@ arena.battle!
 puts "-- Third round results --"
 puts warrior1.card
 puts monster1.card
+
+class Warrior
+  def initialize(name:, level:)
+  end
+
+  def strength
+  end
+end
+
+class BattleArena
+  def initialize(first_character, second_character)
+  end
+end
+
