@@ -3,6 +3,13 @@
 
 ![Gif from Gladiator movie](https://media.giphy.com/media/3Z22MN0dHCa1W/giphy.gif)
 
+## Przygotowanie:
+  - dodaj lokalnie nowe remote z głównego repo
+    `git remote add upstream https://github.com/daftcode/ror4beginners2018.git`
+  - wykonaj polecenie `git fetch upstream`
+  - upewnij się, że jesteś na branchu `master`, nie masz zmienionej historii i nie masz lokalnych zmian
+  - wywowaj polecenie `git rebase upstream master`, aby zaktualizować swojego mastera
+  - stwórz nowego brancha na zad2 `git checkout -b zad2`
 
 ## Założenia:
   - Istnieją dwa rodzaje postaci: Wojownicy i Potwory.
