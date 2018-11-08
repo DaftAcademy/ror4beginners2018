@@ -25,6 +25,12 @@ class Character
     @level = level_valid?(new_level)
   end
 
+  ##
+  # Card returns a short description of character
+  def card
+    "This is #{@name} he is #{Character.to_s} with level: #{@level}."
+  end
+
   protected
 
   # Defines min level character can have
