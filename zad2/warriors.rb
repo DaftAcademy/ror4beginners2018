@@ -1,13 +1,12 @@
 class Character
   attr_accessor :name, :level
 
-  def initialize(name: "default_Character", level: 1)
+  def initialize(name: 'default_Character', level: 1)
     @name = name
-  	if level.between?(1, 99)
-      @level = level
-    else
-      raise "Level is incorect. Should be from 1 to 99 range."
-    end
+    raise 'Level is incorect. Should be from 1 to 99 range.' unless
+    level.between?(1, 99)
+
+    @level = level
   end
 
   def strength
@@ -24,55 +23,54 @@ end
 
 class Monster < Character
   def card
-    "I am the scary #{@name}! My level is #{@level} and you'll be dead soon#{"\u2122"}"
+    """I am the scary #{@name}! My level is #{@level} and you'll be dead soon#{"\u2122"}"""
   end
 end
 
 class BattleArena
-
   def initialize(first_character, second_character)
-  	@first_character = first_character
-  	@second_character = second_character
+    @first_character = first_character
+    @second_character = second_character
   end
 
   def battle!
     first_character_attack = attack(@first_character, @second_character)
-  	second_character_attack = attack(@second_character, @first_character)
-  	puts winner(first_character_attack, second_character_attack)
+    second_character_attack = attack(@second_character, @first_character)
+    puts winner(first_character_attack, second_character_attack)
   end
 
   private
+
   def attack(attacker, defender)
-  	puts "#{attacker.name} attacked #{defender.name} with #{attack = attacker.strength} damage"
-  	return attack
+    puts "#{attacker.name} attacked #{defender.name} with #{attacker.strength} damage"
   end
 
   def winner(first_character_attack, second_character_attack)
-  	if first_character_attack == second_character_attack
-  	  return "It's a draw! We'll have a rematch!"  
-  	elsif first_character_attack > second_character_attack
-  	  if @first_character.is_a? Warrior
-  	      count_new_level(@first_character, @second_character)
-  	  end
-  	  return "#{@first_character.name} wins!"
-  	else
-  	  if @second_character.is_a? Warrior
-  	     count_new_level(@second_character, @first_character)
-  	  end
-  	  return "#{@second_character.name} wins!"
-  	end
+    return "It's a draw! We'll have a rematch!" if first_character_attack == second_character_attack
+    if first_character_attack > second_character_attack
+      if @first_character.is_a? Warrior
+        count_new_level(@first_character, @second_character)
+      end
+      return "#{@first_character.name} wins!"
+    else
+      if @second_character.is_a? Warrior
+        count_new_level(@second_character, @first_character)
+      end
+      return "#{@second_character.name} wins!"
+    end
   end
 
   def count_new_level(winner, looser)
-    if winner.level >= looser.level
-      winner.level +=1
-    else
-      winner.level += (winner.level - looser.level).abs
-    end
+    winner.level += if winner.level >= looser.level
+                      1
+                    else
+                      (winner.level - looser.level).abs
+                    end
+    # winner.level += winner.level >= looser.level ? 1 : (winner.level - looser.level).abs
   end
 end
 
-warrior1 = Warrior.new(name: 'Po', level:  1)
+warrior1 = Warrior.new(name: 'Po', level: 1)
 warrior2 = Warrior.new(name: 'Tai Lung', level: 1)
 monster1 = Monster.new(name: 'Skeleton Mage', level: 15)
 
@@ -115,4 +113,4 @@ arena.battle!
 
 puts monster1.card # => Skeleton Mage (lvl 15)
 
-#warrior5 = Warrior.new(name: 'Po', level:  -1)
+# warrior5 = Warrior.new(name: 'Po', level:  -1)
