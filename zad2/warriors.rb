@@ -49,19 +49,17 @@ class BattleArena
   def winner(first_character_attack, second_character_attack)
     return "It's a draw! We'll have a rematch!" if first_character_attack == second_character_attack
     if first_character_attack > second_character_attack
-      if @first_character.is_a? Warrior
-        count_new_level(@first_character, @second_character)
-      end
+      count_new_level(@first_character, @second_character)
       return "#{@first_character.name} wins!"
     else
-      if @second_character.is_a? Warrior
-        count_new_level(@second_character, @first_character)
-      end
+      count_new_level(@second_character, @first_character)
       return "#{@second_character.name} wins!"
     end
   end
 
   def count_new_level(winner, looser)
+    return unless winner.is_a? Warrior
+
     winner.level += if winner.level >= looser.level
                       1
                     else
