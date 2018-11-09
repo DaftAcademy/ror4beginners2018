@@ -1,6 +1,5 @@
 class Character
-	attr_accessor :name
-	attr_accessor :level
+  attr_accessor :name, :level
 
   def initialize(name: "default_Character", level: 1)
     @name = name
@@ -11,11 +10,11 @@ class Character
     end
   end
 
-  def strength()
+  def strength
     @level + [*1..12].sample
   end
 
-  def card()
+  def card
     "I am the mighty #{@name}! My level is #{@level} cm long"
   end
 end
@@ -24,7 +23,7 @@ class Warrior < Character
 end
 
 class Monster < Character
-  def card()
+  def card
     "I am the scary #{@name}! My level is #{@level} and you'll be dead soon#{"\u2122"}"
   end
 end
@@ -36,12 +35,12 @@ class BattleArena
   	@second_character = second_character
   end
 
-  def battle!()
+  def battle!
     first_character_attack = attack(@first_character, @second_character)
   	second_character_attack = attack(@second_character, @first_character)
   	puts winner(first_character_attack, second_character_attack)
   end
-  
+
   private
   def attack(attacker, defender)
   	puts "#{attacker.name} attacked #{defender.name} with #{attack = attacker.strength} damage"
