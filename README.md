@@ -6,6 +6,11 @@
 
 ![alt text](https://github.com/daftcode/ror4beginners2018/blob/master/plan_zajec.png)
 
+## Przydatne materiały
+
+ - [Dokumentacja Ruby](https://ruby-doc.org/)(Gdy przeglądacie daną stronę dokumentacji, zwracajcie uwagę dla której wersji rubiego dana strona jest)
+ - [Styleguide](https://github.com/rubocop-hq/ruby-style-guide)(Gem [Rubocop](https://github.com/rubocop-hq/rubocop) potrafi automatycznie pilnować go za was)
+
 ## Przygotowanie do zajęć
 
 ### instalacja ruby
