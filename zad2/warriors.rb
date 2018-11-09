@@ -1,4 +1,6 @@
 module Fightable
+  ##
+  # Strength is used to calculate character 'power' during the fight it sums character lv and rolls d12
   def strength
     defined?(level) ? level + [*1..12].sample : [*1..12].sample
   end
@@ -7,6 +9,8 @@ end
 ##
 # This class represents basic character in game containing must have values to define single identity
 class Character
+
+  include Fightable
 
   ##
   # Allows the user to identify the created character during the program runtime
@@ -19,12 +23,6 @@ class Character
   def initialize(name: nil, level: nil)
     @name = name
     @level = level_valid?(level)
-  end
-
-  ##
-  # Strength is used to calculate character 'power' during the fight it sums character lv and rolls d12
-  def strength
-    level + [*1..12].sample
   end
 
   def level=(new_level)
