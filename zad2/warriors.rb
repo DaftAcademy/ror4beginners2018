@@ -46,8 +46,9 @@ class BattleArena
   end
 
   def winner(first_character_attack, second_character_attack)
-    return "It's a draw! We'll have a rematch!" if first_character_attack == second_character_attack
-    if first_character_attack > second_character_attack
+    if first_character_attack == second_character_attack
+      return "It's a draw! We'll have a rematch!"
+    elsif first_character_attack > second_character_attack
       if @first_character.is_a? Warrior
         count_new_level(@first_character, @second_character)
       end
