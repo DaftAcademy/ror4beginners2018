@@ -23,7 +23,7 @@ end
 
 class Monster < Character
   def card
-    """I am the scary #{@name}! My level is #{@level} and you'll be dead soon#{"\u2122"}"""
+    "I am the scary #{@name}! My level is #{@level} and you'll be dead soon#{"\u2122"}"
   end
 end
 
@@ -42,13 +42,13 @@ class BattleArena
   private
 
   def attack(attacker, defender)
-    puts "#{attacker.name} attacked #{defender.name} with #{attacker.strength} damage"
+    puts "#{attacker.name} attacked #{defender.name} with #{attack = attacker.strength} damage"
+    return attack
   end
 
   def winner(first_character_attack, second_character_attack)
-    if first_character_attack == second_character_attack
-      return "It's a draw! We'll have a rematch!"
-    elsif first_character_attack > second_character_attack
+    return "It's a draw! We'll have a rematch!" if first_character_attack == second_character_attack
+    if first_character_attack > second_character_attack
       if @first_character.is_a? Warrior
         count_new_level(@first_character, @second_character)
       end
