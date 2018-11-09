@@ -7,12 +7,11 @@ class Character
 	end
 	def strength
 		return @level+[*1..12].sample
-  end
+  	end
 
 	def card
 		return "#{@name} (lvl #{@level})"
 	end
-
 end
 
 class Warrior < Character
@@ -25,10 +24,10 @@ class Monster < Character
 end
 
 class BattleArena
-  def initialize(first_character, second_character)
+  	def initialize(first_character, second_character)
 		@first_character=first_character
 		@second_character=second_character
-  end
+  	end
 
 	def alert(first,second,strength)
 		puts "#{first.name} attacked #{second.name} with #{strength} damage" 
