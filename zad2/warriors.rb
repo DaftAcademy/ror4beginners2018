@@ -5,7 +5,7 @@ class Character
   def initialize(name: "default_Character", level: 1)
     @name = name
   	if level.between?(1, 99)
-    @level = level
+      @level = level
     else
       raise "Level is incorect. Should be from 1 to 99 range."
     end
@@ -19,7 +19,6 @@ class Character
     "I am the mighty #{@name}! My level is #{@level} cm long"
   end
 end
-
 
 class Warrior < Character
 end
@@ -38,24 +37,23 @@ class BattleArena
   end
 
   def battle!()
-    at1 = attack(@first_character, @second_character)
-  	at2 = attack(@second_character, @first_character)
-  	puts winner(at1, at2)
+    first_character_attack = attack(@first_character, @second_character)
+  	second_character_attack = attack(@second_character, @first_character)
+  	puts winner(first_character_attack, second_character_attack)
   end
-
+  
+  private
   def attack(attacker, defender)
   	puts "#{attacker.name} attacked #{defender.name} with #{attack = attacker.strength} damage"
   	return attack
   end
 
-  def winner(at1, at2)
-  	if at1 == at2
+  def winner(first_character_attack, second_character_attack)
+  	if first_character_attack == second_character_attack
   	  return "It's a draw! We'll have a rematch!"  
-  	elsif at1 > at2
+  	elsif first_character_attack > second_character_attack
   	  if @first_character.is_a? Warrior
-  	  	  puts @first_character.level
   	      count_new_level(@first_character, @second_character)
-  	      puts @first_character.level
   	  end
   	  return "#{@first_character.name} wins!"
   	else
@@ -118,4 +116,4 @@ arena.battle!
 
 puts monster1.card # => Skeleton Mage (lvl 15)
 
-warrior5 = Warrior.new(name: 'Po', level:  -1)
+#warrior5 = Warrior.new(name: 'Po', level:  -1)
