@@ -36,7 +36,7 @@ class BattleArena
   def battle!
     first_character_attack = attack(@first_character, @second_character)
     second_character_attack = attack(@second_character, @first_character)
-    puts winner(first_character_attack, second_character_attack)
+    winner(first_character_attack, second_character_attack)
   end
 
   private
@@ -80,7 +80,7 @@ puts warrior2.card # => Tai Lung (lvl 1)
 puts monster1.card # => Skeleton Mage (lvl 15)
 puts "\n"
 arena = BattleArena.new(warrior1, warrior2)
-arena.battle!
+puts arena.battle!
 # ->  Po attacked Tai Lung with 6 damage
 # ->  Tai Lung attacked Po with 8 damage
 # ->  Tai Lung won
@@ -88,15 +88,15 @@ puts "\n"
 puts warrior1.card # => Po (lvl 1)
 puts warrior2.card # => Tai Lung (lvl 2)
 puts "\n"
-arena.battle!
+puts arena.battle!
 puts warrior1.card # => Po (lvl 1)
 puts warrior2.card # => Tai Lung (lvl 2)
 puts "\n"
-arena.battle!
+puts arena.battle!
 puts warrior1.card # => Po (lvl 1)
 puts warrior2.card # => Tai Lung (lvl 2)
 puts "\n"
-arena.battle!
+puts arena.battle!
 puts warrior1.card # => Po (lvl 1)
 puts warrior2.card # => Tai Lung (lvl 2)
 # ->  Po attacked Tai Lung with 10 damage
@@ -105,11 +105,11 @@ puts warrior2.card # => Tai Lung (lvl 2)
 puts warrior1.card # => Po (lvl 3)
 puts "\n"
 arena = BattleArena.new(warrior1, monster1)
-arena.battle!
+puts arena.battle!
 # ->  Po attacked Skeleton Mage with 13 damage
 # ->  Skeleton Mage attacked Po with 18 damage
 # ->  Skeleton Mage won
 
 puts monster1.card # => Skeleton Mage (lvl 15)
 
-# warrior5 = Warrior.new(name: 'Po', level:  -1)
+#warrior5 = Warrior.new(name: 'Po', level:  -1)
