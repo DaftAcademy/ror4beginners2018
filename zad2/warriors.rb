@@ -1,3 +1,9 @@
+module Fightable
+  def strength
+    defined?(level) ? level + [*1..12].sample : [*1..12].sample
+  end
+end
+
 ##
 # This class represents basic character in game containing must have values to define single identity
 class Character
