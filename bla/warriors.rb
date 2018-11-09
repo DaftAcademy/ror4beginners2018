@@ -65,5 +65,51 @@ class BattleArena
                     else
                       (winner.level - looser.level).abs
                     end
+    # winner.level += winner.level >= looser.level ? 1 : (winner.level - looser.level).abs
   end
 end
+
+warrior1 = Warrior.new(name: 'Po', level: 1)
+warrior2 = Warrior.new(name: 'Tai Lung', level: 1)
+monster1 = Monster.new(name: 'Skeleton Mage', level: 15)
+
+puts warrior1.card # => Po (lvl 1)
+puts warrior1.strength # => 6
+puts warrior1.strength # => 5
+puts warrior2.card # => Tai Lung (lvl 1)
+puts monster1.card # => Skeleton Mage (lvl 15)
+puts "\n"
+arena = BattleArena.new(warrior1, warrior2)
+puts arena.battle!
+# ->  Po attacked Tai Lung with 6 damage
+# ->  Tai Lung attacked Po with 8 damage
+# ->  Tai Lung won
+puts "\n"
+puts warrior1.card # => Po (lvl 1)
+puts warrior2.card # => Tai Lung (lvl 2)
+puts "\n"
+puts arena.battle!
+puts warrior1.card # => Po (lvl 1)
+puts warrior2.card # => Tai Lung (lvl 2)
+puts "\n"
+puts arena.battle!
+puts warrior1.card # => Po (lvl 1)
+puts warrior2.card # => Tai Lung (lvl 2)
+puts "\n"
+puts arena.battle!
+puts warrior1.card # => Po (lvl 1)
+puts warrior2.card # => Tai Lung (lvl 2)
+# ->  Po attacked Tai Lung with 10 damage
+# ->  Tai Lung attacked Po with 7 damage
+# ->  Po won
+puts warrior1.card # => Po (lvl 3)
+puts "\n"
+arena = BattleArena.new(warrior1, monster1)
+puts arena.battle!
+# ->  Po attacked Skeleton Mage with 13 damage
+# ->  Skeleton Mage attacked Po with 18 damage
+# ->  Skeleton Mage won
+
+puts monster1.card # => Skeleton Mage (lvl 15)
+
+# warrior5 = Warrior.new(name: 'Po', level:  -1)
