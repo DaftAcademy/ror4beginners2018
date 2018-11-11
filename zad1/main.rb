@@ -1,47 +1,13 @@
 def sort_letters(string)
-  string.letters_sorted if string.is_a?(String)
+
 end
-
-class String
-  def letters_sorted
-    extract_letters_sorted.join
-  end
-
-  def extract_letters_sorted
-    extract_letters.sort
-  end
-
-  def extract_letters
-    self.scan(/[a-zA-Z]/)
-  end
-end
-
 
 def count_vowels(string)
-  string.number_of_vowels? if string.is_a?(String)
+
 end
-
-class String
-  def number_of_vowels?
-    extract_vowels.length
-  end
-
-  def extract_vowels
-    self.downcase
-        .scan(/[aeiouy]/)
-  end
-end 
-
 
 def filter_odd(array)
-  array.select(&:is_a?.(Integer))
-       .select(&:odd?) if array.is_a?(Array)
-end
 
-class Symbol
-  def call(*args, &block)
-    ->(caller, *rest) { caller.send(self, *rest, *args, &block) }
-  end
 end
 
 sort_letters('dcba') #=> 'abcd'
