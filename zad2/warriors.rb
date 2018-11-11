@@ -70,3 +70,4 @@ puts warrior2.card
 arena1.battle
 puts monster1.card
 
+#Arkadiusz Ryk 
