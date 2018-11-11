@@ -16,7 +16,7 @@ class Character
 end
 
 class Warrior < Character
-    def level_up (loser)
+    def level_up(loser)
         if level >= loser.level
             @level += 1
         else
