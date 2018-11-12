@@ -2,8 +2,9 @@ require 'faker'
 
 class TypeError
 
-  def message          # Custom message in TypeError class
-    'Wrong type!'    
+  # Custom message in TypeError class
+  def message
+    'Wrong type!'
   end
 
 end
@@ -19,12 +20,14 @@ class Character
   end
 
   def initialize(name: "", level: 1)
-    raise TypeError unless (name.is_a? String) && (level.is_a? Integer)     # We want the name to be a string and the level to be an integer
+  	# We want the name to be a string and the level to be an integer
+    raise TypeError unless (name.is_a? String) && (level.is_a? Integer)
 
     @name = name
     @level = level
     
-    fix_level                                                               # Fix level - it might be out f range
+    # Fix level - it might be out f range
+    fix_level
   end
 
   def strength
@@ -43,11 +46,13 @@ class Warrior < Character
     super(name: name, level: level)
   end
 
-  def level_up(opponent)                                                      
-    @level = opponent.level + 1 unless @level > opponent.level      # Raise level by proper amount if it's greater or equal to opponent's, else do nothing                 
-    fix_level                                                       # Fix level - it might be out of range             
-  end                                                                          
-  
+  def level_up(opponent)
+    # Raise level by proper amount if it's lesser than or equal to opponent's, else do nothing
+    @level = opponent.level + 1 unless @level > opponent.leve
+    # Fix level - it might be out of range
+    fix_level
+  end
+
 end
 
 class Monster < Character
@@ -61,7 +66,8 @@ end
 class BattleArena
   
   def initialize(first_character, second_character)
-    raise TypeError unless (first_character.is_a? Character) && (second_character.is_a? Character)      # We want the fighters to by of type Character
+    # We want the fighters to by of type Character
+    raise TypeError unless (first_character.is_a? Character) && (second_character.is_a? Character)
     
     @first_character = first_character
     @second_character = second_character  
@@ -76,13 +82,16 @@ class BattleArena
 
     if damage1 > damage2
       puts "#{@first_character.name} won!"
-      @first_character.level_up(@second_character) unless @first_character.is_a? Monster         # Monsters' levels do not change
+      # Monsters' levels do not change
+      @first_character.level_up(@second_character) unless @first_character.is_a? Monster
     elsif damage1 < damage2
       puts "#{@second_character.name} won!"
-      @second_character.level_up(@first_character) unless @second_character.is_a? Monster        # Monsters' levels do not change
+      # Monsters' levels do not change
+      @second_character.level_up(@first_character) unless @second_character.is_a? Monster
     else
       puts "Draw!"
-      battle!                                 # Recursively repeat the battle if damage1 == damage2
+      # Recursively repeat the battle if damage1 == damage2
+      battle!
     end
   end
 
