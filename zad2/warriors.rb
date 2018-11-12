@@ -52,9 +52,9 @@ class BattleArena
 
   def battle_won(winner, loser)
     win_message(winner)
-      if winner.is_a? Warrior
-        winner.level += level_up(winner, loser)
-      end
+    if winner.is_a? Warrior
+      winner.level += level_up(winner, loser)
+    end
   end
 
   def battle_msg(first, second, strength)
