@@ -48,7 +48,7 @@ class Warrior < Character
 
   def level_up(opponent)
     # Raise level by proper amount if it's lesser than or equal to opponent's, else do nothing
-    @level = opponent.level + 1 unless @level > opponent.leve
+    @level = opponent.level + 1 unless @level > opponent.level
     # Fix level - it might be out of range
     fix_level
   end
