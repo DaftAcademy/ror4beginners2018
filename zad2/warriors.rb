@@ -27,7 +27,7 @@ class Warrior<Character
     end
     def levelUp(enemyLevel)
         x = enemyLevel - self.level
-        x = 1 if x < 0 
+        x = 1 if x < 1 
         self.level += x 
         @level = 99 if self.level > 99
     end
