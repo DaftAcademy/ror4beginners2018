@@ -8,25 +8,20 @@ end
 
 class Character
 
-  attr_accessor :name
+  attr_reader :name
   attr_accessor :level
 
-  def eval_level()
-    raise TypeError unless @level.is_a? Integer
-
+  def eval_level
     @level = 1 if level < 1
-
     @level = 99 if level > 99
   end
 
-  def eval_name()
-    raise TypeError unless @name.is_a? String
-  end
-
   def initialize(name: "", level: 1)
+  	raise TypeError unless (name.is_a? String) && (level.is_a? Integer)
+
     @name = name
     @level = level
-    eval_name
+    
     eval_level
   end
 
@@ -47,7 +42,7 @@ class Warrior < Character
   end
 
   def level_up(opponents_level)
-    @level += [ opponents_level - @level + 1, 0 ].max
+    @level = opponents_level + 1 unless @level > opponents_level
     eval_level
   end
   
@@ -64,37 +59,35 @@ end
 class BattleArena
   
   def initialize(first_character, second_character)
-    if first_character.is_a? Character and second_character.is_a? Character
-      @first_character = first_character
-      @second_character = second_character
-    else
-      raise TypeError
-    end
+    raise TypeError unless (first_character.is_a? Character) && (second_character.is_a? Character)
+    
+    @first_character = first_character
+    @second_character = second_character  
   end
 
   def battle!
-    strength1 = @first_character.strength
-    strength2 = @second_character.strength
+    damage1 = @first_character.strength
+    damage2 = @second_character.strength
 
-    puts "#{@first_character.name} hit #{@second_character.name} for #{strength1} points."
-    puts "#{@second_character.name} hit #{@first_character.name} for #{strength2} points."
+    puts "#{@first_character.name} hit #{@second_character.name} for #{damage1} points."
+    puts "#{@second_character.name} hit #{@first_character.name} for #{damage2} points."
 
-    if strength1 > strength2
+    if damage1 > damage2
       puts "#{@first_character.name} won!"
       @first_character.level_up(@second_character.level) unless @first_character.is_a? Monster
-    elsif strength1 < strength2
+    elsif damage1 < damage2
       puts "#{@second_character.name} won!"
       @second_character.level_up(@first_character.level) unless @second_character.is_a? Monster
     else
       puts 'Draw!'
-      battle!
+      battle!         # Repeat the battle if damage1 = damage2
     end
   end
 
 end
 
-warrior1 = Warrior.new("Warrior1", 99)
-warrior2 = Warrior.new("Warrior2", 90)
+warrior1 = Warrior.new("Warrior1", 1)
+warrior2 = Warrior.new("Warrior2", 2)
 
 warrior1.card
 warrior2.card
