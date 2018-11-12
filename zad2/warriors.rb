@@ -17,7 +17,7 @@ class Character
   end
 
   def initialize(name: "", level: 1)
-  	raise TypeError unless (name.is_a? String) && (level.is_a? Integer)
+    raise TypeError unless (name.is_a? String) && (level.is_a? Integer)
 
     @name = name
     @level = level
