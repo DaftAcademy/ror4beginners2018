@@ -1,18 +1,41 @@
+class TypeError
+
+  def message
+    'Wrong type!'
+  end
+
+end
+
 class Character
+
   attr_accessor :name
   attr_accessor :level
 
-  def is_level_valid?(level)
-    level.to_i.between?(1, 99)
+  def eval_level()
+    raise TypeError unless @level.is_a? Integer
+
+    @level = 1 if level < 1
+
+    @level = 99 if level > 99
+  end
+
+  def eval_name()
+    raise TypeError unless @name.is_a? String
   end
 
   def initialize(name: "", level: 1)
-    @name = name.to_s
-    @level = is_level_valid?(level) ? level.to_i : 1
+    @name = name
+    @level = level
+    eval_name
+    eval_level
   end
 
   def strength
     @level + [*1..12].sample
+  end
+
+  def card
+    puts "#{@name}, (level #{@level})"
   end
 
 end
@@ -23,8 +46,9 @@ class Warrior < Character
     super(name: name, level: level)
   end
 
-  def card
-    puts "#{@name}, (level #{@level})"
+  def level_up(opponents_level)
+    @level += [ opponents_level - @level + 1, 0 ].max
+    eval_level
   end
   
 end
@@ -41,7 +65,7 @@ class BattleArena
   
   def initialize(first_character, second_character)
     if first_character.is_a? Character and second_character.is_a? Character
-  	  @first_character = first_character
+      @first_character = first_character
       @second_character = second_character
     else
       raise TypeError
@@ -57,14 +81,10 @@ class BattleArena
 
     if strength1 > strength2
       puts "#{@first_character.name} won!"
-      unless @first_character.is_a? Monster
-        @first_character.level += [ @second_character.level - @first_character.level + 1, 0 ].max
-      end
+      @first_character.level_up(@second_character.level) unless @first_character.is_a? Monster
     elsif strength1 < strength2
       puts "#{@second_character.name} won!"
-      unless @second_character.is_a? Monster
-        @second_character.level += [ @first_character.level - @second_character.level + 1, 0 ].max
-      end
+      @second_character.level_up(@first_character.level) unless @second_character.is_a? Monster
     else
       puts 'Draw!'
       battle!
@@ -73,8 +93,8 @@ class BattleArena
 
 end
 
-warrior1 = Warrior.new("Warrior1", 5)
-warrior2 = Warrior.new("Warrior2", 5)
+warrior1 = Warrior.new("Warrior1", 99)
+warrior2 = Warrior.new("Warrior2", 90)
 
 warrior1.card
 warrior2.card
