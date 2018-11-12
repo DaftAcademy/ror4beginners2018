@@ -27,11 +27,13 @@ end
 
 class Warrior < Character
   def add_level(opponent)
-    if self.level < opponent.level
-      self.level = checkLevel(opponent.level + 1) ? opponent.level + 1 : 99
-        
-    elsif (self.level == opponent.level)
+    if self.level <= opponent.level
+      self.level = checkLevel(self.level + (opponent.level - self.level + 1)) ? self.level + (opponent.level - self.level + 1) : 99
+      raise ArgumentError.new('Level is maximal!') if !checkLevel(self.level + (opponent.level - self.level))
+
+    else
       self.level = checkLevel(self.level + 1) ? (self.level + 1) : self.level 
+      raise ArgumentError.new('Level is maximal!') if !checkLevel(self.level + 1)
 
     end    
   end
