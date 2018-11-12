@@ -1,10 +1,25 @@
+class InputError < StandardError
+  def message
+    'Wrong input'
+  end
+end
+
 class Character
   attr_reader :name
   attr_accessor :level
 
   def initialize(name: nil, level: 1)
-    @name = name
-    @level = level
+    if name.is_a?(String)
+      @name = name
+    else
+      raise InputError
+    end
+
+    if level.is_a?(Integer) && level > 0 && level <= 99
+      @level = level
+    else
+      raise InputError
+    end
   end
 
   def card
@@ -53,7 +68,12 @@ class BattleArena
   def battle_won(winner, loser)
     win_message(winner)
     if winner.is_a? Warrior
-      winner.level += level_up(winner, loser)
+      level_inc = level_up(winner, loser)
+      if (winner.level + level_inc) > 99
+        winner.level = 99
+      else
+        winner.level += level_inc
+      end
     end
   end
 
@@ -78,8 +98,8 @@ end
 
 
 
-warrior1 = Warrior.new(name: 'Po', level:  1)
-warrior2 = Warrior.new(name: 'Tai Lung', level: 1)
+warrior1 = Warrior.new(name: 9, level:  1)
+warrior2 = Warrior.new(name: 'Tai Lung', level: 95)
 monster1 = Monster.new(name: 'Skeleton Mage', level: 15)
 
 warrior1.card # => Po (lvl 1)
