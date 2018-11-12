@@ -42,10 +42,6 @@ end
 
 class Warrior < Character
 
-  def initialize(name, level)
-    super(name: name, level: level)
-  end
-
   def level_up(opponent)
     # Raise level by proper amount if it's lesser than or equal to opponent's, else do nothing
     @level = opponent.level + 1 unless @level > opponent.level
@@ -56,10 +52,6 @@ class Warrior < Character
 end
 
 class Monster < Character
-
-  def initialize(name, level)
-    super(name: name, level: level)
-  end
 
 end
 
@@ -97,10 +89,10 @@ class BattleArena
 
 end
 
-warrior1 = Warrior.new(Faker::Witcher.witcher, [*1..99].sample)
-warrior2 = Warrior.new(Faker::Witcher.character, [*1..99].sample)
-monster1 = Monster.new(Faker::Witcher.monster, [*1..99].sample)
-monster2 = Monster.new(Faker::Witcher.monster, [*1..99].sample)
+warrior1 = Warrior.new(name: Faker::Witcher.witcher, level: [*1..99].sample)
+warrior2 = Warrior.new(name: Faker::Witcher.character, level: [*1..99].sample)
+monster1 = Monster.new(name: Faker::Witcher.monster, level: [*1..99].sample)
+monster2 = Monster.new(name: Faker::Witcher.monster, level: [*1..99].sample)
 
 puts "====================WARRIORS=============================="
 warrior1.card
