@@ -6,7 +6,7 @@ class Character
   end
 
   def strength
-    self.level+[*1..12].sample
+    level+[*1..12].sample
   end
 
   def card
@@ -16,7 +16,7 @@ end
 
 class Warrior < Character
   def level_up up
-    self.level += up
+    level = min(level+up, 99)
   end
 end
 
