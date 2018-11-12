@@ -1,4 +1,3 @@
-
 class Character
     attr_accessor :name,:level
     def initialize(name:, level:)
@@ -77,3 +76,4 @@ kuchnia = BattleArena.new(samurai, ninja);
 kuchnia.showWarriors
 kuchnia.battle!
 kuchnia.showWarriors
+
