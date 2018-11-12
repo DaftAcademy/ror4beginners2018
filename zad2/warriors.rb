@@ -4,7 +4,7 @@ class Character
   
   def initialize(name: nil, level: 1)
     @name = name
-    @level = if (level.is_a? Integer) && level > 0
+    @level = if (level.is_a? Integer) && level.between?(1, 99)
 	  level
 	else
 	  1
@@ -78,6 +78,7 @@ class BattleArena
     level_diff = loser.level - winner.level
     if level_diff > 0
       winner.level += level_diff
+	  winner.level = [winner.level, 98].min
     end
     winner.level += 1
   end
