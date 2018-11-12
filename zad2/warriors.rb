@@ -1,10 +1,12 @@
 class Character
   attr_reader :name
   attr_accessor :level
+  @@MIN_LEVEL = 1
+  @@MAX_LEVEL = 99
   
-  def initialize(name: nil, level: 1)
+  def initialize(name: nil, level: @@MIN_LEVEL)
     @name = name
-    @level = if (level.is_a? Integer) && level.between?(1, 99)
+    @level = if (level.is_a? Integer) && level.between?(@@MIN_LEVEL, @@MAX_LEVEL)
 	  level
 	else
 	  1
@@ -18,16 +20,29 @@ class Character
   def card
     puts "#{name} (lvl #{level})"
   end
+  
+  def self.max_level
+    @@MAX_LEVEL
+  end
 end
 
 class Warrior < Character
-  def initialize(name: nil, level: nil)
+  def initialize(name: nil, level: @@MIN_LEVEL)
     super
+  end
+  
+  def level_up(defeated_opponent_level)  
+    level_diff = defeated_opponent_level - level
+    if level_diff > 0
+      @level += level_diff
+    end
+    @level += 1	
+	@level = [@level, @@MAX_LEVEL].min
   end
 end
 
 class Monster < Character
-  def initialize(name: nil, level: 1)
+  def initialize(name: nil, level: @@MIN_LEVEL)
     super
   end
 end
@@ -55,12 +70,12 @@ class BattleArena
 	  if first_character_strength > second_character_strength
 	    show_winner(@first_character.name)
 		if first_character.is_a? Warrior 
-	      level_up(@first_character, @second_character)
+	      @first_character.level_up(@second_character.level)
 	    end
 	  else
 	    show_winner(@second_character.name)
 		if second_character.is_a? Warrior 
-	      level_up(@second_character, @first_character)
+	      @second_character.level_up(@first_character.level)
 	    end
 	  end
 	end
@@ -73,20 +88,11 @@ class BattleArena
   def show_winner(winner_name)
     puts "#{winner_name} wins"
   end
-  
-  def level_up(winner, loser)
-    level_diff = loser.level - winner.level
-    if level_diff > 0
-      winner.level += level_diff
-	  winner.level = [winner.level, 98].min
-    end
-    winner.level += 1
-  end
 end
 
 # Some tests
 
-warrior1 = Warrior.new(name: 'Po', level:  1)
+warrior1 = Warrior.new(name: 'Po', level: 1)
 warrior2 = Warrior.new(name: 'Tai Lung', level: 1)
 monster1 = Monster.new(name: 'Skeleton Mage', level: 15)
 
@@ -113,6 +119,12 @@ arena.battle!
 warrior1.card
 warrior2.card
 
+arena.battle!
+warrior1.card
+warrior2.card
+
+warrior2.level = Character.max_level
+warrior2.card
 arena.battle!
 warrior1.card
 warrior2.card
