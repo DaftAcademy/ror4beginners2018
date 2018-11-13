@@ -10,21 +10,18 @@ class Character
 	 def card
 		return "#{@name}  (lvl #{@level})" 
 	end
+	 def strength
+		return [*1..12].sample+@level
+	end
 end
 
 class Warrior < Character
-  def strength
-		return [*1..12].sample+@level
-  end
   def level_up(enemy_level)
 		@level=enemy_level + 1
   end
 end
 
 class Monster < Character
-	def strength
-		return @level
-  end
 end
 
 class BattleArena
