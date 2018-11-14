@@ -6,7 +6,9 @@ class BestiaryController < ApplicationController
   end
 
   def novigrad_monsters
-
+    @monsters = monsters.select do |monster| 
+      monster[:location].eql? 'Novigrad'
+    end
   end
 
   private
