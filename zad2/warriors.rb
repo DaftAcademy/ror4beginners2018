@@ -1,9 +1,12 @@
+MIN_LEVEL=1
+MAX_LEVEL=99
+
 class Character
   attr_accessor :name
   attr_accessor :level
   def initialize(name, level)
     @name=name
-    @level=level
+    @level=[MAX_LEVEL,[level,MIN_LEVEL].max].min
   end
   def strength
     @level + [*1..12].sample
@@ -11,15 +14,17 @@ class Character
   def card
     puts "#{name} (lvl #{level})"
   end
+  def change_lvl(opponent_lvl)
+  end
 end
   
 class Warrior < Character
-  def change_lvl(opponent_lvl)
-    if @level >= opponent_lvl
-      @level+=1
-    else @level+=(opponent_lvl-@level+1)
-    end
-  end
+    def change_lvl(opponent_lvl)
+        if @level >= opponent_lvl
+          @level=[@level+1, MAX_LEVEL].min
+        else @level=[opponent_lvl+1, MAX_LEVEL].min
+        end
+      end
 end
 
 class Monster < Character
@@ -30,29 +35,28 @@ class BattleArena
     @first_character=first_character
     @second_character=second_character
   end
+  def score(winner, loser)
+    puts "#{winner.name} won"
+    winner.change_lvl(loser.level)
+  end
   def battle!
     strength1=@first_character.strength
     strength2=@second_character.strength
     puts "#{@first_character.name} attacked #{@second_character.name} with #{strength1} damage"
     puts "#{@second_character.name} attacked #{@first_character.name} with #{strength2} damage"
-    if strength1 > strength2
-      puts "#{@first_character.name} won"
-      if @first_character.is_a? Warrior
-        @first_character.change_lvl(@second_character.level)
-      end
-    elsif
-      strength1 < strength2
-      puts "#{@second_character.name} won"
-      if @second_character.is_a? Warrior
-        @second_character.change_lvl(@first_character.level)
-      end
-    else puts "No one won"
+    case strength1 <=> strength2  
+    when 1
+      score(@first_character,@second_character)
+    when -1
+      score(@second_character,@first_character)
+    when 0
+      puts "No one won"
     end
   end
 end
 
 warrior1 = Warrior.new('Po', 1)
-warrior2 = Warrior.new('Tai Lung', 1)
+warrior2 = Warrior.new('Tai Lung', 4)
 monster1 = Monster.new('Skeleton Mage', 15)
 warrior1.card 
 warrior1.strength 
