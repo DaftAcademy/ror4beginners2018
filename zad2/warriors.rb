@@ -9,7 +9,7 @@ class Character
     @level=[MAX_LEVEL,[level,MIN_LEVEL].max].min
   end
   def strength
-    @level + [*1..12].sample
+    level + [*1..12].sample
   end
   def card
     puts "#{name} (lvl #{level})"
