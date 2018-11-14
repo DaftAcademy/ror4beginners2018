@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class BestiaryControllerController < ApplicationController
+class BestiaryController < ApplicationController
   def index
 
   end
