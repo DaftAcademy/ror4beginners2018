@@ -13,6 +13,7 @@ class Character
   def card
     "#{name} (lvl #{level})"
   end
+  def level_up(n); end
 end
 
 class Monster < Character
@@ -31,24 +32,21 @@ class BattleArena
     self.first = first_character
     self.second = second_character
   end
+  def score(winner, loser)
+    puts "#{winner.name} won"
+    winner.level_up([loser.level-winner.level+1,0].max)
+  end
   def battle!
     damage1 = first.strength
     damage2 = second.strength
     puts "#{first.name} attacked #{second.name} with #{damage1} damage"
     puts "#{second.name} attacked #{first.name} with #{damage2} damage"
     if damage1 > damage2
-      winner = first
-      loser = second
+        score(first, second)
     elsif damage1 < damage2
-      winner = second
-      loser = first
+        score(second, first)
     else
       puts "It's a tie!"
-      return
-    end
-    puts "#{winner.name} won"
-    if winner.is_a? Warrior and winner.level <= loser.level
-        winner.level_up(loser.level-winner.level+1)
     end
   end
 end
