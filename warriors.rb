@@ -41,7 +41,7 @@ class BattleArena
     self.second_character = second_character
   end  
 
-  def changeLevel(winner, loser)
+  def levelUp(winner, loser)
     winner.level += loser.level unless winner.is_a? Monster
   end
 
@@ -55,12 +55,12 @@ def battle!
    
    	if strength1 > strength2
         puts "#{first_character.name} won!"
-        changeLevel(self.first_character, self.second_character)
+        levelUp(self.first_character, self.second_character)
             
     elsif strength1 < strength2
         
         puts "#{second_character.name} won!"
-        changeLevel(self.second_character, self.first_character)
+        levelUp(self.second_character, self.first_character)
     else
         puts "Draw!"
         
