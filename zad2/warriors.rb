@@ -3,14 +3,14 @@ class Character
 	attr_reader :level
 	def initialize(name:,level:)
 		@name=name
-		@level=[level,1].max
+		@level=[[level,1].max,99].min
 	end
 	def strength
-		return @level+[*1..12].sample
-  end
+		@level+[*1..12].sample
+	end
 
 	def card
-		return "#{@name} (lvl #{@level})"
+		"#{@name} (lvl #{@level})"
 	end
 
 end
@@ -25,10 +25,10 @@ class Monster < Character
 end
 
 class BattleArena
-  def initialize(first_character, second_character)
+	def initialize(first_character, second_character)
 		@first_character=first_character
 		@second_character=second_character
-  end
+	end
 
 	def alert(first,second,strength)
 		puts "#{first.name} attacked #{second.name} with #{strength} damage" 
@@ -36,7 +36,7 @@ class BattleArena
 
 	def winner(character,level)
 		puts "Won #{character.name}"
-		if character.is_a? Warrior and level>0
+		if character.is_a? Warrior && level>0
 			character.level_up(level)
 		end	
 		
