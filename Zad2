@@ -1,0 +1,89 @@
+class Character
+
+  attr_accessor :name
+  attr_accessor :level
+
+  def initialize(name:, level:)
+    @level = level
+    @name = name
+    unless level.between?(1,99)
+    	@level = 1
+    end
+  end
+  
+  def card
+    puts "name: #{name} |lvl: #{level}"
+  end
+
+  def strength
+    @level+[*1..12].sample
+  end
+
+ 
+end
+
+class Warrior < Character
+
+  def lvlup p
+	@level = @level+p
+	@level = 99 if @level>99
+  end
+
+end
+
+class Monster < Character
+end
+
+class BattleArena
+  attr_accessor :first_character
+  attr_accessor :second_character
+
+  def initialize(first_character, second_character)
+  @first_character = first_character
+  @second_character = second_character
+  end
+  
+  def battle! 
+    fcp = @first_character.strength
+    scp = @second_character.strength
+    
+    puts "#{@first_character.name} attacked #{@second_character.name} with #{fcp} damage"
+    puts "#{@second_character.name} attacked #{@first_character.name} with #{scp} damage"
+  
+    if fcp==scp
+      puts 'Draw!'
+    end
+
+    if fcp > scp
+	puts "#{@first_character.name} won!"
+	@first_character.lvlup( 1+(@second_character.level-@first_character.level).abs  ) if @first_character.is_a? Warrior
+    end
+    if fcp < scp
+	puts "#{@second_character.name} won!"
+	@second_character.lvlup( 1+(@second_character.level-@first_character.level).abs  ) if @second_character.is_a? Warrior
+    end
+  end
+
+end
+
+
+warrior1 = Warrior.new(name: 'Po', level:  1)
+warrior2 = Warrior.new(name: 'Tai Lung', level: 1)
+monster1 = Monster.new(name: 'Skeleton Mage', level: 15)
+
+warrior1.card # => Po (lvl 1)
+warrior1.strength # => 6
+warrior1.strength # => 5
+warrior2.card # => Tai Lung (lvl 1)
+monster1.card # => Skeleton Mage (lvl 15)
+
+arena=BattleArena.new(warrior1, warrior2)
+arena.battle!
+
+warrior1.card
+warrior2.card
+arena.battle!
+warrior1.card
+arena = BattleArena.new(warrior1, monster1)
+arena.battle!
+monster1.card
