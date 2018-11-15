@@ -6,18 +6,14 @@ class BestiaryController < ApplicationController
   end
 
   def novigrad_monsters
-    @monsters = monsters.select(&from?("novigrad")).each(&remove(:location))
+    @monsters = monsters.select(&from?("novigrad"))
     render 'index'
   end
 
   private
 
-  def remove key
-    Proc.new {|character| character.delete(key)}
-  end
-
   def from? location
-    Proc.new {|character| character[:location].downcase.eql?(location)}
+    Proc.new {|character| character.delete(:location).downcase.eql?(location)}
   end
 
   def monsters
