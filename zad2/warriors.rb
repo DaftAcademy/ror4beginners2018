@@ -2,8 +2,8 @@ class Character
   attr_reader :level
 
   def initialize(name:, level:)
-    unless level.between? @@MIN_LEVEL, @@MAX_LEVEL 
-      raise ArgumentError, "Level should be in range [#@@MIN_LEVEL, #@@MAX_LEVEL]"
+    unless level.between? MIN_LEVEL, MAX_LEVEL 
+      raise ArgumentError, "Level should be in range [#{MIN_LEVEL}, #{MAX_LEVEL}]"
     end
 
     @name = name
@@ -24,26 +24,25 @@ class Character
 
   protected
 
-  @@MIN_LEVEL = 1
-  @@MAX_LEVEL = 99
+  MIN_LEVEL = 1
+  MAX_LEVEL = 99
 
   private
 
-  @@DICE_SIZE = 12
+  DICE_SIZE = 12
 
   def roll_dice
-    [*1..@@DICE_SIZE].sample
+    [*1..DICE_SIZE].sample
   end
 end
 
 class Warrior < Character
   def level_up!(opponent)
-    level_increase = [0, opponent.level - @level + 1].max
-    new_level = [@level + level_increase, @@MAX_LEVEL].min
-    if new_level > level
-      puts "#{self}'s level increases from #@level to #{new_level}"
-      @level = new_level
-    end
+    return if opponent.level < @level
+    level_increase = opponent.level - @level + 1
+    new_level = [@level + level_increase, MAX_LEVEL].min
+    puts "#{self}'s level increases from #@level to #{new_level}"
+    @level = new_level
   end
 end
 
