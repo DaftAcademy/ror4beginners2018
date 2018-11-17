@@ -1,20 +1,19 @@
 # frozen_string_literal: true
 
 class BestiaryController < ApplicationController
-  attr_reader
   def index
-
+    @index = monsters
   end
 
   def novigrad_monsters
-
+    @novigrad_monsters = monsters.reject {|x| x[:location] != 'Novigrad'}
   end
 
   private
 
   def monsters
     @monsters ||= begin
-      Faker::Config.random = Random.new(42)
+      Faker::Config.random = Random.new(2137)
       (0..20).map do |n|
         {
           id: n,
