@@ -2,11 +2,11 @@
 
 class BestiaryController < ApplicationController
   def index
-
+		monsters
   end
 
   def novigrad_monsters
-
+		@novigrad_monsters = monsters.select {|m|  m[:location].eql? 'Novigrad'}
   end
 
   private
