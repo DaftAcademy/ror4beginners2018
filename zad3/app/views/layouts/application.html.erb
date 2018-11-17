@@ -7,9 +7,13 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	
   </head>
 
   <body>
+  <%= render partial: 'layouts/header'%>
+	<%= link_to 'Monsters', root_path %><br/><br/>
+	<%= link_to 'Novigrad Monsters', novigradmonster_path %><br/><br/>
     <%= yield %>
   </body>
 </html>
