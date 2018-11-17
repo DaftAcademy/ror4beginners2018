@@ -4,7 +4,7 @@ class Character
   MIN_LEVEL = 1
   MAX_LEVEL = 99
 
-  def initialize(name: nil, level: MIN_LEVEL)
+  def initialize(name:, level: MIN_LEVEL)
     @name = name
     @level = if (level.is_a? Integer) && level.between?(MIN_LEVEL, MAX_LEVEL)
       level
@@ -24,4 +24,8 @@ class Character
   def self.max_level
     MAX_LEVEL
   end
+
+  def level_up(defeated_opponent_level) 
+  end
+
 end

@@ -1,42 +1,44 @@
 class BattleArena
-  attr_reader :first_character
-  attr_reader :second_character
+  attr_reader :character1, :character2
 
-  def initialize(first_character, second_character)
-    @first_character = first_character
-    @second_character = second_character
+  def initialize(character1, character2)
+    @character1 = character1
+    @character2 = character2
   end
 
   def battle!
-    first_character_strength = @first_character.strength
-    second_character_strength = @second_character.strength
+    character1_strength = @character1.strength
+    character2_strength = @character2.strength
 
-    battle_log(@first_character.name, @second_character.name, first_character_strength)
-    battle_log(@second_character.name, @first_character.name, second_character_strength)
+    battle_log(@character1.name, @character2.name, character1_strength)
+    battle_log(@character2.name, @character1.name, character2_strength)
 
-    if first_character_strength == second_character_strength
+    if is_draw?(character1_strength, character2_strength)
       puts "It's draw"
       battle!
+    elsif character1_strength > character2_strength
+      reward_winner(character1, character2)
     else
-      if first_character_strength > second_character_strength
-        show_winner(@first_character.name)
-        if first_character.is_a? Warrior 
-          @first_character.level_up(@second_character.level)
-        end
-      else
-        show_winner(@second_character.name)
-        if second_character.is_a? Warrior 
-          @second_character.level_up(@first_character.level)
-        end
-      end
+      reward_winner(character2, character1)
     end
   end
+
+  private
 
   def battle_log(attacking_character_name, attacked_characker_name, strength)
     puts "#{attacking_character_name} attacked #{attacked_characker_name} with #{strength} damage"
   end
 
+  def reward_winner(winner, looser)
+    show_winner(winner.name)
+    winner.level_up(looser.level)
+  end
+
   def show_winner(winner_name)
     puts "#{winner_name} wins"
+  end
+
+  def is_draw?(character1_strength, character2_strength)
+    character1_strength == character2_strength
   end
 end

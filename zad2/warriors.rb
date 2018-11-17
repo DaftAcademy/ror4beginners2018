@@ -1,16 +1,12 @@
 require_relative 'character'
 
 class Warrior < Character
-  def initialize(name: nil, level: MIN_LEVEL)
-    super
-  end
 
   def level_up(defeated_opponent_level)  
-    level_diff = defeated_opponent_level - level
-    if level_diff > 0
-      @level += level_diff
+    new_level = @level + 1
+    if defeated_opponent_level > level
+      new_level += defeated_opponent_level - level
     end
-    @level += 1	
-	@level = [@level, MAX_LEVEL].min
+	  @level = new_level.clamp(MIN_LEVEL, MAX_LEVEL)
   end
 end
