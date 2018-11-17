@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class BestiaryController < ApplicationController
+  attr_reader
   def index
 
   end
