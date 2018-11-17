@@ -7,9 +7,9 @@
 
   <% @novigrad_monsters.each do |list| %>
     <tr>
-      <td><%= list[:id] %></td>
-      <td><%= list[:name] %></td>
-      <td><%= list[:best_slayer] %></td>
+      <% list.values.each do |element| %>
+        <td><%= element %></td>
+      <% end  %>
     </tr>
   <% end %>
 </table>
