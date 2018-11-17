@@ -1,6 +1,26 @@
 // Place all the styles related to the BestiaryController controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    
+    h2 {
+        margin-left: 15px;
+    }
+
+    .locations {
+        margin-right: 15px;
+
+        a {
+            font-size: 18px;
+            text-decoration: none;
+        }
+    }
+}
+
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
