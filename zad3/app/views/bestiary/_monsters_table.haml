@@ -1,0 +1,19 @@
+%header
+  %h1 Witcher's Bestiary
+%table
+  %tr
+    %th ID
+    %th Name
+    %th Location
+    %th Best slayer
+  - monsters.each do |monster|
+    %tr
+      %th 
+        = monster[:id]
+      %th 
+        = monster[:name]
+      %th 
+        = monster[:location]
+      %th 
+        = monster[:best_slayer]
+
