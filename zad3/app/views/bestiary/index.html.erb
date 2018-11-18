@@ -1,2 +1,16 @@
-<h1>BestiaryController#index</h1>
-<p>Find me in app/views/bestiary_controller/index.html.erb</p>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Location</th>
+    <th>Best slayer</th>
+  </tr>
+
+  <% @monsters.each do |monster| %>
+    <tr>
+      <% monster.values.each do |value| %>
+      	<td><%= value %></td>
+      <% end %>
+    </tr>
+  <% end %>
+</table> 
