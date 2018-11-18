@@ -2,17 +2,53 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+caption {
+	font-size: 25px;
+	font-weight: 700;
+	margin-bottom: 20px;
 }
 
 td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+  background-color: #dddddd;
+}
+
+h1 {
+	text-align: center;
+}
+
+h3 {
+	display: inline-block;
+	margin-bottom: 30px;
+}
+
+.link_to {
+	display: inline-block;
+	width: 260px;
+	margin: 30px;
+	text-align: center;
+	text-decoration: none;
+	background-color: #333;
+	border-radius: 10px;
+	padding: 15px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.link_to:hover { 
+  background-color: green;
+}
+
+.navigation {
+	text-align: center;
 }
