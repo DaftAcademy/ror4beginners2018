@@ -16,3 +16,9 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+
+center > a {
+    padding: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
