@@ -1,2 +1,15 @@
-<h1>BestiaryController#novigrad_monsters</h1>
-<p>Find me in app/views/bestiary_controller/novigrad_monsters.html.erb</p>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Location</th>
+    <th>Best slayer</th>
+  </tr>
+   <% @novigrad_monsters.each do |list| %>
+    <tr>
+      <% list.values.each do |element| %>
+        <td><%= element %></td>
+      <% end  %>
+    </tr>
+    <% end %>
+</table> 
