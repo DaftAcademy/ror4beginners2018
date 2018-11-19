@@ -1,18 +1,73 @@
 // Place all the styles related to the BestiaryController controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$background: #0f0f0f;
+$light: #ffffff;
+$table: #a5a4a4;
+$table_head: #333333;
+
+body {
+	background: $background;
+	font-family: Arial, sans-serif;
+	color: $light;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	margin: 0 auto;
+	width: 90%;
+	display: flex;
+	align-items: center;
+
+}
+
+h1 {
+	flex: 100%;
+	color: $table;
+}
+
+nav {
+	flex: 100%;
+	a {
+		color: $light;
+		text-decoration: none;
+		text-transform: uppercase;
+		padding: 5px 10px;
+		&:hover {
+			font-weight: bold;
+			border-bottom: 1px solid $table;
+		}
+	}
+}
+
+.content {
+	margin: 0 auto;
+	box-shadow: 0px 5px 10px -5px $light
+}
+
+section {
+	margin: 1% auto;
+	width: 90%;
+}
 table {
-    font-family: arial, sans-serif;
+	padding: 0;
+	margin-bottom: 2%;
     border-collapse: collapse;
     width: 100%;
 }
 
 td, th {
-    border: 1px solid #dddddd;
+    border: 1px solid $table;
     text-align: left;
     padding: 8px;
 }
 
-tr:nth-child(even) {
-    background-color: #dddddd;
+thead tr {
+	background: $table_head;
+}
+
+tbody tr:hover {
+	background: $table;
+	color: $background;
 }

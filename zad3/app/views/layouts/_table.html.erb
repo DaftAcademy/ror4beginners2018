@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Best slayer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @var.each do |var| %>
+      <tr>
+        <td><%= var[:id] %></td>
+        <td><%= var[:name] %></td>
+        <td><%= var[:location] %></td>
+        <td><%= var[:best_slayer] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
