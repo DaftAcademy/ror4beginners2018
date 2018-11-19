@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Location</th>
+    <th>Best slayer</th>
+  </tr>
+  <% @monsters.each do |m| %>
+    <tr>
+        <td><%= m[:id]%></td>
+        <td><%= m[:name]%></td>
+        <td><%= m[:location]%></td>
+        <td><%= m[:best_slayer]%></td>
+    </tr>
+  <% end %>
+</table>
