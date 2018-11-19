@@ -1,0 +1,22 @@
+<% if @monsters.blank? %>
+<p>There are not any monsters in The Witcher's Bestiary</p>
+<% else %>
+<p>There aer the current monsters in The Witcher's Bestiary</p>
+<% end %>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Location</th>
+    <th>Best slayer</th>
+  </tr>
+    <% @monsters.each do |monster| %>
+  <tr>
+    <td><%= monster[:id] %></td>
+    <td><%= monster[:name] %></td>
+    <td><%= monster[:location] %></td>
+    <td><%= monster[:best_slayer] %></td>
+  </tr>
+    <% end %>
+</table>
