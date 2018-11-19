@@ -146,12 +146,12 @@ puts characters.map(&:card)
 
 # Warriors
 puts ("\n=========================== Warriors ===")
-warriors = Array.new(10) {Warrior.new(name: eval(warrior_sets.sample), level: [*-100..-5].sample)} 
+warriors = Array.new(10) {Warrior.new(name: eval(warrior_sets.sample), level: [*1..5].sample)} 
 puts warriors.map(&:card)
 
 # Monsters
 puts ("\n=========================== Monsters ===")
-monsters = Array.new(10) {Monster.new(name: eval(monster_sets.sample), level: [*100..500].sample)} 
+monsters = Array.new(10) {Monster.new(name: eval(monster_sets.sample), level: [*1..5].sample)} 
 puts monsters.map(&:card)
 
 Faker::UniqueGenerator.clear
