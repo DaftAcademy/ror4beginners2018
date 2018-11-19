@@ -1,2 +1,17 @@
 <% #Find me in app/views/bestiary_controller/novigrad_monsters.html.erb%>
-<table><%=  @novigrad_monster %></table>
+<table>
+	<tr>
+		<th>ID</th>
+		<th>Name</th>
+		<th>Location</th>
+		<th>Best slayer</th>
+	</tr>
+	<%  @monsters.each do |monster| %> 
+	<tr>
+		<th><%= monster[:id] %></th>
+		<th><%= monster[:name] %></th>
+		<th><%= monster[:location] %></th>
+		<th><%= monster[:best_slayer] %></th>
+	</tr>
+	<% end %>
+</table>

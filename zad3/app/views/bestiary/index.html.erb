@@ -1,2 +1,17 @@
 <% #Find me in app/views/bestiary_controller/index.html.erb %>
-<table><%=  @table %> </table>
+<table>
+	<tr>
+		<th>ID</th>
+		<th>Name</th>
+		<th>Location</th>
+		<th>Best slayer</th>
+	</tr>
+	<%  @monsters.each do |monster| %> 
+	<tr>
+		<th><%= monster[:id] %></th>
+		<th><%= monster[:name] %></th>
+		<th><%= monster[:location] %></th>
+		<th><%= monster[:best_slayer] %></th>
+	</tr>
+	<% end %>
+</table>
