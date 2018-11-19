@@ -1,0 +1,15 @@
+current directory: /home/karolina/ror4beginners2018/zad3/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+/usr/bin/ruby2.5 -r ./siteconf20181118-4102-1i3xvp0.rb extconf.rb
+creating Makefile
+
+current directory: /home/karolina/ror4beginners2018/zad3/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: /home/karolina/ror4beginners2018/zad3/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.so
+
+current directory: /home/karolina/ror4beginners2018/zad3/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20181118-4102-11ex174/bindex
