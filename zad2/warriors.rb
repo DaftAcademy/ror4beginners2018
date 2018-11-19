@@ -4,7 +4,7 @@ class Character
   #Constructor
   def initialize(name:,level:)
     @name = name
-    @level = is_valid?(level)
+    @level = is_valid?(level) ? level : 1
   end
 
   #Card displays all the attributes of our character
@@ -20,8 +20,8 @@ class Character
   protected
 
   #Finding out if the level is valid (it is supposed to be between 1 and 99)
-  def is_valid?(valid_level)
-    valid_level.between?(1,99) ? valid_level : @level = 1
+  def is_valid?(level)
+    level.between?(1,99) ? level : @level = 1
   end
 end
 
@@ -46,6 +46,14 @@ class BattleArena
     self.first_character = first_character
     self.second_character = second_character
   end
+  
+  def winner_message(winner)
+    if winner.is_a? Warrior
+      puts "#{winner.name} level increased! Now its #{winner.level}!"
+    else
+      puts "Seems like #{winner.name} has beaten you... #{winner.name} is  #{winner.level}"
+    end
+  end
 
   #Calling out battle force the characters to fight
   def battle!
@@ -60,24 +68,15 @@ class BattleArena
       winner = first_character
 
       #Checking if the winner of our fight is a warrior (then lvl him up), it excludes monsters to get exp 
-      winner.is_a?(Warrior) ? winner.lvl_up(first_character,second_character) : winner.level = winner.level
-      
-      #Puts up a message depending on the class
-      if winner.is_a? Warrior
-        puts "#{winner.name} level increased! Now its #{winner.level}!"
-      else
-        puts "Seems like #{winner.name} has beaten you... #{winner.name} is  #{winner.level}"
-      end
+      winner.lvl_up(first_character,second_character) if winner.is_a?(Warrior)
+            
+      winner_message(winner)
     elsif second_dmg > first_dmg
       winner = second_character
 
-      winner.is_a?(Warrior) ? winner.lvl_up(second_character, first_character) : winner.level = winner.level  
+      winner.lvl_up(first_character,second_character) if winner.is_a?(Warrior)
 
-      if winner.is_a? Warrior
-        puts "#{winner.name} level increased! Now its #{winner.level}!"
-      else
-        puts "Seems like #{winner.name} has beaten you... #{winner.name} is #{winner.level} level."
-      end
+      winner_message(winner)
     else 
       puts 'Seems like no one will win this time...' 
     end
