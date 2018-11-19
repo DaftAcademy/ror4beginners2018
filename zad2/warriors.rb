@@ -28,13 +28,13 @@ class Character
   def card
     "#{@name} (lvl #{@level}), class: #{self.class}"
   end
-
-
-  # Check if characters level has a valid value (belongs to [1:99]), if outside of the bounds: set the naerest valid value.
+  
+  # Check if characters level has a valid value (belongs to [1:99]), if outside of the bounds: set the nearest valid integer value.
   def eval_level level
-    @level = level.round()
-    @level = @level>99 ? 99 : @level
-    @level = @level<1 ? 1 : @level
+    @level = level.to_i()
+	@level = @level>MAX_LVL ? MAX_LVL : @level
+    @level = @level<MIN_LVL ? MIN_LVL : @level
+	# @level.clamp(MIN_LVL, MAX_LVL) # I have to upgrade to ruby 2.4+ to use this
   end
   
   def winning_message
@@ -50,11 +50,12 @@ class Warrior < Character
     # case 1: +1 + level difference for level lower than the opponents level. @level+=1+(enemy_lvl-@level) ==> @level=1+enemy_lvl
     # case 2: +1 for level equal or greater than the opponents level: @level+=1
     @level = @level<enemy_lvl ? eval_level(@level=1+enemy_lvl) : eval_level(@level+=1)
+	puts "#{self.class} #{@name} is at level #{@level} now."
   end
   
   def winning_message
 	puts "#{self.class} #{@name} won and levelled-up!" 
-	puts "#{self.class} #{@name} is at level #{@level} now."
+	#puts "#{self.class} #{@name} is at level #{@level} now."
   end
 end
 
@@ -145,12 +146,12 @@ puts characters.map(&:card)
 
 # Warriors
 puts ("\n=========================== Warriors ===")
-warriors = Array.new(10) {Warrior.new(name: eval(warrior_sets.sample), level: [*1..5].sample)} 
+warriors = Array.new(10) {Warrior.new(name: eval(warrior_sets.sample), level: [*-100..-5].sample)} 
 puts warriors.map(&:card)
 
 # Monsters
 puts ("\n=========================== Monsters ===")
-monsters = Array.new(10) {Monster.new(name: eval(monster_sets.sample), level: [*1..5].sample)} 
+monsters = Array.new(10) {Monster.new(name: eval(monster_sets.sample), level: [*100..500].sample)} 
 puts monsters.map(&:card)
 
 Faker::UniqueGenerator.clear
