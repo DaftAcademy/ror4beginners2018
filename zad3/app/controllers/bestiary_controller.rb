@@ -1,12 +1,14 @@
 # frozen_string_literal: true
 
 class BestiaryController < ApplicationController
-  def index
+
+  def index 
     @monsters = monsters
   end
 
   def novigrad_monsters
-    
+    @monsters = monsters.select { |monster| monster[:location]=="Novigrad" }
+    render 'bestiary/index'
   end
 
   private
