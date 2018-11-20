@@ -10,6 +10,11 @@
   </head>
 
   <body>
+	<%= render partial: 'layouts/header' %> <%# app/views/layouts/_header.html.erb %>
     <%= yield %>
+	<%= render partial: 'layouts/footer' %> <%# app/views/layouts/_footer.html.erb %>
   </body>
 </html>
+
+
+

@@ -2,12 +2,16 @@
 
 class BestiaryController < ApplicationController
   def index
-
+	@monsters = monsters #hash w/ monsters data
   end
 
   def novigrad_monsters
-
-  end
+	@novigrad_monsters = monsters.select { |monster| monster[:location] == 'Novigrad' }
+  end 
+  
+  def g_monsters
+	@g_monsters = monsters.select { |monster| monster[:name].downcase[0] == 'g' }
+  end 
 
   private
 
@@ -25,3 +29,4 @@ class BestiaryController < ApplicationController
     end
   end
 end
+
