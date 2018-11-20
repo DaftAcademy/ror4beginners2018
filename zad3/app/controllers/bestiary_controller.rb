@@ -7,7 +7,6 @@ class BestiaryController < ApplicationController
 
   def novigrad_monsters
     @monsters = monsters.select(&from?("novigrad"))
-    render 'index'
   end
 
   private

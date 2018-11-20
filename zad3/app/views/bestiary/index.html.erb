@@ -1,14 +1,1 @@
-<table>
-<tr>
-<% headers.each do |header| %>
-<th><%= format_header header %></th>
-<% end %>
-</tr>
-<% @monsters.each do |monster| %>
-  <tr>
-  <% monster.values.each do |value| %>
-    <td><%= value %></td>
-  <% end %>
-  </tr>
-<% end %>
-</table>
+<%= render partial: 'bestiary/monsters_table' %>
