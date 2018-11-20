@@ -2,12 +2,12 @@
 
 class BestiaryController < ApplicationController
 
-  attr_internal :monster
+
 
   def index
     begin
     @monster = Array.new
-    Potwor.destroy_all
+ 
       monsters.each {|f|  @monster.push(Potwor.new(f))}
       @monster.each {|f| f.save}
     
@@ -20,7 +20,7 @@ class BestiaryController < ApplicationController
   
 
   def novigrad_monsters
-    #@monster = Array.new
+ 
     @monster = Potwor.where( location: 'Novigrad')
 
     end
