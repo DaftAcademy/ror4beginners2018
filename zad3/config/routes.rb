@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get '/', to: 'bestiary#index', as: :home
-  get '/novigrad', to: 'bestiary#novigrad_monsters', as: :novigrad
+  get '/bestiary/index', to: 'bestiary#index', as: :index
+  get '/bestiary/novigrad_monsters', to: 'bestiary#novigrad_monsters', as: :novigrad_monsters
 end

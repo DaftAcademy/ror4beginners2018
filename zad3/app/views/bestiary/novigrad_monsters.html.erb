@@ -1,15 +1,1 @@
-<table>
-  <tr>
-    <th>ID</th>
-    <th>Name</th>
-    <th>Best slayer</th>
-  </tr>
-
-  <% @novigrad_monsters.each do |list| %>
-    <tr>
-      <% list.values.each do |element| %>
-        <td><%= element %></td>
-      <% end  %>
-    </tr>
-  <% end %>
-</table>
+<%=render partial: 'layouts/build_table', locals: {monsters_data: @novigrad_monsters} %>
