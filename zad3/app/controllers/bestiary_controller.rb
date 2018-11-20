@@ -2,11 +2,11 @@
 
 class BestiaryController < ApplicationController
   def index
-
+    @monster = monsters
   end
 
   def novigrad_monsters
-
+    @monster = monsters.select { |e| e[:location] == 'Novigrad' }
   end
 
   private
