@@ -2,11 +2,23 @@
 
 class BestiaryController < ApplicationController
   def index
-
+    require monsters
+    create table :Monsters 
+      for &:monsters do 
+        "#{id}".integer :ID
+        "#{name}".string :Name
+        "#{location}".string :Location
+        "#{best_slayer}".string :Best_slayer
+      end
+    end
   end
 
   def novigrad_monsters
 
+  end
+
+  def welcome
+    @random = rand(100)
   end
 
   private
