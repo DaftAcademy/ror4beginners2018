@@ -12,7 +12,7 @@ RSpec.describe FootballPlayerManager do
     before { other_player }
 
     it 'returns array with stronger player' do
-      expect(service.stronger_players).to eq([other_player])
+      expect(service.stronger_players).to include(other_player)
     end
   end
 
@@ -22,7 +22,7 @@ RSpec.describe FootballPlayerManager do
     before { service.set_power(new_power) }
 
     it 'sets player power to new power' do
-      expect(player.power).to eq(new_power)
+      expect(player.reload.power).to eq(new_power)
     end
   end
 

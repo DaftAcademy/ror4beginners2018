@@ -5,8 +5,9 @@ require 'rails_helper'
 RSpec.describe Player, type: :model do
   subject(:player) { build(:player) }
 
+  it { is_expected.to be_valid }
+
   %i[first_name last_name].each do |attr|
-    it { is_expected.to be_valid }
     it "is not valid without #{attr}" do
       subject.assign_attributes(attr => nil)
       expect(subject).not_to be_valid
