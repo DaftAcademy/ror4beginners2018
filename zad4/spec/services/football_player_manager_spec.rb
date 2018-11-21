@@ -4,10 +4,10 @@ require 'rails_helper'
 
 RSpec.describe FootballPlayerManager do
   subject(:service) { described_class.new(player) }
-  let(:player) { create(:player, power: 20) }
+  let!(:player) { create(:player, power: 20) }
 
   describe '#stronger_players' do
-    let(:other_player) { create(:player, power: 100) }
+    let(:other_player) { create(:player, power: 99) }
 
     before { other_player }
 
