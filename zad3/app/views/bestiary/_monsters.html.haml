@@ -1,0 +1,16 @@
+%table
+  %tr
+    %th ID
+    %th Name
+    %th Location
+    %th Best slayer
+    - monsters.each do |monster|
+      %tr
+        %td
+          = monster[:id]
+        %td
+          = monster[:name]
+        %td
+          = monster[:location]
+        %td
+          = monster[:best_slayer]
