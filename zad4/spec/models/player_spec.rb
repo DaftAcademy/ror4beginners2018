@@ -24,7 +24,7 @@ RSpec.describe Player, type: :model do
   context 'with power above 99' do
     it 'is not valid' do
       player.power = 100
-      expect(player).not_to be valid
+      expect(player).not_to be_valid
     end
   end
 
@@ -34,9 +34,9 @@ RSpec.describe Player, type: :model do
     end
   end
 
-  context 'when power equals 0' do
+  context 'when power equals 1' do
     it 'is valid' do
-      player.power = 0
+      player.power = 1
       expect(player).to be_valid
     end
   end
