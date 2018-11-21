@@ -5,3 +5,20 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+50.times do
+  Player.create!(
+    first_name: Faker::ElderScrolls.first_name,
+    last_name: Faker::ElderScrolls.last_name,
+    power: Faker::Number.between(0, 99)
+  )
+end
+
+5.times do
+  Player.create!(
+    first_name: Faker::ElderScrolls.first_name,
+    last_name: Faker::ElderScrolls.last_name,
+    power: Faker::Number.between(0, 99),
+    captain: true
+  )
+end

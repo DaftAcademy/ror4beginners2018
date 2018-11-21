@@ -23,3 +23,7 @@
 \* Zadanie dodatkowe na dodatkowe punkty za aktywność
 
 Stwórz widok zawodników, który zestawi ich w losowe, 11 osobowe drużyny. Każda drużyna powinna mieć jednego kapitana.
+
+### UWAGI:
+1. Jeśli generatory krzyczą wam o konfliktach to je ignorujcie literką `n`
+2. Dane testowe można stworzyć poprzez wywołanie `rails db:seed` w konsoli, gdy już zaimplementujecie swój model.
