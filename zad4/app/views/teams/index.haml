@@ -1,0 +1,31 @@
+%header
+  %h1 Teams
+
+%main
+  - @teams.each do |team|
+    .team-name
+      = team[:name]
+    .tbl-header
+      %table{:border => "0", :cellpadding => "0", :cellspacing => "0"}
+        %thead
+          %tr
+            %th Number
+            %th Captain
+            %th First name
+            %th Last name
+            %th power
+    .tbl-content
+      %table{:border => "0", :cellpadding => "0", :cellspacing => "0"}
+        %tbody
+          - team[:players].sort_by! {|player| player.captain ? 0 : 1}.each_with_index do |player, i|
+            %tr
+              %td 
+                = i + 1
+              %td 
+                = player.captain
+              %td
+                = player.first_name
+              %td
+                = player.last_name
+              %td
+                = player.power
