@@ -1,0 +1,15 @@
+  <tr>
+    <th colspan="4"><%= team_name %></th>
+  </tr>
+  <tr>
+    <th style="width: 10%">No</th>
+    <th>Name</th>
+    <th style="width: 10%">Power</th>
+  </tr>
+    <% team.each do |player| %>
+      <tr>
+      <td><%= player.id %></td>
+      <td><%= player.name %></td>
+      <td><%= player.power %></td>
+      </tr>
+    <% end %>
