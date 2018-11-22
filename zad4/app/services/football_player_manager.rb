@@ -8,7 +8,7 @@ class FootballPlayerManager
   end
 
   def stronger_players
-    Player.all.select  { |player| player.score > self.score}
+    Player.all.select  { |player| player.score > player.score}
   end
 
   def set_power(value)
