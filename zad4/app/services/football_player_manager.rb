@@ -12,7 +12,7 @@ class FootballPlayerManager
   end
 
   def set_power(value)
-    # TODO: I need body
+    @player.score = value
   end
 
   def copy_player
