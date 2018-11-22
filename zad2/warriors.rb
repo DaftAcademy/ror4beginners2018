@@ -1,10 +1,9 @@
 class Character
-  attr_accessor :name
-  attr_accessor :level
+  attr_reader :name, :level, :add_points
 
-  def initialize(name, level)
-    self.name = name
-    self.level = (level.is_a? Integer) && level >= 0 && level <= 99 ? level : instance_error
+  def initialize(name:, level:)
+    @name = name
+    @level = instance_error(level)
   end
 
   def strength
@@ -15,56 +14,66 @@ class Character
     "#{name} (lvl #{level})"
   end
 
-  def instance_error
-    begin
-      raise ArgumentError, 'Character can\'t be created'
-    rescue
-      puts 'Character level should be between 0 and 99'
-      exit()
-    end
+  def instance_error(input)
+      raise ArgumentError, 'Character can\'t be created. Level should be between 0 and 99.' unless input.is_a?(Integer) && input.between?(0, 99) 
+      input
   end
- end
+
+  def add_points(opponent)
+  end
+end
 
 class Warrior < Character
+  attr_writer :level
+
+  def add_points(opponent)
+    lvl_diff = opponent.level - self.level
+
+    if (lvl_diff >= 0)
+      self.level += lvl_diff + 1
+      puts "#{self.name} got promoted to level #{self.level}!"
+    end
+  end
 end
 
 class Monster < Character
 end
 
 class BattleArena
-  attr_accessor :first_character
-  attr_accessor :second_character
+  attr_reader :first_character, :second_character
 
-  def initialize(first_character, second_character)
-    self.first_character = first_character
-    self.second_character = second_character
+  def initialize(first_character:, second_character:)
+    @first_character = first_character
+    @second_character = second_character
   end
 
   def battle!
     strength1 = first_character.strength
     strength2 = second_character.strength
+    winner, loser = nil, nil
 
-    puts "#{first_character.name} attacked #{second_character.name} with #{strength1} damage"
-    puts "#{second_character.name} attacked #{first_character.name} with #{strength2} damage"
+    fight([first_character, second_character], strength1)
+    fight([second_character, first_character], strength2)
 
-    if (strength1 > strength2)
-      winner = first_character
-      loser = second_character
-      add_points(winner, loser)
-      puts "#{winner.name} won"
-    elsif (strength1 < strength2)
-      winner = second_character
-      loser = first_character
-      add_points(winner, loser)
-      puts "#{winner.name} won"
-    else
-      puts "It's a tie!"
+    case(strength1 <=> strength2)
+      when 1
+        winner, loser = [first_character, second_character]
+        puts "#{winner.name} wins"
+      when -1
+        winner, loser = [second_character, first_character]
+        puts "#{winner.name} wins"
+      when 0
+        puts "It's a tie!"
     end
+
+    if (!!winner) then winner.add_points(loser); end
+
   end
 
-  def add_points (w, l)
-    lvl_diff = l.level - w.level
+  private
 
-    w.level += (w.is_a? Warrior) && lvl_diff >= 0 ? lvl_diff + 1 : 0
+  def fight(competitors, strength)
+    puts "#{competitors[0].name} attacked #{competitors[1].name} with #{strength} damage"
   end
+
 end
