@@ -1,0 +1,42 @@
+<h1>Teams</h1>
+<p>Randomly generated teams:</p>
+
+<h2 style="color:red;"> Team 1:  </h2>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Power</th>
+    <th>Is a captain?</th>
+  </tr>
+ <% @team1.each do |m| %>
+  <tr>
+    <td><%= m[:id]%></td>
+    <td><%= m[:first_name]%></td>
+    <td><%= m[:last_name]%></td>
+    <td><%= m[:power]%></td>
+    <td><%= m[:captain]%></td>
+    </tr>
+    <% end %>
+</table> 
+
+<h2 style="color:blue"> Team 2:  </h2>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Power</th>
+    <th>Is a captain?</th>
+  </tr>
+ <% @team2.each do |m| %>
+  <tr>
+    <td><%= m[:id]%></td>
+    <td><%= m[:first_name]%></td>
+    <td><%= m[:last_name]%></td>
+    <td><%= m[:power]%></td>
+    <td><%= m[:captain]%></td>
+    </tr>
+    <% end %>
+</table> 
