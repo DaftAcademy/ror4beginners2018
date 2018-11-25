@@ -1,0 +1,22 @@
+<h1>Random team</h1>
+<% i=0%>
+ <% @teamcol.each do |team|%> 
+ <h2><%="Drużyna: #{i=i+1}"%></h2>
+<table>
+ <% team.each do |f|%> 
+   <tr>
+ 
+    <th><%= f.first_name%> </th>
+     <th><%= f.last_name%> </th>
+     <th><%= f.power%> </th>
+     <th><% if f.captain %>
+     <%= "Captain"%>
+     <%else%>
+     <%= ""%> 
+     <%end%></th> 
+  </tr>
+
+<% end %>
+
+</table>
+<% end %>
