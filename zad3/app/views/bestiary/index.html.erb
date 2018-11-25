@@ -1,2 +1,13 @@
-<h1>BestiaryController#index</h1>
-<p>Find me in app/views/bestiary_controller/index.html.erb</p>
+<h1>Witcher's Bestiary</h1>
+<table>
+ <% @monster.each do |f|%> 
+   <tr>
+    <th><%= f.id%> </th>
+    <th><%= f.name%> </th>
+    <th><%= f.location%></th>
+    <th><%= f.best_slayer%></th>
+  </tr>
+
+<% end %>
+
+</table>

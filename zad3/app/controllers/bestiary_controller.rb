@@ -1,14 +1,30 @@
 # frozen_string_literal: true
 
 class BestiaryController < ApplicationController
-  def index
 
+
+
+  def index
+    begin
+    @monster = Array.new
+ 
+      monsters.each {|f|  @monster.push(Potwor.new(f))}
+      @monster.each {|f| f.save}
+    
+    rescue
+    @monster =Potwor.all
+    end
+  
   end
+
+  
 
   def novigrad_monsters
+ 
+    @monster = Potwor.where( location: 'Novigrad')
 
-  end
-
+    end
+  
   private
 
   def monsters
