@@ -1,0 +1,33 @@
+<h1> Teams </h1>
+<% number=0 %>
+<% @captains.each do |m| %>
+  <% if @players.count >9 %>
+  <% number+=1 %>
+  <table>
+    <tr><th><h3><%= "Team #{number}" %></h3></th></tr>
+    <tr>
+  	  <th>Id</th>
+  	  <th>First Name</th>
+  	  <th>Last Name</th>
+  	  <th>Power</th>
+    </tr>
+    <tr>
+  	  <th><%= m[:id] %></th>
+      <th><%= m[:first_name] %></th>
+      <th><%= m[:last_name] %></th>
+      <th><%= m[:power] %></th>
+    </tr>
+    <% 10.times do %>
+      <tr>
+  	    <% random=rand(1..@players.count)-1 %>
+  	    <th><%=@players[random][:id]%></th>
+        <th><%=@players[random][:first_name]%></th>
+        <th><%=@players[random][:last_name]%></th>
+        <th><%=@players[random][:power]%></th>
+        <% @players.delete_at(random) %>
+      </tr>
+    <%end%>
+  </table>
+  <br>
+  <%end%>
+<%end%>
