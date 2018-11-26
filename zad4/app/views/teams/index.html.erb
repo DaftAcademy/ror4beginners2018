@@ -1,0 +1,38 @@
+<h1>Teams</h1>
+<% #<p>Find me in app/views/teams/index.html.erb</p>%>
+
+<% number = 0 %>
+<% @all_teams_captains.each do |captain|%>
+<table>
+	<tr>
+		<th>
+			<h2><%= "Team #{number+1}" %></h2>
+		</th>
+	</tr>
+    <tr>
+  	  <th>Id</th>
+  	  <th>First Name</th>
+  	  <th>Last Name</th>
+  	  <th>Power</th>
+  	  <th>Captain</th>
+    </tr>
+    <tr>
+  	  <th><%= captain[:id] %></th>
+      <th><%= captain[:first_name] %></th>
+      <th><%= captain[:last_name] %></th>
+      <th><%= captain[:power] %></th>
+      <th>V</th>
+    </tr>
+    <% @all_teams[10*number..10*number+9].each do |player| %>
+    <tr>
+  	  <th><%= player[:id] %></th>
+      <th><%= player[:first_name] %></th>
+      <th><%= player[:last_name] %></th>
+      <th><%= player[:power] %></th>
+      <th>X</th>
+    </tr>
+    <% end %>
+</table>
+</br>
+<% number+=1 %>
+<% end %>
