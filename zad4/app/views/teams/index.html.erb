@@ -1,7 +1,7 @@
+<%= @random_players.count %>
 <h1> Teams </h1>
 <% number=0 %>
-<% @captains.each do |m| %>
-  <% if @players.count >9 %>
+<% @random_captains.each do |c| %>
   <% number+=1 %>
   <table>
     <tr><th><h3><%= "Team #{number}" %></h3></th></tr>
@@ -12,22 +12,19 @@
   	  <th>Power</th>
     </tr>
     <tr>
-  	  <th><%= m[:id] %></th>
-      <th><%= m[:first_name] %></th>
-      <th><%= m[:last_name] %></th>
-      <th><%= m[:power] %></th>
+  	  <th><%= c[:id] %></th>
+      <th><%= c[:first_name] %></th>
+      <th><%= c[:last_name] %></th>
+      <th><%= c[:power] %></th>
     </tr>
-    <% 10.times do %>
+    <% @random_players[(number-1)*10..10*number].each do |p| %>
       <tr>
-  	    <% random=rand(1..@players.count)-1 %>
-  	    <th><%=@players[random][:id]%></th>
-        <th><%=@players[random][:first_name]%></th>
-        <th><%=@players[random][:last_name]%></th>
-        <th><%=@players[random][:power]%></th>
-        <% @players.delete_at(random) %>
+  	    <th><%=p[:id]%></th>
+        <th><%=p[:first_name]%></th>
+        <th><%=p[:last_name]%></th>
+        <th><%=p[:power]%></th>
       </tr>
     <%end%>
   </table>
   <br>
-  <%end%>
 <%end%>
