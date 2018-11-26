@@ -1,0 +1,204 @@
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/tomasz_gonciarz/.gem/ruby/2.5.3/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/tomasz_gonciarz/.gem/ruby/2.5.3/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/tomasz_gonciarz/.gem/ruby/2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/tomasz_gonciarz/.gem/ruby/2.5.3/bin/rake:23
+Migrating to CreatePlayers (20181126215710)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/tomasz_gonciarz/.gem/ruby/2.5.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "players" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "capitan" boolean DEFAULT 0 NOT NULL, "first_name" varchar NOT NULL, "last_name" varchar NOT NULL, "power" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181126215710_create_players.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181126215710"]]
+  ↳ /Users/tomasz_gonciarz/.gem/ruby/2.5.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/tomasz_gonciarz/.gem/ruby/2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/tomasz_gonciarz/.gem/ruby/2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/tomasz_gonciarz/.gem/ruby/2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-26 22:13:44.340945"], ["updated_at", "2018-11-26 22:13:44.340945"]]
+  ↳ /Users/tomasz_gonciarz/.gem/ruby/2.5.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/tomasz_gonciarz/.gem/ruby/2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/tomasz_gonciarz/.gem/ruby/2.5.3/bin/rake:23
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" ORDER BY "players"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.5ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Balgruuf"], ["last_name", "Black-Briar"], ["power", 46], ["created_at", "2018-11-26 22:21:54.091153"], ["updated_at", "2018-11-26 22:21:54.091153"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ravyn"], ["last_name", "Mallory"], ["power", 42], ["created_at", "2018-11-26 22:21:54.094290"], ["updated_at", "2018-11-26 22:21:54.094290"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ri'saad"], ["last_name", "The Old"], ["power", 99], ["created_at", "2018-11-26 22:21:54.096353"], ["updated_at", "2018-11-26 22:21:54.096353"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Inigo"], ["last_name", "Lothaire"], ["power", 34], ["created_at", "2018-11-26 22:21:54.098093"], ["updated_at", "2018-11-26 22:21:54.098093"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Arnbjorn"], ["last_name", "Battle-Born"], ["power", 52], ["created_at", "2018-11-26 22:21:54.099758"], ["updated_at", "2018-11-26 22:21:54.099758"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Niranye"], ["last_name", "The Fist"], ["power", 37], ["created_at", "2018-11-26 22:21:54.101378"], ["updated_at", "2018-11-26 22:21:54.101378"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Gian"], ["last_name", "Hunter"], ["power", 6], ["created_at", "2018-11-26 22:21:54.103256"], ["updated_at", "2018-11-26 22:21:54.103256"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ysgramor"], ["last_name", "Stonearm"], ["power", 40], ["created_at", "2018-11-26 22:21:54.105067"], ["updated_at", "2018-11-26 22:21:54.105067"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Farengar"], ["last_name", "Black-Briar"], ["power", 88], ["created_at", "2018-11-26 22:21:54.106719"], ["updated_at", "2018-11-26 22:21:54.106719"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Aela"], ["last_name", "The Man"], ["power", 92], ["created_at", "2018-11-26 22:21:54.108498"], ["updated_at", "2018-11-26 22:21:54.108498"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Gian"], ["last_name", "Secret-Fire"], ["power", 44], ["created_at", "2018-11-26 22:21:54.110283"], ["updated_at", "2018-11-26 22:21:54.110283"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Dirge"], ["last_name", "Rarnis"], ["power", 27], ["created_at", "2018-11-26 22:21:54.112185"], ["updated_at", "2018-11-26 22:21:54.112185"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Enthir"], ["last_name", "Whitemane"], ["power", 66], ["created_at", "2018-11-26 22:21:54.114119"], ["updated_at", "2018-11-26 22:21:54.114119"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Tonilia"], ["last_name", "Cruel-Sea"], ["power", 68], ["created_at", "2018-11-26 22:21:54.115854"], ["updated_at", "2018-11-26 22:21:54.115854"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Athel"], ["last_name", "Septim"], ["power", 2], ["created_at", "2018-11-26 22:21:54.117480"], ["updated_at", "2018-11-26 22:21:54.117480"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Gulum-Ei"], ["last_name", "Black-Briar"], ["power", 38], ["created_at", "2018-11-26 22:21:54.119172"], ["updated_at", "2018-11-26 22:21:54.119172"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Syndus"], ["last_name", "Rarnis"], ["power", 45], ["created_at", "2018-11-26 22:21:54.120888"], ["updated_at", "2018-11-26 22:21:54.120888"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Athis"], ["last_name", "Secret-Fire"], ["power", 41], ["created_at", "2018-11-26 22:21:54.122871"], ["updated_at", "2018-11-26 22:21:54.122871"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Brynjolf"], ["last_name", "gro-Shub"], ["power", 54], ["created_at", "2018-11-26 22:21:54.124694"], ["updated_at", "2018-11-26 22:21:54.124694"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Vignar"], ["last_name", "The Greater"], ["power", 61], ["created_at", "2018-11-26 22:21:54.126598"], ["updated_at", "2018-11-26 22:21:54.126598"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Brynjolf"], ["last_name", "gro-Shub"], ["power", 82], ["created_at", "2018-11-26 22:21:54.128473"], ["updated_at", "2018-11-26 22:21:54.128473"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ahkari"], ["last_name", "Rarnis"], ["power", 41], ["created_at", "2018-11-26 22:21:54.130444"], ["updated_at", "2018-11-26 22:21:54.130444"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ysgramor"], ["last_name", "The Greater"], ["power", 43], ["created_at", "2018-11-26 22:21:54.132398"], ["updated_at", "2018-11-26 22:21:54.132398"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Umana"], ["last_name", "The Fleet"], ["power", 96], ["created_at", "2018-11-26 22:21:54.134502"], ["updated_at", "2018-11-26 22:21:54.134502"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Farkas"], ["last_name", "The Greater"], ["power", 48], ["created_at", "2018-11-26 22:21:54.136506"], ["updated_at", "2018-11-26 22:21:54.136506"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Inigo"], ["last_name", "Twice-Killed"], ["power", 86], ["created_at", "2018-11-26 22:21:54.138411"], ["updated_at", "2018-11-26 22:21:54.138411"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Vignar"], ["last_name", "Mallory"], ["power", 82], ["created_at", "2018-11-26 22:21:54.140275"], ["updated_at", "2018-11-26 22:21:54.140275"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" ORDER BY "players"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE (power > 46 ) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Create (0.5ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Balgruuf"], ["last_name", "Black-Briar"], ["power", 46], ["created_at", "2018-11-26 22:21:54.091153"], ["updated_at", "2018-11-26 22:21:54.091153"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlayer Update (0.4ms)[0m  [1m[33mUPDATE "players" SET "power" = ?, "updated_at" = ? WHERE "players"."id" = ?[0m  [["power", 30], ["updated_at", "2018-11-26 22:24:19.946743"], ["id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
