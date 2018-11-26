@@ -16,8 +16,8 @@ class FootballPlayerManager
   end
 
   def copy_player
-    duplicat = player.dup
-    duplicat.save
-    return duplicat
+    copy = player.dup
+    copy.save
+    return copy
   end
 end
