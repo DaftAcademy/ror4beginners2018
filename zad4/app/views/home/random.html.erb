@@ -1,0 +1,19 @@
+<% @teams.each do |team| %>
+    <h2><%= team_name %> </h2>
+    <table>
+      <tr>
+        <td>ID</td>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Is Captain</td>
+      </tr>
+       <% team.each do |player| %>
+        <tr>
+          <td><%= player.id %></td>
+          <td><%= player.first_name %></td>
+          <td><%= player.last_name %></td>
+          <td><%= player.captain %></td>
+        </tr>
+        <% end %>
+    </table>
+    <% end %>
