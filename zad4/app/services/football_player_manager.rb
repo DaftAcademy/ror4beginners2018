@@ -8,14 +8,15 @@ class FootballPlayerManager
   end
 
   def stronger_players
-    # TODO: Implement me pls
+    min_power = player.power + 1
+    Player.where(:power => min_power..99)
   end
 
   def set_power(value)
-    # TODO: I need body
+    player.update(power: value)
   end
 
   def copy_player
-    # TODO: I feel empty inside
+    Player.create(captain: player.captain, first_name: player.first_name, last_name: player.last_name, power: player.power)
   end
 end

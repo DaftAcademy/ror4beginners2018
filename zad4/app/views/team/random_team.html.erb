@@ -1,0 +1,24 @@
+<h1>Random team</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Captain</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Power</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @players.each do |p| %>
+      <tr>
+        <td><%= p[:id] %></td>
+        <td><%= p[:captain] %></td>
+        <td><%= p[:first_name] %></td>
+        <td><%= p[:last_name] %></td>
+        <td><%= p[:power] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table> 

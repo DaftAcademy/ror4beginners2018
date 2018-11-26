@@ -1,0 +1,48 @@
+// Place all the styles related to the team controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$background: #0f0f0f;
+$light: #ffffff;
+$table: #a5a4a4;
+$table_head: #333333;
+$captain: #10061e;
+
+body {
+	background: $background;
+	font-family: Arial, sans-serif;
+	color: $light;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+h1 {
+	text-transform: uppercase;
+	letter-spacing: 4px;
+}
+
+table {
+	padding: 0;
+	margin-bottom: 2%;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid $table;
+    text-align: center;
+    padding: 8px;
+}
+
+thead tr {
+	background: $table_head;
+}
+
+tbody tr:last-child {
+	background: $captain;
+}
+
+tbody tr:hover {
+	background: $table;
+	color: $background;
+}
