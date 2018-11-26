@@ -1,0 +1,17 @@
+<table>
+	<caption>Random team</caption>
+  <tr>
+    <th>Name</th>
+    <th>Surname</th>
+    <th>Power</th>
+    <th>Captain</th>
+  </tr>
+  <% @team.each do |player| %>
+	  <tr>
+	    <td><%= player[:first_name] %></td>
+	    <td><%= player[:last_name] %></td>
+	    <td><%= player[:power] %></td>
+	    <td><%= player[:captain] %></td>
+	  </tr>
+	<% end %>
+</table>
