@@ -7,15 +7,17 @@ class FootballPlayerManager
     @player = player
   end
 
-  def stronger_players
-    # TODO: Implement me pls
+  def stronger_players()
+    Player.where('power > ?', player.power)
   end
 
   def set_power(value)
-    # TODO: I need body
+    Player.find_by(player.id).update(power: value)
   end
 
   def copy_player
-    # TODO: I feel empty inside
+    duplicat = player.dup
+    duplicat.save
+    return duplicat
   end
 end
