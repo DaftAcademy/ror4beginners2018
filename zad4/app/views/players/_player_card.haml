@@ -1,0 +1,9 @@
+%table
+  %tr
+    - @player.attributes.keys.each do |key|
+      %th #{key}
+  %tr
+    - @player.attributes.values.each do |value|
+      %td #{value}
+  %tr
+    %td{colspan: @player.attributes.count} #{link_to('Back', players_path)}
