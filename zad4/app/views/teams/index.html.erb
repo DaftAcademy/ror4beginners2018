@@ -12,14 +12,14 @@
   	  <th>Power</th>
     </tr>
     <tr>
-  	  <th><%= c[:id] %></th>
+      <th><%= c[:id] %></th>
       <th><%= c[:first_name] %></th>
       <th><%= c[:last_name] %></th>
       <th><%= c[:power] %></th>
     </tr>
     <% @random_players[(number-1)*10..10*number].each do |p| %>
       <tr>
-  	    <th><%=p[:id]%></th>
+      <th><%=p[:id]%></th>
         <th><%=p[:first_name]%></th>
         <th><%=p[:last_name]%></th>
         <th><%=p[:power]%></th>
