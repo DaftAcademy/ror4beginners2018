@@ -20,4 +20,5 @@ class FootballPlayerManager
     copy.save
     return copy
   end
+
 end
