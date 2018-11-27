@@ -6,6 +6,7 @@ class PlayersController < ApplicationController
   def index
     setup
     @id = params[:id]
+    @stronger = params[:stronger]
     @id ? show_player : teams
   end
 
@@ -21,7 +22,7 @@ class PlayersController < ApplicationController
 
   def show_player
     @player = Player.find(@id)
-    stronger_players if params[:stronger]
+    stronger_players if @stronger
   end
 
   def stronger_players
