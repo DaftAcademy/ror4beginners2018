@@ -1,21 +1,23 @@
 def sort_letters(string)
-
+    print(string,'->',string.chars.sort.join,"\n")
 end
 
 def count_vowels(string)
-
+    print("\"",string,"\"",' zawiera: ',string.scan(/[aeiouy]/).count,' samoglosek',"\n")
+    #puts(string.scan(/[aeiouy]/).count)
 end
 
 def filter_odd(array)
-
+    #puts array.select &:odd?
+    print array, " -> ", array.select{|a| a.odd?},"\n"
 end
 
-sort_letters('dcba') #=> 'abcd'
-sort_letters('zyx') #=> 'xyz'
+sort_letters('dcba')
+sort_letters('zyx')
 
-count_vowels('mmmm') #=> 0
-count_vowels('super') #=> 2
-count_vowels('super extra') #=> 4
+count_vowels('mmmm')
+count_vowels('super')
+count_vowels('super extra')
 
-filter_odd([1, 2, 3, 4, 5]) #=> [1, 3, 5]
-filter_odd([6, 7, 9, 2, 6, 5]) #=> [7, 9, 5]
+filter_odd([1,2,3,4,5])
+filter_odd([6,7,9,2,6,5])
