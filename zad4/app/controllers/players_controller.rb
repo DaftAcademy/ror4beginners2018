@@ -4,8 +4,6 @@ class PlayersController < ApplicationController
   @players
 
   def index
-    @@captains = @@players = nil if params[:shuffle]
-    @stronger = params[:stronger]
     setup
     @id = params[:id]
     @id ? show_player : teams
@@ -23,7 +21,7 @@ class PlayersController < ApplicationController
 
   def show_player
     @player = Player.find(@id)
-    stronger_players if @stronger
+    stronger_players if params[:stronger]
   end
 
   def stronger_players
@@ -31,6 +29,7 @@ class PlayersController < ApplicationController
   end
 
   def setup
+    @@captains = @@players = nil if params[:shuffle]
     @@captains ||= Player.where(captain: true).shuffle
     @@players ||= Player.where(captain: false).shuffle
   end
