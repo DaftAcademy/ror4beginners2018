@@ -1,0 +1,21 @@
+<% @teams.each do |team| %>
+    <h2> TEAM </h2>
+    <table>
+      <tr>
+        <td>Number</td>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Role</td>
+        <td>Power</td>
+      </tr>
+      <% team.each do |player| %>
+        <tr>
+          <td><%= player[:id] %></td>
+          <td><%= player[:first_name] %></td>
+          <td><%= player[:last_name] %></td>
+          <td><%= player.captain ? "{C}" : '' %>
+          <td><%= player[:power] %></td>
+        </tr>
+      <% end %>
+    </table>
+<% end %> 
