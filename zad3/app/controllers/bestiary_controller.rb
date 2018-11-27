@@ -5,10 +5,6 @@ class BestiaryController < ApplicationController
 
   end
 
-  def novigrad_monsters
-
-  end
-
   private
 
   def monsters
