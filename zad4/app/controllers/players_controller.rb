@@ -1,10 +1,11 @@
 class PlayersController < ApplicationController
 
-  @@captains
-  @@players
+  @captains
+  @players
 
   def index
     @@captains = @@players = nil if params[:shuffle]
+    @stronger = params[:stronger]
     setup
     @id = params[:id]
     @id ? show_player : teams
@@ -21,7 +22,12 @@ class PlayersController < ApplicationController
   end
 
   def show_player
-    @player = Player.where(id: @id).first
+    @player = Player.find(@id)
+    stronger_players if @stronger
+  end
+
+  def stronger_players
+    @stronger_players = FootballPlayerManager.new(@player).stronger_players.to_a.sort_by(&:power).reverse
   end
 
   def setup
