@@ -1,0 +1,11 @@
+<h1>
+Football Player Manager
+</h1>
+
+<table>
+  <%= render partial: 'team', locals: { team: @teams.first } %>
+</table>
+</br>
+<table>
+  <%= render partial: 'team', locals: { team: @teams.last } %>
+</table>
