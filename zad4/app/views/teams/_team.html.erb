@@ -1,0 +1,19 @@
+<tr>
+    <th colspan="5"><%= team_name %></th>
+</tr>
+<tr>
+  <th>Number</th>
+  <th>Captain</th>
+  <th>First name</th>
+  <th>Last name</th>
+  <th>Power</th>
+</tr>
+<% team.each_with_index do |player, i| %>
+<tr>
+  <td><%= i+1 %></td>
+  <td><%= player.captain %></td>
+  <td><%= player.first_name %></td>
+  <td><%= player.last_name %></td>
+  <td><%= player.power %></td>
+</tr>
+<% end %>

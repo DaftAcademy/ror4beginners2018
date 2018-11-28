@@ -1,0 +1,2225 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreatePlayers (20181128100839)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "players" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "captain" boolean DEFAULT 0 NOT NULL, "first_name" varchar NOT NULL, "last_name" varchar NOT NULL, "power" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181128100839_create_players.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181128100839"]]
+  ↳ bin/rails:9
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-28 10:14:16.263997"], ["updated_at", "2018-11-28 10:14:16.263997"]]
+  ↳ bin/rails:9
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Sapphire"], ["last_name", "Signus"], ["power", 79], ["created_at", "2018-11-28 10:14:57.798669"], ["updated_at", "2018-11-28 10:14:57.798669"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Inigo"], ["last_name", "One-Eye"], ["power", 22], ["created_at", "2018-11-28 10:14:57.807818"], ["updated_at", "2018-11-28 10:14:57.807818"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Festus"], ["last_name", "Signus"], ["power", 56], ["created_at", "2018-11-28 10:14:57.813445"], ["updated_at", "2018-11-28 10:14:57.813445"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Sulla"], ["last_name", "The Lesser"], ["power", 81], ["created_at", "2018-11-28 10:14:57.819090"], ["updated_at", "2018-11-28 10:14:57.819090"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Karliah"], ["last_name", "Hunter"], ["power", 59], ["created_at", "2018-11-28 10:14:57.827312"], ["updated_at", "2018-11-28 10:14:57.827312"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ma'jhad"], ["last_name", "The Greater"], ["power", 83], ["created_at", "2018-11-28 10:14:57.835490"], ["updated_at", "2018-11-28 10:14:57.835490"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Iddra"], ["last_name", "The Lion"], ["power", 78], ["created_at", "2018-11-28 10:14:57.843861"], ["updated_at", "2018-11-28 10:14:57.843861"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Athel"], ["last_name", "Rarnis"], ["power", 86], ["created_at", "2018-11-28 10:14:57.849662"], ["updated_at", "2018-11-28 10:14:57.849662"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Etienne"], ["last_name", "Signus"], ["power", 75], ["created_at", "2018-11-28 10:14:57.855258"], ["updated_at", "2018-11-28 10:14:57.855258"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Gissur"], ["last_name", "The Greater"], ["power", 10], ["created_at", "2018-11-28 10:14:57.860503"], ["updated_at", "2018-11-28 10:14:57.860503"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Hestla"], ["last_name", "Hunter"], ["power", 37], ["created_at", "2018-11-28 10:14:57.867309"], ["updated_at", "2018-11-28 10:14:57.867309"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Zaynabi"], ["last_name", "Black-Briar"], ["power", 36], ["created_at", "2018-11-28 10:14:57.873420"], ["updated_at", "2018-11-28 10:14:57.873420"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Askar"], ["last_name", "The Lion"], ["power", 36], ["created_at", "2018-11-28 10:14:57.879335"], ["updated_at", "2018-11-28 10:14:57.879335"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Umana"], ["last_name", "Secret-Fire"], ["power", 28], ["created_at", "2018-11-28 10:14:57.884827"], ["updated_at", "2018-11-28 10:14:57.884827"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ma'randru-jo"], ["last_name", "Krex"], ["power", 88], ["created_at", "2018-11-28 10:14:57.891446"], ["updated_at", "2018-11-28 10:14:57.891446"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Gian"], ["last_name", "Endell"], ["power", 78], ["created_at", "2018-11-28 10:14:57.898856"], ["updated_at", "2018-11-28 10:14:57.898856"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ysgramor"], ["last_name", "Battle-Born"], ["power", 93], ["created_at", "2018-11-28 10:14:57.911802"], ["updated_at", "2018-11-28 10:14:57.911802"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ria"], ["last_name", "gro-Shub"], ["power", 94], ["created_at", "2018-11-28 10:14:57.919419"], ["updated_at", "2018-11-28 10:14:57.919419"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.6ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Njada"], ["last_name", "The Old"], ["power", 47], ["created_at", "2018-11-28 10:14:57.928788"], ["updated_at", "2018-11-28 10:14:57.928788"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Rulindil"], ["last_name", "Newberry"], ["power", 7], ["created_at", "2018-11-28 10:14:57.935400"], ["updated_at", "2018-11-28 10:14:57.935400"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Athis"], ["last_name", "The Old"], ["power", 44], ["created_at", "2018-11-28 10:14:57.944847"], ["updated_at", "2018-11-28 10:14:57.944847"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Farkas"], ["last_name", "The Haggard"], ["power", 58], ["created_at", "2018-11-28 10:14:57.952147"], ["updated_at", "2018-11-28 10:14:57.952147"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Eorlund"], ["last_name", "Ember-Master"], ["power", 22], ["created_at", "2018-11-28 10:14:57.960910"], ["updated_at", "2018-11-28 10:14:57.960910"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Balgruuf"], ["last_name", "Ember-Master"], ["power", 98], ["created_at", "2018-11-28 10:14:57.966882"], ["updated_at", "2018-11-28 10:14:57.966882"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "J'darr"], ["last_name", "Twice-Killed"], ["power", 11], ["created_at", "2018-11-28 10:14:57.973059"], ["updated_at", "2018-11-28 10:14:57.973059"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Urag"], ["last_name", "Imyan"], ["power", 36], ["created_at", "2018-11-28 10:14:57.980167"], ["updated_at", "2018-11-28 10:14:57.980167"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Skjor"], ["last_name", "Lothaire"], ["power", 26], ["created_at", "2018-11-28 10:14:57.986404"], ["updated_at", "2018-11-28 10:14:57.986404"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Tsun"], ["last_name", "Secret-Fire"], ["power", 37], ["created_at", "2018-11-28 10:14:57.992679"], ["updated_at", "2018-11-28 10:14:57.992679"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Endon"], ["last_name", "The Fist"], ["power", 29], ["created_at", "2018-11-28 10:14:58.000275"], ["updated_at", "2018-11-28 10:14:58.000275"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Thrynn"], ["last_name", "Mallory"], ["power", 79], ["created_at", "2018-11-28 10:14:58.006955"], ["updated_at", "2018-11-28 10:14:58.006955"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Farkas"], ["last_name", "Hunter"], ["power", 93], ["created_at", "2018-11-28 10:14:58.013692"], ["updated_at", "2018-11-28 10:14:58.013692"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Sulla"], ["last_name", "Cruel-Sea"], ["power", 57], ["created_at", "2018-11-28 10:14:58.019759"], ["updated_at", "2018-11-28 10:14:58.019759"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Irileth"], ["last_name", "Hunter"], ["power", 77], ["created_at", "2018-11-28 10:14:58.024677"], ["updated_at", "2018-11-28 10:14:58.024677"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Balgruuf"], ["last_name", "The Fist"], ["power", 87], ["created_at", "2018-11-28 10:14:58.031316"], ["updated_at", "2018-11-28 10:14:58.031316"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ma'jhad"], ["last_name", "The Fist"], ["power", 30], ["created_at", "2018-11-28 10:14:58.036928"], ["updated_at", "2018-11-28 10:14:58.036928"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Delvin"], ["last_name", "Black-Skeever"], ["power", 20], ["created_at", "2018-11-28 10:14:58.046075"], ["updated_at", "2018-11-28 10:14:58.046075"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Hestla"], ["last_name", "Endell"], ["power", 31], ["created_at", "2018-11-28 10:14:58.055093"], ["updated_at", "2018-11-28 10:14:58.055093"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Septimus"], ["last_name", "Newberry"], ["power", 88], ["created_at", "2018-11-28 10:14:58.061193"], ["updated_at", "2018-11-28 10:14:58.061193"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Molgrom"], ["last_name", "Mallory"], ["power", 88], ["created_at", "2018-11-28 10:14:58.067453"], ["updated_at", "2018-11-28 10:14:58.067453"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Tsun"], ["last_name", "Stonearm"], ["power", 39], ["created_at", "2018-11-28 10:14:58.073039"], ["updated_at", "2018-11-28 10:14:58.073039"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Rune"], ["last_name", "Black-Skeever"], ["power", 36], ["created_at", "2018-11-28 10:14:58.079122"], ["updated_at", "2018-11-28 10:14:58.079122"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Inigo"], ["last_name", "Black-Skeever"], ["power", 68], ["created_at", "2018-11-28 10:14:58.085545"], ["updated_at", "2018-11-28 10:14:58.085545"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Garthar"], ["last_name", "The Greater"], ["power", 46], ["created_at", "2018-11-28 10:16:27.346599"], ["updated_at", "2018-11-28 10:16:27.346599"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "J'darr"], ["last_name", "Stonearm"], ["power", 30], ["created_at", "2018-11-28 10:16:27.354367"], ["updated_at", "2018-11-28 10:16:27.354367"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Atahbah"], ["last_name", "The Haggard"], ["power", 68], ["created_at", "2018-11-28 10:16:27.362555"], ["updated_at", "2018-11-28 10:16:27.362555"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Delvin"], ["last_name", "The Fleet"], ["power", 67], ["created_at", "2018-11-28 10:16:27.367913"], ["updated_at", "2018-11-28 10:16:27.367913"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ma'jhad"], ["last_name", "The Greater"], ["power", 35], ["created_at", "2018-11-28 10:16:27.373176"], ["updated_at", "2018-11-28 10:16:27.373176"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Njada"], ["last_name", "Cruel-Sea"], ["power", 91], ["created_at", "2018-11-28 10:16:27.378396"], ["updated_at", "2018-11-28 10:16:27.378396"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ravyn"], ["last_name", "Golden-Hilt"], ["power", 50], ["created_at", "2018-11-28 10:16:27.383916"], ["updated_at", "2018-11-28 10:16:27.383916"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Farkas"], ["last_name", "Black-Skeever"], ["power", 78], ["created_at", "2018-11-28 10:16:27.389507"], ["updated_at", "2018-11-28 10:16:27.389507"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Felldir"], ["last_name", "Signus"], ["power", 31], ["created_at", "2018-11-28 10:16:27.394860"], ["updated_at", "2018-11-28 10:16:27.394860"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Balgruuf"], ["last_name", "Rarnis"], ["power", 12], ["created_at", "2018-11-28 10:16:27.400258"], ["updated_at", "2018-11-28 10:16:27.400258"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Vipir"], ["last_name", "Imyan"], ["power", 72], ["created_at", "2018-11-28 10:16:27.406522"], ["updated_at", "2018-11-28 10:16:27.406522"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Vilkas"], ["last_name", "Krex"], ["power", 80], ["created_at", "2018-11-28 10:16:27.417048"], ["updated_at", "2018-11-28 10:16:27.417048"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ma'dran"], ["last_name", "Whitemane"], ["power", 96], ["created_at", "2018-11-28 10:16:27.423248"], ["updated_at", "2018-11-28 10:16:27.423248"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Niranye"], ["last_name", "Rarnis"], ["power", 29], ["created_at", "2018-11-28 10:16:27.428471"], ["updated_at", "2018-11-28 10:16:27.428471"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Tonilia"], ["last_name", "Black-Briar"], ["power", 43], ["created_at", "2018-11-28 10:16:27.433723"], ["updated_at", "2018-11-28 10:16:27.433723"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Astrid"], ["last_name", "Hunter"], ["power", 82], ["created_at", "2018-11-28 10:16:27.440162"], ["updated_at", "2018-11-28 10:16:27.440162"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Atahbah"], ["last_name", "Imyan"], ["power", 67], ["created_at", "2018-11-28 10:16:27.445403"], ["updated_at", "2018-11-28 10:16:27.445403"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Faralda"], ["last_name", "Hunter"], ["power", 49], ["created_at", "2018-11-28 10:16:27.450875"], ["updated_at", "2018-11-28 10:16:27.450875"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ysgramor"], ["last_name", "Stonearm"], ["power", 82], ["created_at", "2018-11-28 10:16:27.456345"], ["updated_at", "2018-11-28 10:16:27.456345"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Tonilia"], ["last_name", "Rarnis"], ["power", 14], ["created_at", "2018-11-28 10:16:27.461913"], ["updated_at", "2018-11-28 10:16:27.461913"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Septimus"], ["last_name", "Hunter"], ["power", 97], ["created_at", "2018-11-28 10:16:27.467556"], ["updated_at", "2018-11-28 10:16:27.467556"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Torvar"], ["last_name", "Black-Skeever"], ["power", 93], ["created_at", "2018-11-28 10:16:27.473461"], ["updated_at", "2018-11-28 10:16:27.473461"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Dirge"], ["last_name", "The Lesser"], ["power", 84], ["created_at", "2018-11-28 10:16:27.479159"], ["updated_at", "2018-11-28 10:16:27.479159"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Elenwen"], ["last_name", "The Greater"], ["power", 12], ["created_at", "2018-11-28 10:16:27.488755"], ["updated_at", "2018-11-28 10:16:27.488755"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ma'jhad"], ["last_name", "Newberry"], ["power", 17], ["created_at", "2018-11-28 10:16:27.504643"], ["updated_at", "2018-11-28 10:16:27.504643"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Urag"], ["last_name", "Imyan"], ["power", 19], ["created_at", "2018-11-28 10:16:27.510800"], ["updated_at", "2018-11-28 10:16:27.510800"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Inigo"], ["last_name", "Maccius"], ["power", 74], ["created_at", "2018-11-28 10:16:27.516746"], ["updated_at", "2018-11-28 10:16:27.516746"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Vex"], ["last_name", "The Greater"], ["power", 28], ["created_at", "2018-11-28 10:16:27.522631"], ["updated_at", "2018-11-28 10:16:27.522631"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Sapphire"], ["last_name", "The Lesser"], ["power", 16], ["created_at", "2018-11-28 10:16:27.529069"], ["updated_at", "2018-11-28 10:16:27.529069"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Erikur"], ["last_name", "One-Eye"], ["power", 30], ["created_at", "2018-11-28 10:16:27.535310"], ["updated_at", "2018-11-28 10:16:27.535310"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Rulindil"], ["last_name", "The Fist"], ["power", 59], ["created_at", "2018-11-28 10:16:27.541127"], ["updated_at", "2018-11-28 10:16:27.541127"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Vilkas"], ["last_name", "Mallory"], ["power", 86], ["created_at", "2018-11-28 10:16:27.547455"], ["updated_at", "2018-11-28 10:16:27.547455"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Mallus"], ["last_name", "Krex"], ["power", 49], ["created_at", "2018-11-28 10:16:27.554585"], ["updated_at", "2018-11-28 10:16:27.554585"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Karliah"], ["last_name", "The Haggard"], ["power", 43], ["created_at", "2018-11-28 10:16:27.559992"], ["updated_at", "2018-11-28 10:16:27.559992"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Drahff"], ["last_name", "The Man"], ["power", 25], ["created_at", "2018-11-28 10:16:27.572796"], ["updated_at", "2018-11-28 10:16:27.572796"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Cynric"], ["last_name", "Twice-Killed"], ["power", 93], ["created_at", "2018-11-28 10:16:27.579461"], ["updated_at", "2018-11-28 10:16:27.579461"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Malborn"], ["last_name", "Cruel-Sea"], ["power", 40], ["created_at", "2018-11-28 10:16:27.585366"], ["updated_at", "2018-11-28 10:16:27.585366"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Enthir"], ["last_name", "The Man"], ["power", 80], ["created_at", "2018-11-28 10:16:27.595899"], ["updated_at", "2018-11-28 10:16:27.595899"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ralof"], ["last_name", "Twice-Killed"], ["power", 43], ["created_at", "2018-11-28 10:16:27.604999"], ["updated_at", "2018-11-28 10:16:27.604999"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Umana"], ["last_name", "Stonearm"], ["power", 67], ["created_at", "2018-11-28 10:16:27.613807"], ["updated_at", "2018-11-28 10:16:27.613807"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Felldir"], ["last_name", "Endell"], ["power", 36], ["created_at", "2018-11-28 10:16:27.619234"], ["updated_at", "2018-11-28 10:16:27.619234"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Enthir"], ["last_name", "Cruel-Sea"], ["power", 33], ["created_at", "2018-11-28 10:16:27.626087"], ["updated_at", "2018-11-28 10:16:27.626087"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Gulum-Ei"], ["last_name", "Battle-Born"], ["power", 42], ["created_at", "2018-11-28 10:16:27.631742"], ["updated_at", "2018-11-28 10:16:27.631742"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Thrynn"], ["last_name", "The Old"], ["power", 69], ["created_at", "2018-11-28 10:16:27.640332"], ["updated_at", "2018-11-28 10:16:27.640332"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Balgruuf"], ["last_name", "Black-Briar"], ["power", 67], ["created_at", "2018-11-28 10:16:27.649903"], ["updated_at", "2018-11-28 10:16:27.649903"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Gissur"], ["last_name", "Septim"], ["power", 82], ["created_at", "2018-11-28 10:16:27.656283"], ["updated_at", "2018-11-28 10:16:27.656283"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Mjoll"], ["last_name", "Rarnis"], ["power", 84], ["created_at", "2018-11-28 10:16:27.662435"], ["updated_at", "2018-11-28 10:16:27.662435"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Karliah"], ["last_name", "gro-Shub"], ["power", 14], ["created_at", "2018-11-28 10:16:27.669793"], ["updated_at", "2018-11-28 10:16:27.669793"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Felldir"], ["last_name", "Gatharian"], ["power", 88], ["created_at", "2018-11-28 10:16:27.677468"], ["updated_at", "2018-11-28 10:16:27.677468"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Orgnar"], ["last_name", "The Unbroken"], ["power", 14], ["created_at", "2018-11-28 10:16:27.683821"], ["updated_at", "2018-11-28 10:16:27.683821"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("captain", "first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["captain", 1], ["first_name", "Felldir"], ["last_name", "Septim"], ["power", 89], ["created_at", "2018-11-28 10:16:27.696154"], ["updated_at", "2018-11-28 10:16:27.696154"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("captain", "first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["captain", 1], ["first_name", "Delvin"], ["last_name", "Mallory"], ["power", 77], ["created_at", "2018-11-28 10:16:27.703993"], ["updated_at", "2018-11-28 10:16:27.703993"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("captain", "first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["captain", 1], ["first_name", "Zaynabi"], ["last_name", "The Old"], ["power", 97], ["created_at", "2018-11-28 10:16:27.711783"], ["updated_at", "2018-11-28 10:16:27.711783"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("captain", "first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["captain", 1], ["first_name", "Felldir"], ["last_name", "Rarnis"], ["power", 54], ["created_at", "2018-11-28 10:16:27.717504"], ["updated_at", "2018-11-28 10:16:27.717504"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("captain", "first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["captain", 1], ["first_name", "Molgrom"], ["last_name", "Frey"], ["power", 59], ["created_at", "2018-11-28 10:16:27.723717"], ["updated_at", "2018-11-28 10:16:27.723717"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ria"], ["last_name", "The Lion"], ["power", 65], ["created_at", "2018-11-28 10:17:41.765563"], ["updated_at", "2018-11-28 10:17:41.765563"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Kodlak"], ["last_name", "Endell"], ["power", 48], ["created_at", "2018-11-28 10:17:41.774133"], ["updated_at", "2018-11-28 10:17:41.774133"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Garthar"], ["last_name", "Black-Briar"], ["power", 51], ["created_at", "2018-11-28 10:17:41.780789"], ["updated_at", "2018-11-28 10:17:41.780789"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Garthar"], ["last_name", "Stonearm"], ["power", 2], ["created_at", "2018-11-28 10:17:41.788195"], ["updated_at", "2018-11-28 10:17:41.788195"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Thrynn"], ["last_name", "Ember-Master"], ["power", 47], ["created_at", "2018-11-28 10:17:41.795153"], ["updated_at", "2018-11-28 10:17:41.795153"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Gissur"], ["last_name", "The Fleet"], ["power", 18], ["created_at", "2018-11-28 10:17:41.801048"], ["updated_at", "2018-11-28 10:17:41.801048"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Gulum-Ei"], ["last_name", "The Fleet"], ["power", 37], ["created_at", "2018-11-28 10:17:41.808543"], ["updated_at", "2018-11-28 10:17:41.808543"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Dirge"], ["last_name", "The Haggard"], ["power", 23], ["created_at", "2018-11-28 10:17:41.813925"], ["updated_at", "2018-11-28 10:17:41.813925"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Veezara"], ["last_name", "Golden-Hilt"], ["power", 46], ["created_at", "2018-11-28 10:17:41.822560"], ["updated_at", "2018-11-28 10:17:41.822560"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Rune"], ["last_name", "The Unbroken"], ["power", 50], ["created_at", "2018-11-28 10:17:41.830701"], ["updated_at", "2018-11-28 10:17:41.830701"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Askar"], ["last_name", "Gray-Mane"], ["power", 19], ["created_at", "2018-11-28 10:17:41.836043"], ["updated_at", "2018-11-28 10:17:41.836043"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Farengar"], ["last_name", "Rarnis"], ["power", 29], ["created_at", "2018-11-28 10:17:41.841494"], ["updated_at", "2018-11-28 10:17:41.841494"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Brynjolf"], ["last_name", "Black-Briar"], ["power", 10], ["created_at", "2018-11-28 10:17:41.847653"], ["updated_at", "2018-11-28 10:17:41.847653"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Athis"], ["last_name", "Imyan"], ["power", 55], ["created_at", "2018-11-28 10:17:41.853638"], ["updated_at", "2018-11-28 10:17:41.853638"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ra'zhinda"], ["last_name", "Secret-Fire"], ["power", 71], ["created_at", "2018-11-28 10:17:41.859941"], ["updated_at", "2018-11-28 10:17:41.859941"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ravyn"], ["last_name", "The Fist"], ["power", 42], ["created_at", "2018-11-28 10:17:41.865593"], ["updated_at", "2018-11-28 10:17:41.865593"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Niranye"], ["last_name", "The Haggard"], ["power", 37], ["created_at", "2018-11-28 10:17:41.872498"], ["updated_at", "2018-11-28 10:17:41.872498"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Dro'marash"], ["last_name", "Gatharian"], ["power", 32], ["created_at", "2018-11-28 10:17:41.884701"], ["updated_at", "2018-11-28 10:17:41.884701"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Rulindil"], ["last_name", "The Greater"], ["power", 21], ["created_at", "2018-11-28 10:17:41.895094"], ["updated_at", "2018-11-28 10:17:41.895094"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Karliah"], ["last_name", "Frey"], ["power", 76], ["created_at", "2018-11-28 10:17:41.902497"], ["updated_at", "2018-11-28 10:17:41.902497"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Felldir"], ["last_name", "Ember-Master"], ["power", 43], ["created_at", "2018-11-28 10:17:41.908700"], ["updated_at", "2018-11-28 10:17:41.908700"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Syndus"], ["last_name", "Twice-Killed"], ["power", 79], ["created_at", "2018-11-28 10:17:41.915148"], ["updated_at", "2018-11-28 10:17:41.915148"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Gormlaith"], ["last_name", "The Lesser"], ["power", 83], ["created_at", "2018-11-28 10:17:41.921297"], ["updated_at", "2018-11-28 10:17:41.921297"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Urag"], ["last_name", "Golden-Hilt"], ["power", 16], ["created_at", "2018-11-28 10:17:41.927706"], ["updated_at", "2018-11-28 10:17:41.927706"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Brill"], ["last_name", "Signus"], ["power", 98], ["created_at", "2018-11-28 10:17:41.933582"], ["updated_at", "2018-11-28 10:17:41.933582"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Zaynabi"], ["last_name", "Whitemane"], ["power", 48], ["created_at", "2018-11-28 10:17:41.940909"], ["updated_at", "2018-11-28 10:17:41.940909"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Dirge"], ["last_name", "Maccius"], ["power", 29], ["created_at", "2018-11-28 10:17:41.947184"], ["updated_at", "2018-11-28 10:17:41.947184"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Gulum-Ei"], ["last_name", "Krex"], ["power", 16], ["created_at", "2018-11-28 10:17:41.953440"], ["updated_at", "2018-11-28 10:17:41.953440"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Astrid"], ["last_name", "Mallory"], ["power", 42], ["created_at", "2018-11-28 10:17:41.960436"], ["updated_at", "2018-11-28 10:17:41.960436"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Hestla"], ["last_name", "Secret-Fire"], ["power", 87], ["created_at", "2018-11-28 10:17:41.968118"], ["updated_at", "2018-11-28 10:17:41.968118"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "J'darr"], ["last_name", "The Haggard"], ["power", 89], ["created_at", "2018-11-28 10:17:41.974858"], ["updated_at", "2018-11-28 10:17:41.974858"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Vipir"], ["last_name", "The Lion"], ["power", 96], ["created_at", "2018-11-28 10:17:41.984141"], ["updated_at", "2018-11-28 10:17:41.984141"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Dirge"], ["last_name", "Secret-Fire"], ["power", 98], ["created_at", "2018-11-28 10:17:41.991197"], ["updated_at", "2018-11-28 10:17:41.991197"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ravyn"], ["last_name", "Frey"], ["power", 8], ["created_at", "2018-11-28 10:17:42.003119"], ["updated_at", "2018-11-28 10:17:42.003119"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Athis"], ["last_name", "Ember-Master"], ["power", 21], ["created_at", "2018-11-28 10:17:42.012067"], ["updated_at", "2018-11-28 10:17:42.012067"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Brynjolf"], ["last_name", "Imyan"], ["power", 63], ["created_at", "2018-11-28 10:17:42.021220"], ["updated_at", "2018-11-28 10:17:42.021220"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Inigo"], ["last_name", "The Haggard"], ["power", 82], ["created_at", "2018-11-28 10:17:42.030123"], ["updated_at", "2018-11-28 10:17:42.030123"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Gerdur"], ["last_name", "Battle-Born"], ["power", 80], ["created_at", "2018-11-28 10:17:42.036171"], ["updated_at", "2018-11-28 10:17:42.036171"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ma'jhad"], ["last_name", "Black-Briar"], ["power", 88], ["created_at", "2018-11-28 10:17:42.041607"], ["updated_at", "2018-11-28 10:17:42.041607"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ravyn"], ["last_name", "Twice-Killed"], ["power", 5], ["created_at", "2018-11-28 10:17:42.047549"], ["updated_at", "2018-11-28 10:17:42.047549"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Aela"], ["last_name", "Secret-Fire"], ["power", 33], ["created_at", "2018-11-28 10:17:42.057545"], ["updated_at", "2018-11-28 10:17:42.057545"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Rune"], ["last_name", "Black-Skeever"], ["power", 44], ["created_at", "2018-11-28 10:17:42.063838"], ["updated_at", "2018-11-28 10:17:42.063838"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Septimus"], ["last_name", "The Lion"], ["power", 29], ["created_at", "2018-11-28 10:17:42.069853"], ["updated_at", "2018-11-28 10:17:42.069853"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Veezara"], ["last_name", "Stonearm"], ["power", 88], ["created_at", "2018-11-28 10:17:42.075713"], ["updated_at", "2018-11-28 10:17:42.075713"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Zaynabi"], ["last_name", "The Fist"], ["power", 2], ["created_at", "2018-11-28 10:17:42.085176"], ["updated_at", "2018-11-28 10:17:42.085176"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Eorlund"], ["last_name", "Hunter"], ["power", 18], ["created_at", "2018-11-28 10:17:42.091985"], ["updated_at", "2018-11-28 10:17:42.091985"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Zaynabi"], ["last_name", "Ember-Master"], ["power", 36], ["created_at", "2018-11-28 10:17:42.099803"], ["updated_at", "2018-11-28 10:17:42.099803"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Rune"], ["last_name", "The Haggard"], ["power", 77], ["created_at", "2018-11-28 10:17:42.111630"], ["updated_at", "2018-11-28 10:17:42.111630"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Glover"], ["last_name", "Newberry"], ["power", 84], ["created_at", "2018-11-28 10:17:42.120569"], ["updated_at", "2018-11-28 10:17:42.120569"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Skjor"], ["last_name", "The Old"], ["power", 10], ["created_at", "2018-11-28 10:17:42.127072"], ["updated_at", "2018-11-28 10:17:42.127072"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("captain", "first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["captain", 1], ["first_name", "Balgruuf"], ["last_name", "Gray-Mane"], ["power", 61], ["created_at", "2018-11-28 10:17:42.132711"], ["updated_at", "2018-11-28 10:17:42.132711"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("captain", "first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["captain", 1], ["first_name", "Dro'marash"], ["last_name", "Signus"], ["power", 84], ["created_at", "2018-11-28 10:17:42.139493"], ["updated_at", "2018-11-28 10:17:42.139493"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Dro'marash"], ["last_name", "Gatharian"], ["power", 7], ["created_at", "2018-11-28 10:24:07.519241"], ["updated_at", "2018-11-28 10:24:07.519241"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Etienne"], ["last_name", "Secret-Fire"], ["power", 34], ["created_at", "2018-11-28 10:24:07.527173"], ["updated_at", "2018-11-28 10:24:07.527173"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Etienne"], ["last_name", "Newberry"], ["power", 88], ["created_at", "2018-11-28 10:24:07.532828"], ["updated_at", "2018-11-28 10:24:07.532828"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Brynjolf"], ["last_name", "The Lesser"], ["power", 78], ["created_at", "2018-11-28 10:24:07.539717"], ["updated_at", "2018-11-28 10:24:07.539717"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Mjoll"], ["last_name", "Rarnis"], ["power", 39], ["created_at", "2018-11-28 10:24:07.546230"], ["updated_at", "2018-11-28 10:24:07.546230"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ra'zhinda"], ["last_name", "Stonearm"], ["power", 10], ["created_at", "2018-11-28 10:24:07.551901"], ["updated_at", "2018-11-28 10:24:07.551901"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Gabriella"], ["last_name", "Rarnis"], ["power", 76], ["created_at", "2018-11-28 10:24:07.557586"], ["updated_at", "2018-11-28 10:24:07.557586"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Malborn"], ["last_name", "One-Eye"], ["power", 22], ["created_at", "2018-11-28 10:24:07.563226"], ["updated_at", "2018-11-28 10:24:07.563226"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Molgrom"], ["last_name", "Krex"], ["power", 7], ["created_at", "2018-11-28 10:24:07.568798"], ["updated_at", "2018-11-28 10:24:07.568798"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Balgruuf"], ["last_name", "Krex"], ["power", 79], ["created_at", "2018-11-28 10:24:07.575446"], ["updated_at", "2018-11-28 10:24:07.575446"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Babette"], ["last_name", "Hunter"], ["power", 48], ["created_at", "2018-11-28 10:24:07.580976"], ["updated_at", "2018-11-28 10:24:07.580976"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Cynric"], ["last_name", "Frey"], ["power", 69], ["created_at", "2018-11-28 10:24:07.587688"], ["updated_at", "2018-11-28 10:24:07.587688"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Aela"], ["last_name", "The Fleet"], ["power", 8], ["created_at", "2018-11-28 10:24:07.593192"], ["updated_at", "2018-11-28 10:24:07.593192"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Nazir"], ["last_name", "Gatharian"], ["power", 46], ["created_at", "2018-11-28 10:24:07.600045"], ["updated_at", "2018-11-28 10:24:07.600045"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Atahbah"], ["last_name", "Krex"], ["power", 29], ["created_at", "2018-11-28 10:24:07.608116"], ["updated_at", "2018-11-28 10:24:07.608116"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Ma'randru-jo"], ["last_name", "Lothaire"], ["power", 44], ["created_at", "2018-11-28 10:24:07.614087"], ["updated_at", "2018-11-28 10:24:07.614087"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Maliq"], ["last_name", "Endell"], ["power", 98], ["created_at", "2018-11-28 10:24:07.620811"], ["updated_at", "2018-11-28 10:24:07.620811"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Babette"], ["last_name", "Endell"], ["power", 61], ["created_at", "2018-11-28 10:24:07.628037"], ["updated_at", "2018-11-28 10:24:07.628037"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Dro'marash"], ["last_name", "The Haggard"], ["power", 37], ["created_at", "2018-11-28 10:24:07.633449"], ["updated_at", "2018-11-28 10:24:07.633449"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Drahff"], ["last_name", "Black-Briar"], ["power", 89], ["created_at", "2018-11-28 10:24:07.639102"], ["updated_at", "2018-11-28 10:24:07.639102"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Hadvar"], ["last_name", "The Lion"], ["power", 97], ["created_at", "2018-11-28 10:24:07.644953"], ["updated_at", "2018-11-28 10:24:07.644953"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Faralda"], ["last_name", "Hunter"], ["power", 23], ["created_at", "2018-11-28 10:24:07.652490"], ["updated_at", "2018-11-28 10:24:07.652490"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Irileth"], ["last_name", "Septim"], ["power", 45], ["created_at", "2018-11-28 10:24:07.660471"], ["updated_at", "2018-11-28 10:24:07.660471"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Brand-shei"], ["last_name", "Maccius"], ["power", 56], ["created_at", "2018-11-28 10:24:07.665922"], ["updated_at", "2018-11-28 10:24:07.665922"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Veezara"], ["last_name", "Krex"], ["power", 80], ["created_at", "2018-11-28 10:24:07.671901"], ["updated_at", "2018-11-28 10:24:07.671901"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Vanryth"], ["last_name", "Gray-Mane"], ["power", 27], ["created_at", "2018-11-28 10:24:07.684089"], ["updated_at", "2018-11-28 10:24:07.684089"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Endon"], ["last_name", "Lothaire"], ["power", 3], ["created_at", "2018-11-28 10:24:07.697109"], ["updated_at", "2018-11-28 10:24:07.697109"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Endon"], ["last_name", "Golden-Hilt"], ["power", 54], ["created_at", "2018-11-28 10:24:07.705090"], ["updated_at", "2018-11-28 10:24:07.705090"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Brill"], ["last_name", "Mallory"], ["power", 75], ["created_at", "2018-11-28 10:24:07.712279"], ["updated_at", "2018-11-28 10:24:07.712279"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Tonilia"], ["last_name", "The Fist"], ["power", 81], ["created_at", "2018-11-28 10:24:07.721619"], ["updated_at", "2018-11-28 10:24:07.721619"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Askar"], ["last_name", "The Lesser"], ["power", 17], ["created_at", "2018-11-28 10:24:07.730630"], ["updated_at", "2018-11-28 10:24:07.730630"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Iddra"], ["last_name", "The Fleet"], ["power", 66], ["created_at", "2018-11-28 10:24:07.738388"], ["updated_at", "2018-11-28 10:24:07.738388"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Khayla"], ["last_name", "Endell"], ["power", 92], ["created_at", "2018-11-28 10:24:07.744729"], ["updated_at", "2018-11-28 10:24:07.744729"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.2ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Inigo"], ["last_name", "Golden-Hilt"], ["power", 71], ["created_at", "2018-11-28 10:24:07.751350"], ["updated_at", "2018-11-28 10:24:07.751350"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Maliq"], ["last_name", "Krex"], ["power", 28], ["created_at", "2018-11-28 10:24:07.757978"], ["updated_at", "2018-11-28 10:24:07.757978"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Create (0.4ms)[0m  [1m[32mINSERT INTO "players" ("first_name", "last_name", "power", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Delvin"], ["last_name", "Newberry"], ["power", 20], ["created_at", "2018-11-28 10:24:07.770644"], ["updated_at", "2018-11-28 10:24:07.770644"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" ORDER BY "players"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-11-28 11:54:52 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ula/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  Rendered teams/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 178ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (require_tree argument must be a directory):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/cable.js:6
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___4556298347852751903_69987000306360'
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-28 11:54:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-28 11:56:03 +0100
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  Rendered teams/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (require_tree argument must be a directory):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/cable.js:6
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___4556298347852751903_69987010998400'
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-28 11:56:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-28 11:58:39 +0100
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  Rendered teams/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (require_tree argument must be a directory):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/cable.js:6
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___4556298347852751903_69987096093040'
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-28 11:58:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-28 11:59:03 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ula/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  Rendered teams/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 182ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (require_tree argument must be a directory):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/cable.js:6
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__206021663160856227_47051609244320'
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-28 11:59:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-28 12:00:35 +0100
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  Rendered teams/index.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (require_tree argument must be a directory):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/cable.js:6
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__206021663160856227_69912556781920'
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-28 12:00:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-28 12:00:37 +0100
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  Rendered teams/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (require_tree argument must be a directory):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/cable.js:6
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__206021663160856227_69912554803920'
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-28 12:00:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-28 12:01:21 +0100
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  Rendered teams/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (require_tree argument must be a directory):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/cable.js:6
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__206021663160856227_69912549597020'
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-28 12:01:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-28 12:03:16 +0100
+Processing by TeamsController#index as HTML
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE (captain) ORDER BY random() LIMIT ?[0m  [["LIMIT", 2]]
+  ↳ app/controllers/teams_controller.rb:8
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE NOT (captain) ORDER BY random() LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/controllers/teams_controller.rb:10
+  Rendering teams/index.html.erb within layouts/application
+  Rendered teams/index.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (require_tree argument must be a directory):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/cable.js:6
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__206021663160856227_69912559194280'
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-28 12:03:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-28 12:07:38 +0100
+Processing by TeamsController#index as HTML
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE (captain) ORDER BY random() LIMIT ?[0m  [["LIMIT", 2]]
+  ↳ app/controllers/teams_controller.rb:8
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE NOT (captain) ORDER BY random() LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/controllers/teams_controller.rb:10
+  Rendering teams/index.html.erb within layouts/application
+  Rendered teams/_team.html.erb (0.3ms)
+  Rendered teams/_team.html.erb (0.0ms)
+  Rendered teams/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (require_tree argument must be a directory):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7:     
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/cable.js:6
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__206021663160856227_69912555914840'
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-28 12:07:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/__web_console/repl_sessions/5c467f367053b1ba366f187759dd062b/trace" for 127.0.0.1 at 2018-11-28 12:07:59 +0100
+Started GET "/" for 127.0.0.1 at 2018-11-28 12:08:30 +0100
+Processing by TeamsController#index as HTML
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE (captain) ORDER BY random() LIMIT ?[0m  [["LIMIT", 2]]
+  ↳ app/controllers/teams_controller.rb:8
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE NOT (captain) ORDER BY random() LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/controllers/teams_controller.rb:10
+  Rendering teams/index.html.erb within layouts/application
+  Rendered teams/_team.html.erb (0.2ms)
+  Rendered teams/_team.html.erb (0.0ms)
+  Rendered teams/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 347ms (Views: 342.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-28 12:08:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-28 12:10:53 +0100
+Processing by TeamsController#index as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE (captain) ORDER BY random() LIMIT ?[0m  [["LIMIT", 2]]
+  ↳ app/controllers/teams_controller.rb:8
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE NOT (captain) ORDER BY random() LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/controllers/teams_controller.rb:10
+  Rendering teams/index.html.erb within layouts/application
+  Rendered teams/_team.html.erb (0.3ms)
+  Rendered teams/_team.html.erb (0.0ms)
+  Rendered teams/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 18ms (Views: 13.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-28 12:10:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-28 12:11:30 +0100
+Processing by TeamsController#index as HTML
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE (captain) ORDER BY random() LIMIT ?[0m  [["LIMIT", 2]]
+  ↳ app/controllers/teams_controller.rb:8
+  [1m[36mPlayer Load (1.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE NOT (captain) ORDER BY random() LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/controllers/teams_controller.rb:10
+  Rendering teams/index.html.erb within layouts/application
+  Rendered teams/_team.html.erb (0.3ms)
+  Rendered teams/_team.html.erb (0.1ms)
+  Rendered teams/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 36ms (Views: 21.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-28 12:11:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/index" for 127.0.0.1 at 2018-11-28 12:11:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-28 12:11:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/teams" for 127.0.0.1 at 2018-11-28 12:11:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/teams"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-28 12:11:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/teams/index" for 127.0.0.1 at 2018-11-28 12:11:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/teams/index"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-28 12:11:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-28 12:11:57 +0100
+Processing by TeamsController#index as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE (captain) ORDER BY random() LIMIT ?[0m  [["LIMIT", 2]]
+  ↳ app/controllers/teams_controller.rb:8
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE NOT (captain) ORDER BY random() LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/controllers/teams_controller.rb:10
+  Rendering teams/index.html.erb within layouts/application
+  Rendered teams/_team.html.erb (0.3ms)
+  Rendered teams/_team.html.erb (0.0ms)
+  Rendered teams/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 23ms (Views: 19.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-28 12:11:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-28 12:15:10 +0100
+Processing by TeamsController#index as HTML
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE (captain) ORDER BY random() LIMIT ?[0m  [["LIMIT", 2]]
+  ↳ app/controllers/teams_controller.rb:8
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE NOT (captain) ORDER BY random() LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/controllers/teams_controller.rb:10
+  Rendering teams/index.html.erb within layouts/application
+  Rendered teams/_team.html.erb (0.4ms)
+  Rendered teams/_team.html.erb (0.1ms)
+  Rendered teams/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 47ms (Views: 32.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-28 12:15:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-28 12:16:01 +0100
+Processing by TeamsController#index as HTML
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE (captain) ORDER BY random() LIMIT ?[0m  [["LIMIT", 2]]
+  ↳ app/controllers/teams_controller.rb:8
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE NOT (captain) ORDER BY random() LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/controllers/teams_controller.rb:10
+  Rendering teams/index.html.erb within layouts/application
+  Rendered teams/_team.html.erb (83.0ms)
+  Rendered teams/_team.html.erb (0.4ms)
+  Rendered teams/index.html.erb within layouts/application (85.3ms)
+Completed 200 OK in 110ms (Views: 105.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-28 12:16:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-28 12:19:00 +0100
+Processing by TeamsController#index as HTML
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE (captain) ORDER BY random() LIMIT ?[0m  [["LIMIT", 2]]
+  ↳ app/controllers/teams_controller.rb:8
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE NOT (captain) ORDER BY random() LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/controllers/teams_controller.rb:10
+  Rendering teams/index.html.erb within layouts/application
+  Rendered teams/_team.html.erb (1.1ms)
+  Rendered teams/_team.html.erb (1.1ms)
+  Rendered teams/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 60ms (Views: 19.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-28 12:19:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-28 12:36:51 +0100
+Processing by TeamsController#index as HTML
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE (captain) ORDER BY random() LIMIT ?[0m  [["LIMIT", 2]]
+  ↳ app/controllers/teams_controller.rb:8
+  [1m[36mPlayer Load (0.9ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE NOT (captain) ORDER BY random() LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/controllers/teams_controller.rb:10
+  Rendering teams/index.html.erb within layouts/application
+  Rendered teams/_team.html.erb (1.1ms)
+  Rendered teams/_team.html.erb (0.6ms)
+  Rendered teams/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 36ms (Views: 20.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-28 12:36:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-28 12:37:08 +0100
+Processing by TeamsController#index as HTML
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE (captain) ORDER BY random() LIMIT ?[0m  [["LIMIT", 2]]
+  ↳ app/controllers/teams_controller.rb:8
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE NOT (captain) ORDER BY random() LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/controllers/teams_controller.rb:10
+  Rendering teams/index.html.erb within layouts/application
+  Rendered teams/_team.html.erb (1.1ms)
+  Rendered teams/_team.html.erb (0.4ms)
+  Rendered teams/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 19ms (Views: 14.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-28 12:37:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
