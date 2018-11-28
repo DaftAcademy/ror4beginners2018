@@ -15,7 +15,7 @@
 - stworzenie nowego artysty (`create` wraz z akcją `new`)
 - aktualizację istniejącego artysty (`update` wraz z akcją `edit`).
 
-6. Popraw link prowadzący do artystów, znajdziesz go w pliku `_nav.html.erb`
+6. Popraw link prowadzący do artystów, znajdziesz go w pliku `_navbar.html.erb`
 
 7. W tabeli zawierającej listę wszystkich utworów:
 - popraw linki `edit` i `remove`
