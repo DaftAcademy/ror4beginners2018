@@ -32,7 +32,7 @@
     <session id="-408259434">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.12" value="1" />
@@ -341,11 +341,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23754000" />
+    <option name="totallyTimeSpent" value="23771000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="522" y="23" width="758" height="777" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31005585" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
