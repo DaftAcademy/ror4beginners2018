@@ -18,7 +18,6 @@ class FootballPlayerManager
   def copy_player
 	new_player = @player.dup
 	new_player.save
-	#https://stackoverflow.com/a/44935641
-	return new_player
+	return new_player #https://stackoverflow.com/a/44935641 - tests fail w/o return
   end
 end
