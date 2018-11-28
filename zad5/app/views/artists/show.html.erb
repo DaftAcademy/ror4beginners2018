@@ -1,22 +1,22 @@
 <div class="container">
   <%= link_to 'Add new track', new_track_url, class: 'btn btn-success pull-right' %>
-  <h2>Tracks Table</h2>
+  <h2>Artists tracks</h2>
 
   <table class="table">
     <thead>
       <tr>
         <th>Title</th>
-        <th class="text-center">Artists</th>
+        <th class="text-center">Link</th>
         <th class="text-center">Playlists</th>
         <th class="text-right">Actions</th>
       </tr>
     </thead>
     <tbody>
-      <% @tracks.each do |track| %>
+      <% @artist.tracks.each do |track| %>
         <tr>
           <td><%= track.title %></td>
           <td class="text-center">
-            <%= track.artist.name %>
+            <%= link_to track.title, track %>
           </td>
           <td class="text-center">
             <% track.playlists.each do |playlist| %>
