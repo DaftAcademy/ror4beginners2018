@@ -1,0 +1,16 @@
+<div id="wrapper">
+  <% @teams.each_with_index do |team, index| %>
+    <div class="team">
+      <h1> Team <%= index + 1 %></h1>
+      <ul> 
+        <% team.each do |player| %>
+          <li>
+            <span class="number"> <%= player.id %>. </span>
+            <%= player.first_name + ' ' + player.last_name %>
+            <%= set_captain_armband player.captain %>
+            </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>
