@@ -1,0 +1,20 @@
+<h1>Tamriel Tournament, Final Round - teams</h1>
+<% @teams.each do |team| %>
+	<%# @team_names.each do |name| %>
+		<h2><%= team.first %> </h2>
+			<table>
+				<tr>
+					<td>ID</td>
+					<td>First Name</td>
+					<td>Last Name</td>
+				</tr>
+				<% team.drop(1).each do |player| %>
+					<tr>
+						<td><%= player.id %><%= player.captain==true ? 'C' : '' %></td>
+						<td><%= player.first_name %></td>
+						<td><%= player.last_name %></td>
+					</tr>
+				<% end %>
+			</table>
+	<%# end %>
+<% end %>
