@@ -2,7 +2,7 @@
 
 class TracksController < ApplicationController
   before_action :set_track, only: %i[show update destroy edit]
-  before_action :set_artists_collection, only: %i[new edit]
+  before_action :set_artists_collection, only: %i[new edit create update]
 
   def index
     @tracks = Track.all
