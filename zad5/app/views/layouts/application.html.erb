@@ -12,6 +12,9 @@
   <body>
     <%= render partial: 'layouts/navbar' %>
     <div class="container">
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-info"><%= message %></div>
+      <% end %>
       <%= yield %>
     </div>
   </body>
