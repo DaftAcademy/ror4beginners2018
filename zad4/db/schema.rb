@@ -10,16 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_26_205639) do
-
-  create_table "players", force: :cascade do |t|
-    t.boolean "capitan", default: false, null: false
-    t.string "first_name", null: false
-    t.string "last_name", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "power"
-    t.integer "#<ActiveRecord::ConnectionAdapters::SQLite3::TableDefinition:0x0000000003b8fdf0>"
-  end
+ActiveRecord::Schema.define(version: 0) do
 
 end
