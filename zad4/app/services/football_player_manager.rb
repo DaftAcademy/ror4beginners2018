@@ -12,12 +12,12 @@ class FootballPlayerManager
   end
 
   def set_power(value)
-    Player.find_by(player.id).update(power: value)
+    player.update!(power: value)
   end
 
   def copy_player
-    duplicat = player.dup
-    duplicat.save
-    return duplicat
+    copy = player.dup
+    copy.save!
+    return copy
   end
 end

@@ -19,6 +19,6 @@ end
     first_name: Faker::ElderScrolls.first_name,
     last_name: Faker::ElderScrolls.last_name,
     power: Faker::Number.between(0, 99),
-    captain: true
+    capitan: true
   )
 end

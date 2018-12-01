@@ -1,0 +1,14 @@
+%table
+  %thead
+    %tr
+      %th Imie
+      %th Nazwisko
+      %th Siła
+      %th Kapitan
+    %tbody
+      - team.each do |player|
+        %tr{:class=> player.capitan ? 'capitan' : 'player'}
+          %td= player.first_name
+          %td= player.last_name
+          %td= player.power
+          %td= player.capitan ? '👍' : ''
