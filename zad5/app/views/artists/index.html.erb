@@ -1,0 +1,31 @@
+<div class="container">
+  <%= link_to 'Add new artist', new_artist_url, class: 'btn btn-success pull-right' %>
+  <h2>Artists Table</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th class="text-center">Artist</th>
+        <th class="text-center"></th>
+        <th class="text-right">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @artists.each do |artist| %>
+        <tr>
+          <td><%= artist.id %></td>
+          <td class="text-center">
+            <%= artist.name %>
+          </td>
+          <td class="text-center"></td>
+          <td class="text-right">
+            <%= link_to 'edit', edit_artist_url(artist), class: 'btn btn-warning' %>
+            <%= link_to 'remove', { action: :destroy, id: artist.id}, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'  %>
+            <%= link_to 'show', artist_url(artist), class: 'btn btn-success' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

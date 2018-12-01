@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2018_11_28_125329) do
 
   create_table "artists", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -29,13 +29,12 @@ ActiveRecord::Schema.define(version: 2018_11_28_125329) do
 
   create_table "playlists", force: :cascade do |t|
     t.string "title"
-    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "tracks", force: :cascade do |t|
-    t.string "title"
+    t.string "title", null: false
     t.integer "artist_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
