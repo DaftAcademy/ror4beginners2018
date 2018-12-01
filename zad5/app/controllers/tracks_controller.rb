@@ -21,11 +21,6 @@ class TracksController < ApplicationController
     end
   end
 
-  def edit
-    @track = Track.find(params[:id])
-    render 'edit'
-  end
-
   def update
     if @track.update(track_params)
       redirect_to tracks_url, notice: 'Track has been updated'
@@ -35,7 +30,7 @@ class TracksController < ApplicationController
   end
 
   def destroy
-    Track.destroy(params[:id])
+    @track.destroy!
     redirect_to tracks_url, notice: 'Track has been removed'
   end
 
