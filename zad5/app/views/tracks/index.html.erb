@@ -1,7 +1,6 @@
 <div class="container">
   <%= link_to 'Add new track', new_track_url, class: 'btn btn-success pull-right' %>
   <h2>Tracks Table</h2>
-
   <table class="table">
     <thead>
       <tr>
@@ -16,12 +15,16 @@
         <tr>
           <td><%= track.title %></td>
           <td class="text-center">
-            <%= track.artist.name %>
+            <%= link_to track.artist.name, track_path(track) %>
           </td>
-          <td class="text-center"></td>
+          <td class="text-center">
+            <% track.playlists.each do |t| %>
+              <p> <%= link_to t.title, playlist_path(t) %></p>
+            <% end %>
+          </td>
           <td class="text-right">
-            <%= link_to 'edit', '#', class: 'btn btn-warning' %>
-            <%= link_to 'remove', '#', class: 'btn btn-danger'  %>
+            <%= link_to 'Edit', edit_track_path(track), class: 'btn btn-warning' %>
+            <%= link_to 'Remove', track_path(track), method: :delete, class: 'btn btn-danger' %>
           </td>
         </tr>
       <% end %>

@@ -12,25 +12,35 @@ class TracksController < ApplicationController
     @track = Track.new
   end
 
+  def edit
+    @artist = Track.find(params[:id])
+    render :new
+  end
+
   def create
     @track = Track.new(track_params)
     if @track.save
       redirect_to tracks_url, notice: 'Track has been saved'
     else
-      render 'new'
+      render :new
     end
   end
 
   def update
+    @track = Track.find(params[:id])
     if @track.update(track_params)
       redirect_to tracks_url, notice: 'Track has been updated'
     else
-      render 'edit'
+      render :edit
     end
   end
 
+  def show
+    @artist = Artist.find(params[:id])
+  end
+
   def destroy
-    @track.destroy!
+    Track.destroy(params[:id])
     redirect_to tracks_url, notice: 'Track has been removed'
   end
 
