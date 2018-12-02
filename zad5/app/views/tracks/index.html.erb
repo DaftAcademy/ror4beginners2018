@@ -16,10 +16,12 @@
         <tr>
           <td><%= track.title %></td>
           <td class="text-center">
-            <%= link_to track.artist.name, artist_url(track.artist.id), artists: :show %>
+            <%= link_to track.artist.name, artist_url(track.artist) %>
           </td>
           <td class="text-center">
-            <%= link_to track.playlists.ids, "/playlists/#{track.playlists.ids[0]}" , playlists: :show %>
+            <% track.playlists.each do |playlist| %>
+              <%= link_to playlist.title, playlist_url(playlist) %>
+            <%end%>
           </td>
           <td class="text-right">
             <%= link_to 'edit', edit_track_url(track), class: 'btn btn-warning' %>
@@ -30,3 +32,4 @@
     </tbody>
   </table>
 </div>
+
