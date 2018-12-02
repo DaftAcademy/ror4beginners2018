@@ -9,6 +9,10 @@ class ArtistsController < ApplicationController
         @artist = Artist.new
     end
 
+    def show
+        @artist = set_artist
+    end
+
     def create
         @artist = Artist.new(artist_params)
         if @artist.save
@@ -21,6 +25,14 @@ class ArtistsController < ApplicationController
     def destroy
         @artist.destroy!
         redirect_to artists_url, notice: 'Artist has been removed!'
+    end
+
+    def update
+        if @artist.update(artist_params)
+            redirect_to artist_url, notice: 'Artist has been updated!'
+        else
+            render 'edit'
+        end
     end
 
     private 
