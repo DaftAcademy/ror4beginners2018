@@ -16,12 +16,14 @@
         <tr>
           <td><%= track.title %></td>
           <td class="text-center">
-            <%= track.artist.name %>
+            <%= link_to track.artist.name, artist_url(track.artist.id), artists: :show %>
           </td>
-          <td class="text-center"></td>
+          <td class="text-center">
+            <%= link_to track.playlists.ids, "/playlists/#{track.playlists.ids[0]}" , playlists: :show %>
+          </td>
           <td class="text-right">
-            <%= link_to 'edit', '#', class: 'btn btn-warning' %>
-            <%= link_to 'remove', '#', class: 'btn btn-danger'  %>
+            <%= link_to 'edit', edit_track_url(track), class: 'btn btn-warning' %>
+            <%= link_to 'remove', track_url(track), class: 'btn btn-danger', method: :delete %>
           </td>
         </tr>
       <% end %>

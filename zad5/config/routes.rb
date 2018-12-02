@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   root 'tracks#index'
 
-  resources :tracks
+  resources :tracks, only: %i[index new create update edit destroy]
   resources :playlists, only: %i[index show]
+  resources :artists
 end

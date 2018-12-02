@@ -1,0 +1,11 @@
+<div class="container">
+  <h2>Enter new artist</h2>
+  <%= simple_form_for @artist do |f| %>
+    <%= f.input :name, label: 'Add name of the artist' %>
+    <%= f.button :submit, class: 'btn btn-primary' %>
+  <% end %>
+  </br>
+  <% @artist.errors.full_messages.each do |error| %>
+    <%= error %></br>
+  <% end %>
+</div>
