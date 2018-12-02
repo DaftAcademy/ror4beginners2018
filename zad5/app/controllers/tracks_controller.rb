@@ -30,7 +30,7 @@ class TracksController < ApplicationController
   end
 
   def destroy
-    @track.destroy!
+    Track.destroy(params[:id])
     redirect_to tracks_url, notice: 'Track has been removed'
   end
 
