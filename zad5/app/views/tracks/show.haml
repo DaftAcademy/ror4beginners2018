@@ -1,0 +1,13 @@
+%div.container
+  %h2 Track: #{@track.title}
+  %table.table
+    %thead
+      %tr
+        %th ID
+        %th Artist
+    %tr
+      %td #{@track.id}
+      %td #{link_to @track.artist.name, artist_url(@track.artist), class: 'btn btn-primary'}
+      %td.text-right
+        = link_to 'edit', edit_track_url(@track), class: 'btn btn-warning'
+        = link_to 'remove', track_url(@track), class: 'btn btn-danger', method: :delete

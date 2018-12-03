@@ -7,5 +7,5 @@
         %th Artist
     - @playlist.tracks.each do |track|
       %tr
-        %td #{track.title}
-        %td #{track.artist.name}
+        %td #{link_to track.title, track_url(track), class: 'btn btn-info'}
+        %td #{link_to track.artist.name, artist_url(track.artist), class: 'btn btn-primary'}

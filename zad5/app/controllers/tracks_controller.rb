@@ -8,8 +8,12 @@ class TracksController < ApplicationController
     @tracks = Track.all
   end
 
+  def show
+  end
+
   def new
     @track = Track.new
+    @artist = Artist.find_by(id: params[:artist])
   end
 
   def create

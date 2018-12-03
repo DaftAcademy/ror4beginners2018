@@ -1,17 +1,14 @@
 %div.container
-  = link_to 'Add new track', new_track_url, class: 'btn btn-success pull-right'
-  %h2 Tracks Table
+  = link_to 'Add new track', new_track_url(artist: @artist), class: 'btn btn-success pull-right'
+  %h2 #{@artist.name}
   %table.table
     %thead
       %tr
         %th Title
-        %th.text-center Artists
-        %th.text-center Playlists
-        %th.text-right Actions
+        %th Playlist
     - @tracks.each do |track|
       %tr
         %td #{link_to track.title, track_url(track), class: 'btn btn-info'}
-        %td.text-center #{link_to track.artist.name, artist_url(artist(track)), class: 'btn btn-primary'}
         %td.text-center 
           - if playlist = read_playlist(track)
             = link_to playlist.title, playlist_url(playlist), class: 'btn btn-success'
