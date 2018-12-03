@@ -1,0 +1,20 @@
+<div class="container">
+  <h2><%= @playlist.title %> playlist </h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Artist</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @playlist.tracks.each do |track| %>
+        <tr>
+          <td><%= track.title %></td>
+          <td><%= track.artist.name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
