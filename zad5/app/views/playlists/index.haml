@@ -5,9 +5,7 @@
       %tr
         %th Title
         %th.text-center Songs
-        %th.text-right Actions
     - @playlists.each do |playlist|
       %tr
-        %td #{playlist.title}
+        %td #{link_to playlist.title, playlist_url(playlist), class: 'btn btn-success'}
         %td.text-center #{playlist.tracks.size}
-        %td.text-right #{link_to 'show', playlist_url(playlist), class: 'btn btn-success'}
