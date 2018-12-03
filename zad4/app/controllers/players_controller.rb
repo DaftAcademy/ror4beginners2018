@@ -1,7 +1,5 @@
 class PlayersController < ApplicationController
-
-  @captains
-  @players
+  TEAM_SIZE = 11
 
   def index
     setup

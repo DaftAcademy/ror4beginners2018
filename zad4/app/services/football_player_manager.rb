@@ -8,15 +8,16 @@ class FootballPlayerManager
   end
 
   def stronger_players
-    Player.where("power > ?", @player[:power])
+    Player.where("power > ?", player.power)
   end
 
   def set_power(value)
-    @player.update(power: value)
+    player.update(power: value)
   end
 
   def copy_player
-    clone = @player.dup
-    clone if clone.save
+    clone = player.dup
+    clone.save
+    clone
   end
 end
