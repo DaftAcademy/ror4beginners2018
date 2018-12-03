@@ -1,0 +1,13 @@
+%div.container
+  %h2 Playlist Table
+  %table.table
+    %thead
+      %tr
+        %th Title
+        %th.text-center Songs
+        %th.text-right Actions
+    - @playlists.each do |playlist|
+      %tr
+        %td #{playlist.title}
+        %td.text-center #{playlist.tracks.size}
+        %td.text-right #{link_to 'show', playlist_url(playlist), class: 'btn btn-success'}
