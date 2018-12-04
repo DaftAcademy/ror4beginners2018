@@ -1,0 +1,23 @@
+<div class="container">
+  <%= link_to 'Add new artist', new_artist_url, class: 'btn btn-success pull-right' %>
+  <h2>Artists Table</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+    
+        <th class="text-left">Artists</th>
+  
+      </tr>
+    </thead>
+    <tbody>
+      <% @artists.each do |artist| %>
+        <tr>
+          <td><%= artist.name %></td>
+          <td><%= link_to 'show', artist_url(artist), class: 'btn btn-success' %></td>
+        
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
