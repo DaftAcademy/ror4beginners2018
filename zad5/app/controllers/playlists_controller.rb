@@ -8,4 +8,5 @@ class PlaylistsController < ApplicationController
   def index
     @playlists = Playlist.includes(:tracks)
   end
+
 end
