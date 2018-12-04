@@ -1,0 +1,24 @@
+<br/>
+<%= link_to 'Add new rock', new_rock_path %>
+<br/><br/>
+All the rocks:
+<br/><br/>
+<table>
+  <thead>
+  <td>Name</td>
+  <td>Weight</td>
+  <td>Actions</td>
+  </thead>
+  <% @rocks.each do |rock| %>
+  <tr>
+    <td><%= rock.nickname.present? ? rock.nickname : "rock_#{rock.id}" %></td>
+    <td> <%= rock.weight %></td>
+    <td>
+      <%= link_to 'Show', rock_path(rock) %>
+      <%= link_to 'Edit', edit_rock_path(rock) %>
+      <%= link_to 'Destroy', rock_path(rock), method: :delete %>
+    </td>
+  </tr>
+  <% end %>
+  </thead>
+</table>

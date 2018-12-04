@@ -1,0 +1,14 @@
+<br/>
+Enter rock details:
+<br/><br/>
+<%= form_for @rock do |f| %>
+  <%= f.label :nickname %>
+  <%= f.text_field :nickname %>
+  <%= f.label :weight %>
+  <%= f.text_field :weight %>
+  <%= f.submit %>
+<% end %>
+<br/>
+<% @rock.errors.full_messages.each do |error| %>
+  <%= error %> <br/>
+<% end %>
