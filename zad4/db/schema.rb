@@ -10,13 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_11_26_165225) do
+=======
+ActiveRecord::Schema.define(version: 2018_11_28_150305) do
+>>>>>>> 5ce1fe2de31db652fbead0b82e9d9d1a04d1d8ca
 
   create_table "players", force: :cascade do |t|
     t.boolean "captain", default: false, null: false
     t.string "first_name", null: false
     t.string "last_name", null: false
     t.integer "power"
+<<<<<<< HEAD
+=======
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+>>>>>>> 5ce1fe2de31db652fbead0b82e9d9d1a04d1d8ca
   end
 
 end

@@ -1,0 +1,8 @@
+---
+1.0.0 google-protobuf:= 3.6.1|checksum:2897c9b707ffeee120bd610dd4d1a26c1a48474e818bc8e9b4b98da220a4707f,ruby:>= 1.9.3
+1.0.4 google-protobuf:= 3.6.1|checksum:1ce29717cf1f2c8fbecd47bc8472a20901da727c24d206d05eefd25b96019f7d,ruby:>= 1.9.3
+1.1.1 google-protobuf:= 3.6.1|checksum:4f8a49fe75571d88fc9f3dc827359ff564d41044957f74e56c169ca087279e49,ruby:>= 1.9.3
+1.1.2 google-protobuf:= 3.6.1|checksum:6203bb78adcaef97e7d41aab672dde59de1fd709e5b89f5018ab22947d1439e5,ruby:>= 1.9.3
+2.0.0 google-protobuf:= 3.6.1|checksum:2c02fab5dc2e22846cf972fd5030800d0b93f2670687648bd16bf9b7d33e422b,ruby:>= 1.9.3
+2.1.0 google-protobuf:= 3.6.1|checksum:53b631382080bbedbe3ff816200cbfa674872aaffc7995baaf6064a26591b627,ruby:>= 1.9.3
+2.1.1 google-protobuf:= 3.6.1|checksum:bac351579327b3ba57fa747cc2f6a7b8572a6a5f40ff4891e9308141c3ee6b1c,ruby:>= 1.9.3

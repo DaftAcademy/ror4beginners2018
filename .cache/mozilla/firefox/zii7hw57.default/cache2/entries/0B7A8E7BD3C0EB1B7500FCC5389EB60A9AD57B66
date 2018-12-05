@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Api</title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="t39JCy21W2nOiahkxAWGcAlDUkPUmm9NjkGO+uQFn0umbBmbD8s1f4z6rlV+1pG5Nvos9MaPjoebJJbYqyEr7A==" />
+    
+
+    <link rel="stylesheet" media="all" href="/assets/application.self-6e789278da832cad448d7329705b384f0317f36d1a3028e2d01e3f6e18b656df.css?body=1" data-turbolinks-track="reload" />
+    <script src="/assets/rails-ujs.self-3b600681e552d8090230990c0a2e8537aff48159bea540d275a620d272ba33a0.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" data-turbolinks-track="reload"></script>
+<script src="/assets/application.self-eba3cb53a585a0960ade5a8cb94253892706bb20e3f12097a13463b1f12a4528.js?body=1" data-turbolinks-track="reload"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">REST</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="http://localhost:3000/tracks">Tracks</a></li>
+        <li><a href="http://localhost:3000/playlists">Playlists</a></li>
+        <li><a href="http://localhost:3000/artists">Artists</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+    <div class="container">
+      <div class="container">
+  <a class="btn btn-success pull-right" href="http://localhost:3000/tracks/new">Add new track</a>
+  <h2>Tracks Table</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th class="text-center">Artists</th>
+        <th class="text-center">Playlists</th>
+        <th class="text-right">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td>Ruchome Piaski</td>
+        <td class="text-center">
+          <a href="http://localhost:3000/artists/2">Heyyyyy</a>
+        </td>
+        <td class="text-center">
+            <a href="/playlists/1">Karaoke</a>
+        </td>
+       
+        <td class="text-center"></td>
+        
+        <td class="text-right">
+         
+          <a class="btn btn-warning" href="http://localhost:3000/tracks/1/edit">edit</a>
+          <a class="btn btn-danger" rel="nofollow" data-method="delete" href="http://localhost:3000/tracks/1">remove</a>
+        </td>
+        </td>
+      </tr>
+      </tr>
+        <tr>
+        <td>Moja i twoja nadzieja</td>
+        <td class="text-center">
+          <a href="http://localhost:3000/artists/2">Heyyyyy</a>
+        </td>
+        <td class="text-center">
+            <a href="/playlists/1">Karaoke</a>
+        </td>
+       
+        <td class="text-center"></td>
+        
+        <td class="text-right">
+         
+          <a class="btn btn-warning" href="http://localhost:3000/tracks/2/edit">edit</a>
+          <a class="btn btn-danger" rel="nofollow" data-method="delete" href="http://localhost:3000/tracks/2">remove</a>
+        </td>
+        </td>
+      </tr>
+      </tr>
+        <tr>
+        <td>Kolorowy wiatr</td>
+        <td class="text-center">
+          <a href="http://localhost:3000/artists/10">Nagly Atak Spawacza</a>
+        </td>
+        <td class="text-center">
+            <a href="/playlists/1">Karaoke</a>
+        </td>
+       
+        <td class="text-center"></td>
+        
+        <td class="text-right">
+         
+          <a class="btn btn-warning" href="http://localhost:3000/tracks/4/edit">edit</a>
+          <a class="btn btn-danger" rel="nofollow" data-method="delete" href="http://localhost:3000/tracks/4">remove</a>
+        </td>
+        </td>
+      </tr>
+      </tr>
+        <tr>
+        <td>Harvest moon</td>
+        <td class="text-center">
+          <a href="http://localhost:3000/artists/5">Jane Birkin</a>
+        </td>
+        <td class="text-center">
+            <a href="/playlists/2">Chill</a>
+        </td>
+       
+        <td class="text-center"></td>
+        
+        <td class="text-right">
+         
+          <a class="btn btn-warning" href="http://localhost:3000/tracks/5/edit">edit</a>
+          <a class="btn btn-danger" rel="nofollow" data-method="delete" href="http://localhost:3000/tracks/5">remove</a>
+        </td>
+        </td>
+      </tr>
+      </tr>
+        <tr>
+        <td>Golden Brown</td>
+        <td class="text-center">
+          <a href="http://localhost:3000/artists/6">Bedhead</a>
+        </td>
+        <td class="text-center">
+            <a href="/playlists/2">Chill</a>
+        </td>
+       
+        <td class="text-center"></td>
+        
+        <td class="text-right">
+         
+          <a class="btn btn-warning" href="http://localhost:3000/tracks/6/edit">edit</a>
+          <a class="btn btn-danger" rel="nofollow" data-method="delete" href="http://localhost:3000/tracks/6">remove</a>
+        </td>
+        </td>
+      </tr>
+      </tr>
+        <tr>
+        <td>Bushel Hyde</td>
+        <td class="text-center">
+          <a href="http://localhost:3000/artists/7">Jessica Pratt</a>
+        </td>
+        <td class="text-center">
+            <a href="/playlists/2">Chill</a>
+        </td>
+       
+        <td class="text-center"></td>
+        
+        <td class="text-right">
+         
+          <a class="btn btn-warning" href="http://localhost:3000/tracks/7/edit">edit</a>
+          <a class="btn btn-danger" rel="nofollow" data-method="delete" href="http://localhost:3000/tracks/7">remove</a>
+        </td>
+        </td>
+      </tr>
+      </tr>
+        <tr>
+        <td>Twin Peaks Theme</td>
+        <td class="text-center">
+          <a href="http://localhost:3000/artists/8">Angelo Badalamenti</a>
+        </td>
+        <td class="text-center">
+            <a href="/playlists/2">Chill</a>
+        </td>
+       
+        <td class="text-center"></td>
+        
+        <td class="text-right">
+         
+          <a class="btn btn-warning" href="http://localhost:3000/tracks/8/edit">edit</a>
+          <a class="btn btn-danger" rel="nofollow" data-method="delete" href="http://localhost:3000/tracks/8">remove</a>
+        </td>
+        </td>
+      </tr>
+      </tr>
+        <tr>
+        <td>By This River</td>
+        <td class="text-center">
+          <a href="http://localhost:3000/artists/9">Brian Eno</a>
+        </td>
+        <td class="text-center">
+            <a href="/playlists/2">Chill</a>
+        </td>
+       
+        <td class="text-center"></td>
+        
+        <td class="text-right">
+         
+          <a class="btn btn-warning" href="http://localhost:3000/tracks/9/edit">edit</a>
+          <a class="btn btn-danger" rel="nofollow" data-method="delete" href="http://localhost:3000/tracks/9">remove</a>
+        </td>
+        </td>
+      </tr>
+      </tr>
+        <tr>
+        <td>Anty-Liroy</td>
+        <td class="text-center">
+          <a href="http://localhost:3000/artists/10">Nagly Atak Spawacza</a>
+        </td>
+        <td class="text-center">
+        </td>
+       
+        <td class="text-center"></td>
+        
+        <td class="text-right">
+         
+          <a class="btn btn-warning" href="http://localhost:3000/tracks/10/edit">edit</a>
+          <a class="btn btn-danger" rel="nofollow" data-method="delete" href="http://localhost:3000/tracks/10">remove</a>
+        </td>
+        </td>
+      </tr>
+      </tr>
+
+    </div>
+  </body>
+</html>
+$≠	ü§      \&Ö\&Ü?…ıo           :http://localhost:3000/tracks necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: text/html; charset=utf-8
+ETag: W/"4f63564280687eaf923db03544d208a0"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 99306226-e73b-49e9-b016-65b08fbc5b23
+X-Runtime: 0.387142
+ original-response-headers X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: text/html; charset=utf-8
+ETag: W/"4f63564280687eaf923db03544d208a0"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _api_session=%2FVNgBUB4uSPno4bw6d0pxFQ46qJROh0bC98k9ReFj9qWJHKVQGF2vfIOzHlk0sYoGL4QUTgCWDZvlVWs3WfUnCwZsDXw1ER8N6wSk9KzMXK%2FDdJtkifZu%2BN8zgqVXWyuYqvc4ZNm47oaZiT0mqKfTMWPM%2FItOI97P4OIO0itUEky77UEgTyDJ6M7HQ8cvZwjkJetPCn8KzlOTx6DbR3DBigdK1C6K3xhgA5R4wOt9GU3nu8%3D--jDNM4B9n8hogfDlp--gg9mXr2zeOOq7mxRTI4gAQ%3D%3D; path=/; HttpOnly
+X-Request-Id: 99306226-e73b-49e9-b016-65b08fbc5b23
+X-Runtime: 0.387142
+Transfer-Encoding: chunked
+ uncompressed-len 0 net-response-time-onstart 393 net-response-time-onstop 432 predictor::resource-count 17 predictor::http://localhost:3000/assets/application.self-6e789278da832cad448d7329705b384f0317f36d1a3028e2d01e3f6e18b656df.css?body=1 1,1,1543972485,4096 predictor::http://localhost:3000/assets/rails-ujs.self-3b600681e552d8090230990c0a2e8537aff48159bea540d275a620d272ba33a0.js?body=1 1,1,1543972485,4096 predictor::http://localhost:3000/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1 1,1,1543972485,4096 predictor::http://localhost:3000/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1 1,1,1543972485,4096 predictor::http://localhost:3000/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1 1,1,1543972485,4096 predictor::http://localhost:3000/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1 1,1,1543972485,4096 predictor::http://localhost:3000/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1 1,1,1543972485,4096 predictor::http://localhost:3000/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1 1,1,1543972485,4096 predictor::http://localhost:3000/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1 1,1,1543972485,4096 predictor::http://localhost:3000/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1 1,1,1543972485,4096 predictor::http://localhost:3000/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1 1,1,1543972485,4096 predictor::http://localhost:3000/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1 1,1,1543972485,4096 predictor::http://localhost:3000/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1 1,1,1543972485,4096 predictor::http://localhost:3000/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1 1,1,1543972485,4096 predictor::http://localhost:3000/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1 1,1,1543972485,4096 predictor::http://localhost:3000/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1 1,1,1543972485,4096 predictor::http://localhost:3000/assets/application.self-eba3cb53a585a0960ade5a8cb94253892706bb20e3f12097a13463b1f12a4528.js?body=1 1,1,1543972485,4096   ' 

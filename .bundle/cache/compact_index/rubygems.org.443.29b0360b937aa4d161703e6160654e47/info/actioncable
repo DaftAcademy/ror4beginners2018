@@ -1,0 +1,54 @@
+---
+0.0.0 |checksum:505c6770a5ec896244d31d7eac08663696d22140493ddb820f66d12670b669d2
+5.0.0.beta1 actionpack:= 5.0.0.beta1,celluloid:~> 0.17.2,coffee-rails:~> 4.1.0,em-hiredis:~> 0.3.0,faye-websocket:~> 0.10.0,redis:~> 3.0,websocket-driver:~> 0.6.1|checksum:270fe61cbdbae56f496858bbe8adecde60a8ba1329f173a99dc84f5f75cd963c,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.0.0.beta1.1 actionpack:= 5.0.0.beta1.1,celluloid:~> 0.17.2,coffee-rails:~> 4.1.0,em-hiredis:~> 0.3.0,faye-websocket:~> 0.10.0,redis:~> 3.0,websocket-driver:~> 0.6.1|checksum:a5fff3b6d2ee4d8e48ea391d9c7bb0f7f2cb43e352a7986b306e67a2d1367fec,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.0.0.beta2 actionpack:= 5.0.0.beta2,nio4r:~> 1.2,websocket-driver:~> 0.6.1|checksum:1b3f3d4d2fb08895552d9d906a55f8e26786e851e0c47b2c1ff7f75ab5891f97,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.0.0.beta3 actionpack:= 5.0.0.beta3,nio4r:~> 1.2,websocket-driver:~> 0.6.1|checksum:77bf615d4dd384ffbe7738bbf5d35a9400fd6abe743fbc8d235c516f77028b9e,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.0.0.beta4 actionpack:= 5.0.0.beta4,nio4r:~> 1.2,websocket-driver:~> 0.6.1|checksum:6ad5f4dfd30e724d99c3d1d18638885b0196fd2e76c1684698f7c1c00e5c6c1a,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.0.0.rc1 actionpack:= 5.0.0.rc1,nio4r:~> 1.2,websocket-driver:~> 0.6.1|checksum:548468f07d94672590b3f0562976e6bdf4f168e432e95d0a2db949abaefdc046,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.0.0.racecar1 actionpack:= 5.0.0.racecar1,nio4r:~> 1.2,websocket-driver:~> 0.6.1|checksum:5468cf8eb95a7147dacb78b82814f9356896db7f634cbad0f793379d36d3e036,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.0.0.rc2 actionpack:= 5.0.0.rc2,nio4r:~> 1.2,websocket-driver:~> 0.6.1|checksum:f41e572146bfb6bb2a3a27abd6a8d51eb0f8a4f58be1c6eafb25eab7282487b5,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.0.0 actionpack:= 5.0.0,nio4r:~> 1.2,websocket-driver:~> 0.6.1|checksum:43ced9836ce73bb42eb3824aa3cb02e7cfe8837073a248f942d1b0c9f39ee8f4,ruby:>= 2.2.2
+5.0.0.1 actionpack:= 5.0.0.1,nio4r:~> 1.2,websocket-driver:~> 0.6.1|checksum:b77c42c6118a8d50c866c5c00ec743e1369b33299b23181f3d1020f82e3c176c,ruby:>= 2.2.2
+5.0.1.rc1 actionpack:= 5.0.1.rc1,nio4r:~> 1.2,websocket-driver:~> 0.6.1|checksum:09db8f9a05ea211119336521a14bb4b03241eb6c2824ececff7e7a6f854e406f,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.0.1.rc2 actionpack:= 5.0.1.rc2,nio4r:~> 1.2,websocket-driver:~> 0.6.1|checksum:5aac24b748e19c72e6bb3164fcd07c801887d38c0bf83d3e406041345b214ca8,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.0.1 actionpack:= 5.0.1,nio4r:~> 1.2,websocket-driver:~> 0.6.1|checksum:a7ddffa73c581f9f1369a8d9048171036ba46cf7c410057c5cf944ac90dfbe00,ruby:>= 2.2.2
+5.1.0.beta1 actionpack:= 5.1.0.beta1,nio4r:~> 2.0,websocket-driver:~> 0.6.1|checksum:5498cdd7fdca754ad5823a8d5e77df1619851a53ee6d48f54ff3377076550b3a,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.0.2.rc1 actionpack:= 5.0.2.rc1,nio4r:< 3.0&>= 1.2,websocket-driver:~> 0.6.1|checksum:89e447f43e924c465d4bc19efe333e67966daddb3d163cf6cf9b324578628811,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.0.2 actionpack:= 5.0.2,nio4r:< 3.0&>= 1.2,websocket-driver:~> 0.6.1|checksum:bec943d44cc3c91b1be7ed9dd0a750e89668035089905f8b357eafb7019402e0,ruby:>= 2.2.2
+5.1.0.rc1 actionpack:= 5.1.0.rc1,nio4r:~> 2.0,websocket-driver:~> 0.6.1|checksum:9d02e33571159294989efedb18b5f573ba34bd4f9b682a9f3145dceeac6b19c1,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.1.0.rc2 actionpack:= 5.1.0.rc2,nio4r:~> 2.0,websocket-driver:~> 0.6.1|checksum:30577ae9d82c29ccf1134820b83845adcff7e11a4f378f22f9388bfe4d3e0550,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.1.0 actionpack:= 5.1.0,nio4r:~> 2.0,websocket-driver:~> 0.6.1|checksum:8cb257ed9679c347d6c003f65d129d265b1f711e1f3f3c83f88b47a10e0c1989,ruby:>= 2.2.2
+5.0.3 actionpack:= 5.0.3,nio4r:< 3.0&>= 1.2,websocket-driver:~> 0.6.1|checksum:7b8d1c987dd7f424a293254985165ef6fccfdda65086ad86ea0917162670feed,ruby:>= 2.2.2
+5.1.1 actionpack:= 5.1.1,nio4r:~> 2.0,websocket-driver:~> 0.6.1|checksum:4aac15edc70018b060928202560ab9178a2e580c6e1215658feb804f8cb0b706,ruby:>= 2.2.2
+5.0.4.rc1 actionpack:= 5.0.4.rc1,nio4r:< 3.0&>= 1.2,websocket-driver:~> 0.6.1|checksum:c99354a6392225b29f01f2c0c73d27cd641a247298871640eeee032d1e6d9f58,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.0.4 actionpack:= 5.0.4,nio4r:< 3.0&>= 1.2,websocket-driver:~> 0.6.1|checksum:f296d82b6494bc6591963f2cd91a08f6853f3ce9b784ab8a6bada5588ceee280,ruby:>= 2.2.2
+5.1.2.rc1 actionpack:= 5.1.2.rc1,nio4r:~> 2.0,websocket-driver:~> 0.6.1|checksum:ae90de7d8f5d1129a162e9419b65e08870a433ed4eb067bcd44be161de394773,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.1.2 actionpack:= 5.1.2,nio4r:~> 2.0,websocket-driver:~> 0.6.1|checksum:27943a2642cd94478a88d4e239bb1467476d2acd10f0f588b220e05367163524,ruby:>= 2.2.2
+5.1.3.rc1 actionpack:= 5.1.3.rc1,nio4r:~> 2.0,websocket-driver:~> 0.6.1|checksum:3716fe810ac09651160af680e0622dba606eadc3532dc6100a09bc3dc46d8a79,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.0.5.rc1 actionpack:= 5.0.5.rc1,nio4r:< 3.0&>= 1.2,websocket-driver:~> 0.6.1|checksum:71ae996b0cbadc4836d8de61058870fe3d7ae275c5a3d345b851ca8b88e7c5a7,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.1.3.rc2 actionpack:= 5.1.3.rc2,nio4r:~> 2.0,websocket-driver:~> 0.6.1|checksum:f2a510b5f274e7cdb9f18dbab316fe1fa703ba91af5e031fe807355633728b3b,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.0.5.rc2 actionpack:= 5.0.5.rc2,nio4r:< 3.0&>= 1.2,websocket-driver:~> 0.6.1|checksum:dfcbee8aca863312a170b1075d9a740cfaf60c68d9a4351e23d2783dd63450a1,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.0.5 actionpack:= 5.0.5,nio4r:< 3.0&>= 1.2,websocket-driver:~> 0.6.1|checksum:479efb52e6b6fedfcafcd3530be24dc7b9829dd41e0f5a37212ed4d67146f51b,ruby:>= 2.2.2
+5.1.3.rc3 actionpack:= 5.1.3.rc3,nio4r:~> 2.0,websocket-driver:~> 0.6.1|checksum:f1b9758a78543bb27f65946a65a94e803140787b781f24983c696d89315685ea,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.1.3 actionpack:= 5.1.3,nio4r:~> 2.0,websocket-driver:~> 0.6.1|checksum:4cfe1343217caa199ce2a2de485a62271b0c81e8c3cf72f7c039c5eddf3c7bd0,ruby:>= 2.2.2
+5.0.6.rc1 actionpack:= 5.0.6.rc1,nio4r:< 3.0&>= 1.2,websocket-driver:~> 0.6.1|checksum:0490ac6c4621756871839ad584f0a0349a72a9ccdeac0f72dafd3539638ba5ef,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.1.4.rc1 actionpack:= 5.1.4.rc1,nio4r:~> 2.0,websocket-driver:~> 0.6.1|checksum:6ebb05e31a5d46379f638092742aa1543ab3522302a62351de9e5dc746fc7c77,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.0.6 actionpack:= 5.0.6,nio4r:< 3.0&>= 1.2,websocket-driver:~> 0.6.1|checksum:8321d86a6bb9ec85b5189093139bbdfb87ad1935166e5c0eac422068a2a6e515,ruby:>= 2.2.2
+5.1.4 actionpack:= 5.1.4,nio4r:~> 2.0,websocket-driver:~> 0.6.1|checksum:47d968f5636aa2ee88cb6306a7cb8b426b2156c93851628a354cae9139d56916,ruby:>= 2.2.2
+5.2.0.beta1 actionpack:= 5.2.0.beta1,nio4r:~> 2.0,websocket-driver:~> 0.6.1|checksum:9a10ac362492c9c4d4e28e45b592e63f9035ec4c6e9f7278a4bb313358df41aa,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.2.0.beta2 actionpack:= 5.2.0.beta2,nio4r:~> 2.0,websocket-driver:~> 0.6.1|checksum:70c2983f1a07ec04c52819630d83bf456efc8d553ebd1b814585563c849eaa45,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.2.0.rc1 actionpack:= 5.2.0.rc1,nio4r:~> 2.0,websocket-driver:>= 0.6.1|checksum:96bcdda3bd43ac77c34e4f2c7273eddf2ab80ce380ea8ffa9e1a971bd5bd4d8a,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.1.5.rc1 actionpack:= 5.1.5.rc1,nio4r:~> 2.0,websocket-driver:~> 0.6.1|checksum:3efbb4f001a97abce94694a09ebd9108277d1978b6b7290a2bfb431c121021de,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.1.5 actionpack:= 5.1.5,nio4r:~> 2.0,websocket-driver:~> 0.6.1|checksum:877ff84da386dafdd5d8fc5f8fccd2d87be59cbbfdd2dcac378fb3672c3eb554,ruby:>= 2.2.2
+5.2.0.rc2 actionpack:= 5.2.0.rc2,nio4r:~> 2.0,websocket-driver:>= 0.6.1|checksum:40f3cd37eaabdc9cbd944d57762230a5b1418cf209a471a84c5b8e7f80ddcb0a,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.0.7 actionpack:= 5.0.7,nio4r:< 3.0&>= 1.2,websocket-driver:~> 0.6.1|checksum:c023d1df2fd6f5e1ac042ad6a0338e8a2c4d1404484f8fe77121b81f10b75f2c,ruby:>= 2.2.2
+5.1.6 actionpack:= 5.1.6,nio4r:~> 2.0,websocket-driver:~> 0.6.1|checksum:2e678b45852f242e5897a0d4e43dca1088fb3d5c350592b22768b502a085261f,ruby:>= 2.2.2
+5.2.0 actionpack:= 5.2.0,nio4r:~> 2.0,websocket-driver:>= 0.6.1|checksum:a154d74692f7d46d1f213cbbbe371ef438d8592aab7b4adf5ceffe10fca02842,ruby:>= 2.2.2
+5.2.1.rc1 actionpack:= 5.2.1.rc1,nio4r:~> 2.0,websocket-driver:>= 0.6.1|checksum:cf26a51b6483ce88c352687207557825b5ce22d45276f7b4f1168ef71275c5bb,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.2.1 actionpack:= 5.2.1,nio4r:~> 2.0,websocket-driver:>= 0.6.1|checksum:ce0d3cf1c76afd3a2f8a751542e2ddfe48cf4005d426a09775b944a780ed6d9f,ruby:>= 2.2.2
+5.0.7.1 actionpack:= 5.0.7.1,nio4r:< 3.0&>= 1.2,websocket-driver:~> 0.6.1|checksum:2befb790e89ca0573f2f25d7458aee45aff694a4a9b3ee2049ec7b13a8628390,ruby:>= 2.2.2
+5.1.6.1 actionpack:= 5.1.6.1,nio4r:~> 2.0,websocket-driver:~> 0.6.1|checksum:3f011a9732531f6e00f213910a66b5d1ec5f9c8cd0b208c32ed9a014008e517f,ruby:>= 2.2.2
+5.2.1.1 actionpack:= 5.2.1.1,nio4r:~> 2.0,websocket-driver:>= 0.6.1|checksum:8dc3251fb9dc898a693243d0f5488ef5bbfaefc92c2fd744db4554b0b739ce9c,ruby:>= 2.2.2
+5.2.2.rc1 actionpack:= 5.2.2.rc1,nio4r:~> 2.0,websocket-driver:>= 0.6.1|checksum:c412268c40fc61c16480952c801261d4901c2b0ca81518c6b8ed1c619e38cbe4,ruby:>= 2.2.2,rubygems:> 1.3.1
+5.2.2 actionpack:= 5.2.2,nio4r:~> 2.0,websocket-driver:>= 0.6.1|checksum:1d996c7e148dfb9f0587ca520022263f0db0a34ac6f7997d7203500059994620,ruby:>= 2.2.2
