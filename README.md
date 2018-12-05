@@ -1,66 +1,39 @@
-# Ruby on Rails 4 beginners
+# Zadanie 4
 
-![alt text](https://github.com/daftcode/ror4beginners2018/blob/master/logo.png)
+1. Wygeneruj model `Player` reprezentujący gracza piłki nożnej. W tabeli daj mu atrybuty:
 
-## Plan zajęć
+- `captain` typu `boolean`, które nie może być puste i posiada domyślną wartość `false`
+- `first_name` typu `string`, które nie może być puste
+- `last_name` typu `string`, które nie może być puste
+- `power` typu `integer`
 
-![alt text](https://github.com/daftcode/ror4beginners2018/blob/master/plan_zajec.png)
+2. W modelu zwaliduj istnienie atrybutów: 
 
-## Przydatne materiały
+- `first_name`
+- `last_name`
 
- - [Dokumentacja Ruby](https://ruby-doc.org/)(Gdy przeglądacie daną stronę dokumentacji, zwracajcie uwagę dla której wersji rubiego dana strona jest)
- - [Styleguide](https://github.com/rubocop-hq/ruby-style-guide)(Gem [Rubocop](https://github.com/rubocop-hq/rubocop) potrafi automatycznie pilnować go za was)
+3. Zwaliduj atrybut `power` tak, aby był większy niż 0 i mniejszy niż 100.
 
-## Przygotowanie do zajęć
+4. Zaimplementuj brakujące metody w klasie `FootballPlayerManager`, którą znajdziesz w folderze `app/services`. Przyjmuje ona jeden argument, instancję `Player`. Metody do zaimplementowania to:
 
-### instalacja ruby
+- `stronger_players` - zwraca zawodników silniejszych niż podany zawodnik
+- `set_power(value)` - ustawia podanemu zawodnikowi `power` na daną wartość
+- `copy_player` - tworzy w bazie klona zawodnika i zwraca go
 
-#### Linux/Unix/Mac os
+*\* Zadanie dodatkowe na dodatkowe punkty za aktywność:*
 
-Jeśli masz system z rodziny Unix sprawa jest dosyć prosta - wystarczy wywołać w terminalu komendę `irb`, aby wyświetlić znak zachęty interpretera rubiego.
+Stwórz widok zawodników, który zestawi ich w losowe, 11 osobowe drużyny. Każda drużyna powinna mieć jednego kapitana.
 
+### UWAGI:
+1. Jeśli generatory krzyczą wam o konfliktach to je ignorujcie literką `n`
+2. Dane testowe można stworzyć poprzez wywołanie `rails db:seed` w konsoli, gdy już zaimplementujecie swój model.
+3. Poprawność podstawowego wykonania zadania możecie sprawdzić poprzez wykonanie w konsoli komendy `rspec`. Na dniach postaramy się dodać CI :)
+
+### Przykładowe wywołania `FootballPlayerManager`
+```ruby
+player = Player.first # => #<Player id: 1, first_name: "Top", last_name: "Kek", power: 20>
+player_manager = FootballPlayerManager.new(player)
+player_manager.stronger_players # => zwraca kolekcje silniejszych graczy
+player_manager.copy_player # => #<Player id: 2, first_name: "Top", last_name: "Kek", power: 20>
+player_manager.set_power(30) # => #<Player id: 1, first_name: "Top", last_name: "Kek", power: 30>
 ```
-➜  ~ irb
-2.5.1 :001 > 
-```
-
-Jeśli jednak tak się nie stało, a komenda `which ruby` nic nie zwraca, postępuj zgodnie z instukcjami w linku:
-
-Debian lub Ubuntu:
-https://www.ruby-lang.org/pl/documentation/installation/#apt
-
-OS X:
-https://www.ruby-lang.org/pl/documentation/installation/#homebrew
-
-Arch Linux:
-https://www.ruby-lang.org/pl/documentation/installation/#pacman
-
-Gentoo:
-https://www.ruby-lang.org/pl/documentation/installation/#gentoo
-
-CentOS, Fedora lub RHEL:
-https://www.ruby-lang.org/pl/documentation/installation/#yum
-
-#### Windows
-
-![alt text](https://i.gifer.com/1EAo.gif)
-
-Z Windowsem sprawa jest nieco bardziej skomplikowana. Jeśli nie instalowałeś rubiego samodzielnie - prawdopodobnie go nie masz. Należy w takim razie wejść na https://rubyinstaller.org/downloads/ i ściągnąć najnowszą wersję `Ruby+Devkit 2.5.X`
-
-Windows i Ruby on Rails nie są najlepszymi kumplami, dlatego mając system Microsoftu warto zainstalować sobie maszynę wirtualną z dowolnym systemem Linux i pracować na niej - unikniesz w ten sposób bólu głowy.
-
-### Wybór edytora tekstu
-
-Programowanie w Rubym nie wymaga żadnych specjalistycznych narzędzi - wystarczy korzystać z edytora tekstu. Na zajęciach możesz korzystać z dowolnego edytora. Jeżeli nie wiesz co wybrać, polecamy VS Code https://code.visualstudio.com/.
-
-## Przesyłanie zadań domowych
-
-Aby przesłać nam rozwiązane zadania należy zrobić:
-  * fork projektu (prawy górny róg githuba)
-  * pobrać go do swojego lokalnego środowiska `git clone ...`
-  * stworzyć nowy branch z nazwą zadania `git checkout -b 'zad1'` && `git push --set-upstream origin zad1`
-  * rozwiązać zadanie i wrzucić do swojego forka `git commit -m ''` && `git push`
-  * stworzyć pull request do `daftcode/ror4beginners2018`
-
-## Pytania / kontakt
-Jak macie jakieś pytania, albo coś nie działa, dajcie znać na ror@daftacademy.pl lub napiszcie issue.
