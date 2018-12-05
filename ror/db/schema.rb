@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_21_163834) do
+ActiveRecord::Schema.define(version: 2018_11_28_161627) do
 
   create_table "rocks", force: :cascade do |t|
     t.float "weight", null: false
