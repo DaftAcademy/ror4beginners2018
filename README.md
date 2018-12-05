@@ -1,66 +1,30 @@
-# Ruby on Rails 4 beginners
+# Zadanie 5
 
-![alt text](https://github.com/daftcode/ror4beginners2018/blob/master/logo.png)
+1. Wykonaj wszystkie niezbędne czynności potrzebne do uruchomienia aplikacji. Może to być:
+- `gem install bundler`
+- `bundle`
+- `rake db:setup`.
+2. Przypatrz się dokładnie jak są zrobione kontrolery, znajdziesz je w folderze `app/controllers`.
+3. wywołaj `rails s` i "przeklikaj się" po aplikacji.
+4. Stwórz kontroler odpowiedzialny za artystów (nie zapomnij zmienić pliku `routes.rb`!). Stworzony kontroler powinien umożliwiać:
+- wyświetlenie listy artystów (`index`)
+- usunięcie istniejącego artysty (`destroy`)
+- stworzenie nowego artysty (`create` wraz z akcją `new`)
+- aktualizację istniejącego artysty (`update` wraz z akcją `edit`).
 
-## Plan zajęć
+6. Popraw link prowadzący do artystów, znajdziesz go w pliku `_navbar.html.erb`
+7. W tabeli zawierającej listę wszystkich utworów:
+- popraw linki `edit` i `remove`
+- w kolumnie `Playlists` wyświetl jako hiperłącza wszystkie playlisty, na których występuje dany utwór.
 
-![alt text](https://github.com/daftcode/ror4beginners2018/blob/master/plan_zajec.png)
+8. Dodaj o walidację: każdy utwór powinien posiadać tytuł.
 
-## Przydatne materiały
+Dodatkowo:
+- stwórz widok danego artysty (`show`) z tabelą należących do niego utworów
+- w tabeli zawierającej listę wszystkich utworów zamień nazwę artysty na hiperłącze
 
- - [Dokumentacja Ruby](https://ruby-doc.org/)(Gdy przeglądacie daną stronę dokumentacji, zwracajcie uwagę dla której wersji rubiego dana strona jest)
- - [Styleguide](https://github.com/rubocop-hq/ruby-style-guide)(Gem [Rubocop](https://github.com/rubocop-hq/rubocop) potrafi automatycznie pilnować go za was)
+Jeśli nie masz pomysłu jak stworzyć widoki dla artystów - zobacz jak zostały napisane widoki dla utworów.
 
-## Przygotowanie do zajęć
-
-### instalacja ruby
-
-#### Linux/Unix/Mac os
-
-Jeśli masz system z rodziny Unix sprawa jest dosyć prosta - wystarczy wywołać w terminalu komendę `irb`, aby wyświetlić znak zachęty interpretera rubiego.
-
-```
-➜  ~ irb
-2.5.1 :001 > 
-```
-
-Jeśli jednak tak się nie stało, a komenda `which ruby` nic nie zwraca, postępuj zgodnie z instukcjami w linku:
-
-Debian lub Ubuntu:
-https://www.ruby-lang.org/pl/documentation/installation/#apt
-
-OS X:
-https://www.ruby-lang.org/pl/documentation/installation/#homebrew
-
-Arch Linux:
-https://www.ruby-lang.org/pl/documentation/installation/#pacman
-
-Gentoo:
-https://www.ruby-lang.org/pl/documentation/installation/#gentoo
-
-CentOS, Fedora lub RHEL:
-https://www.ruby-lang.org/pl/documentation/installation/#yum
-
-#### Windows
-
-![alt text](https://i.gifer.com/1EAo.gif)
-
-Z Windowsem sprawa jest nieco bardziej skomplikowana. Jeśli nie instalowałeś rubiego samodzielnie - prawdopodobnie go nie masz. Należy w takim razie wejść na https://rubyinstaller.org/downloads/ i ściągnąć najnowszą wersję `Ruby+Devkit 2.5.X`
-
-Windows i Ruby on Rails nie są najlepszymi kumplami, dlatego mając system Microsoftu warto zainstalować sobie maszynę wirtualną z dowolnym systemem Linux i pracować na niej - unikniesz w ten sposób bólu głowy.
-
-### Wybór edytora tekstu
-
-Programowanie w Rubym nie wymaga żadnych specjalistycznych narzędzi - wystarczy korzystać z edytora tekstu. Na zajęciach możesz korzystać z dowolnego edytora. Jeżeli nie wiesz co wybrać, polecamy VS Code https://code.visualstudio.com/.
-
-## Przesyłanie zadań domowych
-
-Aby przesłać nam rozwiązane zadania należy zrobić:
-  * fork projektu (prawy górny róg githuba)
-  * pobrać go do swojego lokalnego środowiska `git clone ...`
-  * stworzyć nowy branch z nazwą zadania `git checkout -b 'zad1'` && `git push --set-upstream origin zad1`
-  * rozwiązać zadanie i wrzucić do swojego forka `git commit -m ''` && `git push`
-  * stworzyć pull request do `daftcode/ror4beginners2018`
-
-## Pytania / kontakt
-Jak macie jakieś pytania, albo coś nie działa, dajcie znać na ror@daftacademy.pl lub napiszcie issue.
+## references:
+gem użyty do tworzenia formularzy
+- https://github.com/plataformatec/simple_form

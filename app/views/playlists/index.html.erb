@@ -1,0 +1,26 @@
+<div class="container">
+  <h2>Playlist Table</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th class="text-center">Songs</th>
+        <th class="text-right">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @playlists.each do |playlist| %>
+        <tr>
+          <td><%= playlist.title %></td>
+          <td class="text-center">
+            <%= playlist.tracks.size %>
+          </td>
+          <td class="text-right">
+            <%= link_to 'show', playlist_url(playlist), class: 'btn btn-success' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
