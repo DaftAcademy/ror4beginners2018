@@ -5,6 +5,7 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
+<<<<<<< HEAD
 zad3/.bundle
 
 # Ignore the default SQLite database.
@@ -14,10 +15,22 @@ zad3/db/*.sqlite3-journal
 # Ignore all logfiles and tempfiles.
 zad3/log/*
 zad3/tmp/*
+=======
+/.bundle
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+>>>>>>> .gitignore
 !/log/.keep
 !/tmp/.keep
 
 # Ignore uploaded files in development
+<<<<<<< HEAD
 zad3/storage/*
 !/storage/.keep
 
@@ -53,3 +66,12 @@ zad4/.byebug_history
 # Ignore master key for decrypting credentials and more.
 zad3/config/master.key
 zad4/config/master.key
+=======
+/storage/*
+!/storage/.keep
+
+.byebug_history
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+>>>>>>> .gitignore

@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Location</th>
+    <th>Best slayer</th>
+    <% monsters_data.each do |list| %>
+    <tr>
+      <% list.values.each do |element| %>
+        <td><%= element %></td>
+      <% end  %>
+    </tr>
+  <% end %>
+  </tr>
+</table>

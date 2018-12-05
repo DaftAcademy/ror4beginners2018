@@ -3,7 +3,6 @@
 class TracksController < ApplicationController
   before_action :set_track, only: %i[show update destroy edit]
   before_action :set_artists_collection, only: %i[new edit create update]
-
   def index
     @tracks = Track.all
   end
@@ -32,6 +31,10 @@ class TracksController < ApplicationController
   def destroy
     @track.destroy!
     redirect_to tracks_url, notice: 'Track has been removed'
+  end
+
+  def playlist_tracks
+    @playlist_track = Track.playlists
   end
 
   private
