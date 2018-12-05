@@ -1,0 +1,23 @@
+<div class="container">
+  <%= link_to 'Edit artist', edit_artist_url(@artist), class: 'btn btn-warning pull-right' %>
+  <h2><%= @artist.name %></h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th class="text-center">Playlists</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @tracks.each do |track| %>
+        <tr>
+          <td><%= track.title %></td>
+          <td class="text-center">
+            <%= render partial: 'playlists_for_track', locals: { track: track } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
