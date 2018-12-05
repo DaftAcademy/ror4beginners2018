@@ -6,7 +6,7 @@ class ArtistsController < ApplicationController
   end
 
   def show
-    @tracks = Track.where(artist_id: @artist.id)
+    @tracks = @artist.tracks #Track.where(artist_id: @artist.id)
   end
 
   def new
