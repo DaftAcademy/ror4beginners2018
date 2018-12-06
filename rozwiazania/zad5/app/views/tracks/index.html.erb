@@ -1,0 +1,32 @@
+<div class="container">
+  <%= link_to 'Add new track', new_track_url, class: 'btn btn-success pull-right' %>
+  <h2>Tracks Table</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th class="text-center">Artists</th>
+        <th class="text-center">Playlists</th>
+        <th class="text-right">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @tracks.each do |track| %>
+        <tr>
+          <td><%= track.title %></td>
+          <td class="text-center">
+            <%= link_to(track.artist.name, artist_path(track.artist)) %>
+          </td>
+          <td class="text-center">
+            <%= render partial: 'playlists_for_track', locals: { track: track } %>
+          </td>
+          <td class="text-right">
+            <%= link_to 'edit', edit_track_url(track), class: 'btn btn-warning' %>
+            <%= link_to 'remove', track_url(track), method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure' } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
