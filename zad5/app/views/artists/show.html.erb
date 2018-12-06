@@ -1,5 +1,4 @@
 <div class="container">
   <h2>Artist: <%= @artist.name %></h2>
-  <%= @artist.tracks %>
-  <%= render partial: 'common/tracks_table', locals: {tracks: @artist.tracks.pluck(:id, :title, :created_at, :updated_at).flatten} %>
+  <%= render partial: 'tracks_table', locals: {tracks: @artist.tracks} %>
 </div>
