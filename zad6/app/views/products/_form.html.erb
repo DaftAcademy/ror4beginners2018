@@ -8,6 +8,12 @@
     <%= f.input :description %>
     <%= f.input :condition %>
     <%= f.input :price %>
+    <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |b| %>
+      <div class="collection-check-box">
+      <%= b.check_box %>
+      <%= b.label %>
+      </div>
+    <% end %>
   </div>
 
   <div class="form-actions">
