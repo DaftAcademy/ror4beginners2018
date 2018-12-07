@@ -11,9 +11,15 @@
 <% end %>
 
 <div class="product-index-grid">
-  <% @products.each do |product| %>
-    <div class="product border-light">
-      <%= link_to image_tag(product.image_url(:thumb)), product %>
-    </div>
+  <% if @products.empty? %>
+    <h2>There are no products in stock, come back later</h2>
+  <% else %>
+  <% @products = filter_price @products, params[:price] if params[:price] %>
+    <% @products.each do |product| %>
+      <div class="product border-light">
+        <%= link_to product.name, product_path(product) %>
+        <span class="text-right"><%= number_to_currency(product.price, unit: "PLN", format: "%n %u") %></span>
+      </div>
+    <% end %>
   <% end %>
 </div>

@@ -5,7 +5,8 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all.order("created_at desc")
+    # Why products won't order?
+    @products = Product.all.order(price: :asc)
   end
 
   # GET /products/1

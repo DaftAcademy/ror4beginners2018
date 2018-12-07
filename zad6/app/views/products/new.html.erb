@@ -12,11 +12,4 @@
 
 <%= render 'form', product: @product %>
 
-<% if @product.errors.messages.empty? %>
-<% else %>
-<% @product.errors.messages.each do |msg| %>
-  <p><%= msg%></p>
-  <% end %>
-<% end %>
-
 <%= link_to 'Back', products_path %>
