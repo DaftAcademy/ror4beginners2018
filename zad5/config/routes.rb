@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   root 'tracks#index'
 
+  resources :artists
   resources :tracks
   resources :playlists, only: %i[index show]
 end
