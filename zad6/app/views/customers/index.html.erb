@@ -1,0 +1,18 @@
+<h1>All customers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Products</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @customers.each do |customer| %>
+      <tr>
+        <td><%= customer.name %></td>
+        <td><%= link_to 'Show all', customer_products_path(customer) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
