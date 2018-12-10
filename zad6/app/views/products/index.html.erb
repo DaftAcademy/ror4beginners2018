@@ -1,0 +1,31 @@
+<div class="container">
+  <h2>Products Table</h2>
+  <% if @limit != false and @limit > 0 %>
+    products cheaper than <%= @limit %>
+  <% end %>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Product ID</th>
+        <th>Price</th>
+        <th>Categories</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td><%= product.id %></td>
+          <td class="text-right">
+            <%= product.price %>
+          </td>
+          <td>
+            <% product.categories.each do |category| %>
+              <%= category.name %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
