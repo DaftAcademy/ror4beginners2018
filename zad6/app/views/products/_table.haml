@@ -1,0 +1,13 @@
+%table
+  %tr
+    %th Name
+    %th Price
+    %th Category
+    %th Owner
+  - @products.each do |product|
+    %tr
+      %td #{product.name}
+      %td #{product.price}
+      %td #{read_categories(product)}
+      - if has_customer? product
+        %td #{link_to read_customer_email, customer_path(read_customer(product))}
