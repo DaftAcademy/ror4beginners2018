@@ -10,6 +10,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render partial: 'layouts/navbar' %>
+    <div class='main'>
+      <%= yield %>
+    </div>
   </body>
 </html>

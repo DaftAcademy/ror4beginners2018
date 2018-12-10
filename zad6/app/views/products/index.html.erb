@@ -1,0 +1,21 @@
+<div class="container">
+  <h2>Products Table</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Customer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td><%= product.id %></td>
+          <td><%= product.price %></td>
+          <td><%= product.customer.name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
