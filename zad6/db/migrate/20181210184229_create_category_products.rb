@@ -5,5 +5,7 @@ class CreateCategoryProducts < ActiveRecord::Migration[5.2]
       t.references :category
       t.timestamps
     end
+
+    remove_reference :products, :categories
   end
 end
