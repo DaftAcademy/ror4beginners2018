@@ -1,0 +1,17 @@
+<h1><%= @customer.name %>'s products</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th class="text-center">Product Name</th>
+      <th class="text-center">Product Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |p| %>
+      <tr>
+        <td><%= p.name %></td>
+        <td><%= p.price %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
