@@ -1,4 +1,4 @@
-<h1><%= @customer.name %>'s products</h1>
+<h1 class="text-center"><%= @customer.name %>'s products</h1>
 <table class="table">
   <thead>
     <tr>
@@ -9,8 +9,8 @@
   <tbody>
     <% @products.each do |p| %>
       <tr>
-        <td><%= p.name %></td>
-        <td><%= p.price %></td>
+        <td class="text-center"><%= p.name %></td>
+        <td class="text-center"><%= p.price %></td>
       </tr>
     <% end %>
   </tbody>
