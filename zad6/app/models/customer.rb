@@ -1,3 +1,4 @@
 class Customer < ApplicationRecord
-  has_many :products, through: category_product
+  has_many :products
+  validates :name, presence: true
 end
