@@ -1,0 +1,23 @@
+ <h2>Product Table</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Product</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td><%= product.id %></td>
+          <td class="text-center">
+            <%= product.name %>
+          </td>
+            <td class="text-center">
+            <%= product.price %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>

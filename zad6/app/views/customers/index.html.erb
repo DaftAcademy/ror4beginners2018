@@ -1,0 +1,22 @@
+
+  <h2>Customer Table</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Customer</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <% @customers.each do |customer| %>
+        <tr>
+          <td><%= customer.id %></td>
+          <td class="text-center">
+            <%= customer.name %>
+          </td>
+          
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
