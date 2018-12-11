@@ -8,14 +8,3 @@ class FootballPlayerManager
   end
 
   def stronger_players
-    # TODO: Implement me pls
-  end
-
-  def set_power(value)
-    # TODO: I need body
-  end
-
-  def copy_player
-    # TODO: I feel empty inside
-  end
-end

@@ -1,0 +1,18 @@
+<table>
+    <thead>
+        <tr>
+            <th>Imie</th>
+            <th>Nazwisko</th>
+            <th>Siła</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% team.each do |player| %>
+            <tr class="<%= player.captain ? 'captain' : '' %>" >
+                <td><%= player.first_name %></td>
+                <td><%= player.last_name %></td>
+                <td><%= player.power %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table> 

@@ -1,0 +1,3 @@
+<% track.playlists.each do |playlist| %>
+  <%= link_to playlist.title, playlist_url(playlist), class: 'btn btn-default' %>
+<% end %>

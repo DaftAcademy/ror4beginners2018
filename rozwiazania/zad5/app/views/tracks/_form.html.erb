@@ -1,0 +1,5 @@
+<%= simple_form_for @track do |f| %>
+  <%= f.input :title, label: 'Title of the track' %>
+  <%= f.input :artist_id, collection: @artists %>
+  <%= f.button :submit, class: 'btn btn-primary' %>
+<% end %>

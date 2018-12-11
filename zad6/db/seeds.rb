@@ -1,3 +1,4 @@
+
 customer1 = Customer.create!(name: "Jaś")
 customer2 = Customer.create!(name: "Małgosia")
 
@@ -33,3 +34,5 @@ CategoryProduct.create!(category_id: category3.id, product_id: p5.id)
 CategoryProduct.create!(category_id: category3.id, product_id: p6.id)
 CategoryProduct.create!(category_id: category3.id, product_id: p7.id)
 CategoryProduct.create!(category_id: category3.id, product_id: p9.id)
+
+
