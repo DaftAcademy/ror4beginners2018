@@ -1,6 +1,6 @@
 class NestProductsController < ApplicationController
   def index
-      @products = customer.products.all.order_by(price:)
+      @products = customer.products.all.order(price: :desc)
 
   end
 
