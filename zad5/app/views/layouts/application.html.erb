@@ -12,6 +12,9 @@
   <body>
     <%= render partial: 'layouts/navbar' %>
     <div class="container">
+      <% flash.each do |key, value| %>
+        <%= content_tag :div, value, class: "alert alert-success flash #{key}" %>
+      <% end %>
       <%= yield %>
     </div>
   </body>
