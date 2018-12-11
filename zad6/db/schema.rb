@@ -13,21 +13,34 @@
 ActiveRecord::Schema.define(version: 2018_12_11_205333) do
 
   create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.text "descripton"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "category_products", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_category_products_on_category_id"
+    t.index ["product_id"], name: "index_category_products_on_product_id"
   end
 
   create_table "customers", force: :cascade do |t|
+    t.string "name", null: false
+    t.decimal "price", precision: 10, scale: 2
+    t.text "description"
+    t.integer "customer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["customer_id"], name: "index_customers_on_customer_id"
   end
 
   create_table "products", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "mail", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
