@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>All customers</h2>
+   <table class="table">
+    <thead>
+      <tr>
+        <th class="text-center">Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @customer.each do |customer| %>
+        <tr>
+          <td><li> <%= link_to customer.name, customer_products_path(customer_name: customer.name) %> </li></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
