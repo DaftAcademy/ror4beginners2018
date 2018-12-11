@@ -1,0 +1,13 @@
+<h2>Customers</h2>
+<table>
+  <th>ID</th>
+  <th>Name</th>
+  <th>E-mail</th>
+  <% @customers.each do |customer| %>
+    <tr>
+      <td><%= customer.id %>
+      <td><%= link_to customer.name, customer_products_path(customer.id) %></td>
+      <td><%= customer.email %>
+    </tr>
+  <% end %>
+</table>

@@ -1,0 +1,23 @@
+<h2>Products <%= "under $#{params[:price]}" if params[:price].present? %></h2>
+<ul class="filters">
+  <li><%= link_to "All", products_path %></li>
+  <li><%= link_to "Under $10", products_path(price: 10) %></li>
+  <li><%= link_to "Under $25", products_path(price: 25) %></li>
+  <li><%= link_to "Under $50", products_path(price: 50) %></li>
+</ul>
+<table>
+  <thead>
+    <th>Price</th>
+    <th>Name</th>
+    <th>Categories</th>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= ActionController::Base.helpers.number_to_currency(product.price) %></td>
+        <td><%= product.name %></td>
+        <td><%= product.categories.pluck(:name).join(', ') %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

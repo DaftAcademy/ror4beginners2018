@@ -1,0 +1,17 @@
+<h2><%= @customer.name %>'s products</h2>
+<table>
+  <thead>
+    <th>Price</th>
+    <th>Name</th>
+    <th>Categories</th>
+  </thead>
+  <tbody>
+    <% @customer_products.each do |product| %>
+      <tr>
+        <td><%= ActionController::Base.helpers.number_to_currency(product.price) %></td>
+        <td><%= product.name %></td>
+        <td><%= product.categories.pluck(:name).join(', ') %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
