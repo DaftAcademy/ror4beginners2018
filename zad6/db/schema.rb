@@ -19,21 +19,28 @@ ActiveRecord::Schema.define(version: 2018_12_11_213717) do
   end
 
   create_table "category_products", force: :cascade do |t|
+    t.integer "category_id"
+    t.integer "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_category_products_on_category_id"
+    t.index ["product_id"], name: "index_category_products_on_product_id"
   end
 
   create_table "customers", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_customers_on_name", unique: true
   end
 
   create_table "products", force: :cascade do |t|
     t.float "price"
     t.string "name"
+    t.integer "customer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["customer_id"], name: "index_products_on_customer_id"
   end
 
 end

@@ -1,2 +1,14 @@
-%h1 Product#index
-%p Find me in app/views/product/index.html.haml
+%div= link_to 'back', customers_path
+%h2= @customer.name + "'s items"
+%table
+  %thead
+    %tr
+      %th Name
+      %th Price
+
+  %tbody
+    - @products.each do |product|
+      %tr
+        %td= product.name
+        %td= product.price
+%div= link_to 'Show products cheaper than 10', price:10

@@ -1,2 +1,3 @@
-%h1 Customer#index
-%p Find me in app/views/customer/index.html.haml
+%h1 Customers
+- @customers.each do |customer|
+  %li= link_to customer.name, customer_products_path(customer_id: customer)
