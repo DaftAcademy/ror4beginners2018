@@ -1,0 +1,21 @@
+<div class="container">
+  <h2>Lista Klientów</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Klient</th>
+        <th>Produkty</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @customers.each do |customer| %>
+        <tr>
+          <td><%= customer.name %></td>
+          <td class="text-right">
+            <%= link_to 'Szczegóły', customer_products_path(customer) %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
