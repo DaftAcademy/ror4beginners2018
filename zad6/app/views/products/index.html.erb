@@ -1,0 +1,30 @@
+<h2 class="header"> <%= @customer.name %> - lista produktów</h2>
+<%= form_tag customer_products_path(@customer), method: :get do %>
+  <label>
+    Maksymalna cena:
+    <%= number_field_tag :price %>
+  </label>
+  <%= submit_tag 'Filtruj' %>
+<% end %>
+<table>
+  <thead>
+    <tr>
+      <th>Produkt</th>  
+      <th>Cena</th>
+      <th>Kategoria</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.name%></td>
+        <td><%= product.price %></td>
+        <td>
+          <% product.categories.each do |category| %>
+            <%= category.name %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
