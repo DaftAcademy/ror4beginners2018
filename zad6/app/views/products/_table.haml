@@ -10,4 +10,4 @@
       %td #{product.price}
       %td #{read_categories(product)}
       - if has_customer? product
-        %td #{link_to read_customer_email, customer_path(read_customer(product))}
+        %td #{link_to read_customer(product).email, customer_path(read_customer(product))}

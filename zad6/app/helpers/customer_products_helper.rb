@@ -1,5 +1,5 @@
 module CustomerProductsHelper
   def products_not_empty?
-    @products && !@products.empty?
+    @products && @products.any?
   end
 end

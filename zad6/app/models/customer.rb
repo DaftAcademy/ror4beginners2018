@@ -1,4 +1,4 @@
 class Customer < ApplicationRecord
   has_many :products
-  validates :email, presence: true
+  validates :name, presence: true
 end

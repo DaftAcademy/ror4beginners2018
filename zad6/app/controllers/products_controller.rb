@@ -1,17 +1,13 @@
 class ProductsController < ApplicationController
 
   def index
-    @products = products_filtered.sorted
+    @products = products.filtered(price).sorted
   end
 
   private
 
-  def products_filtered
-    products.where('price > ?', price)
-  end
-
   def price
-    params[:price].to_i
+    params.has_key?(:price) ? params[:price].to_i : Product.maximum("price").to_i + 1 #Można zastąpić stałą
   end
 
   def products
