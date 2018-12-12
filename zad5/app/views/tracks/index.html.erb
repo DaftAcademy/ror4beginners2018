@@ -25,7 +25,7 @@
           </td>
           <td class="text-right">
             <%= link_to 'edit', edit_track_url(track), class: 'btn btn-warning' %>
-            <%= link_to 'remove', track_url(track), method: :delete, class: 'btn btn-danger'  %>
+            <%= link_to 'remove', track_url(track), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'  %>
           </td>
         </tr>
       <% end %>
