@@ -1,0 +1,13 @@
+<h1>Customers and their products:</h1>
+<ul>
+  <% @customers.each do |customer| %>
+    <li> <%= link_to customer.name, customer_products_path(customer_name: customer.name) %> </li>
+  <% end %>
+</ul>
+<h1>Customers and their cheap products (price<=10):</h1>
+<ul>  
+  <% @customers.each do |customer| %>
+    <li> <%= link_to customer.name, customer_products_path(customer_name: customer.name, price: 10) %> </li>
+  <% end %>
+  
+</ul> 

@@ -1,0 +1,9 @@
+<h1> Customer: <%= @customer.name %></h1>
+<h2> Products: </h2>
+<ul> 
+  <% @products.each do |product| %>
+    <li> <b><%= product.name %></b>: Price: <b><%= product.price %></b> </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Back', customers_path %>
