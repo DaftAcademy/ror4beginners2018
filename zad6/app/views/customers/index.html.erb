@@ -1,0 +1,15 @@
+<h1>Customers list</h1>
+
+<table>
+        <tr>
+            <th>Name</th> 
+            <th colspan = 2>Products</th>          
+        </tr>
+        <% @customers.each do |customer| %>
+            <tr>
+                <td><%= customer.name %></td>
+                <td><%= link_to 'Show all products', customer_products_path(customer) %> </td>
+                <td><%= link_to 'Are you rich enough?', customer_products_path(customer, price: 9000) %> </td>              
+            </tr>
+        <% end %>
+</table>

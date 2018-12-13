@@ -1,0 +1,18 @@
+<h1> <%= @customer.name %> products list</h1>
+
+<table>
+        <tr>
+            <th><center>Name</center></th>
+            <th><center>Price</center></th>
+            <th colspan="3"><center>Category</center></th>           
+        </tr>
+        <% @products.each do |product| %>
+            <tr>
+                <td><center><%= product.name %></center></td>
+                <td><%= product.price %> </td>              
+                <% product.categories.each do |category| %>
+                     <td><%= category.name %></td> 
+                <% end %>                       
+            </tr>
+        <% end %>
+</table>
