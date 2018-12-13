@@ -53,6 +53,7 @@ zad4/.byebug_history
 # Ignore master key for decrypting credentials and more.
 zad3/config/master.key
 zad4/config/master.key
+wyklady/wyklad7/przyklady/config/master.key
 
 # Ignore bundler config.
 zad4/.bundle
@@ -79,3 +80,28 @@ zad6/.byebug_history
 
 # Ignore master key for decrypting credentials and more.
 zad6/config/master.key
+
+.DS_store
+
+# Ignore bundler config.
+wyklady/wyklad7/przyklady/.bundle
+
+# Ignore the default SQLite database.
+wyklady/wyklad7/przyklady/db/*.sqlite3
+wyklady/wyklad7/przyklady/db/*.sqlite3-journal
+
+# Ignore all logfiles and tempfiles.
+wyklady/wyklad7/przyklady/log/*
+wyklady/wyklad7/przyklady/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore uploaded files in development
+wyklady/wyklad7/przyklady/storage/*
+!/storage/.keep
+
+wyklady/wyklad7/przyklady/node_modules
+wyklady/wyklad7/przyklady/yarn-error.log
+
+wyklady/wyklad7/przyklady/public/assets
+wyklady/wyklad7/przyklady/.byebug_history
