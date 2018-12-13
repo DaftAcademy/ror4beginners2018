@@ -1,0 +1,10 @@
+%table
+  %tr
+    %th Id
+    %th Email
+    %th Products Count
+  - @customers.each do |customer|
+    %tr
+      %td #{customer.id}
+      %td #{link_to customer.email, customer_path(customer)}
+      %td #{customer.products_count}

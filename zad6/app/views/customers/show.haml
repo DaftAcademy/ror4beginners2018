@@ -1,0 +1,5 @@
+- if @customer
+  %h1 Customer: #{@customer.email}
+  %h1 Products: #{link_to @customer.products_count, customer_products_path(@customer)}
+- else 
+  %h1 Customer: not found

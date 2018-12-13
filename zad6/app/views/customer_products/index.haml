@@ -1,0 +1,3 @@
+%h1 #{link_to @customer.email, customer_path(@customer)}
+- if @customer.products.any?
+  = render partial: 'products/table'
