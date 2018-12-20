@@ -1,0 +1,9 @@
+<%= link_to 'Back', customers_path %>
+<h1> <%= @customer.name %>'s items: </h1>
+<%= link_to 'Show items cheaper than 10', price: 10 %> | <%= link_to 'Clear filters' %>
+<ul> 
+  <% @products.each do |product| %>
+    <li> <b><%= product.title %></b> | Price: <b><%= product.price %></b> </li>
+  <% end %>
+</ul>
+
