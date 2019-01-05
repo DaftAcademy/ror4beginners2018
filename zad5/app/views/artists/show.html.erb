@@ -1,0 +1,18 @@
+<div class="container">
+  <h2><%= @artist.name %></h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Track title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @artist.tracks.each do |track| %>
+        <tr>
+          <td><%= track.title %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  
+</div>
