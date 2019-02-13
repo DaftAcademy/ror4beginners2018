@@ -1,7 +1,21 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+customer1 = Customer.create!(name: "Test1")
+customer2 = Customer.create!(name: "Test2")
+
+category1 = Category.create!(name: "cat1")
+category2 = Category.create!(name: "cat2")
+category3 = Category.create!(name: "cat3")
+category4 = Category.create!(name: "cat4")
+
+p1 = customer1.products.create!(name: "item1", price: 450)
+p2 = customer1.products.create!(name: "item2", price: 690)
+p3 = customer1.products.create!(name: "item3", price: 420.50)
+p4 = customer2.products.create!(name: "item11", price: 800)
+p5 = customer2.products.create!(name: "item12", price: 210.60)
+p6 = customer2.products.create!(name: "item13", price: 12.30)
+
+CategoryProduct.create!(category_id: category1.id, product_id: p1.id)
+CategoryProduct.create!(category_id: category2.id, product_id: p2.id)
+CategoryProduct.create!(category_id: category3.id, product_id: p3.id)
+CategoryProduct.create!(category_id: category4.id, product_id: p4.id)
+CategoryProduct.create!(category_id: category1.id, product_id: p5.id)
+CategoryProduct.create!(category_id: category2.id, product_id: p6.id)
