@@ -1,0 +1,19 @@
+<div class="container">
+  <h1><%= @customer.name %>'s products</h1>
+   <table class="table">
+  <thead>
+    <tr>
+      <th>Product ID</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+        <tr>
+        <td><%= product.id %></td>
+        <td class="text-right"><%=product.price%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>  
