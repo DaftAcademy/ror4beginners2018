@@ -1,0 +1,11 @@
+%div.container
+  %h2 #{@playlist.title} playlist
+  %table.table
+    %thead
+      %tr
+        %th Title
+        %th Artist
+    - @playlist.tracks.each do |track|
+      %tr
+        %td #{link_to track.title, track_url(track), class: 'btn btn-info'}
+        %td #{link_to track.artist.name, artist_url(track.artist), class: 'btn btn-primary'}

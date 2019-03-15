@@ -1,0 +1,11 @@
+%div.container
+  %h2 Playlist Table
+  %table.table
+    %thead
+      %tr
+        %th Title
+        %th.text-center Songs
+    - @playlists.each do |playlist|
+      %tr
+        %td #{link_to playlist.title, playlist_url(playlist), class: 'btn btn-success'}
+        %td.text-center #{playlist.tracks.size}

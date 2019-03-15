@@ -1,0 +1,6 @@
+%div.container
+  - if @artist
+    %h2 #{@artist.name}'s new track
+  - else
+    %h2 New track  
+  = render partial: 'form'

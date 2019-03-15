@@ -1,0 +1,20 @@
+%div.container
+  = link_to 'Add new track', new_track_url, class: 'btn btn-success pull-right'
+  %h2 Tracks Table
+  %table.table
+    %thead
+      %tr
+        %th Title
+        %th.text-center Artists
+        %th.text-center Playlists
+        %th.text-right Actions
+    - @tracks.each do |track|
+      %tr
+        %td #{link_to track.title, track_url(track), class: 'btn btn-info'}
+        %td.text-center #{link_to track.artist.name, artist_url(artist(track)), class: 'btn btn-primary'}
+        %td.text-center 
+          - if playlist = read_playlist(track)
+            = link_to playlist.title, playlist_url(playlist), class: 'btn btn-success'
+        %td.text-right
+          = link_to 'edit', edit_track_url(track), class: 'btn btn-warning'
+          = link_to 'remove', track_url(track), class: 'btn btn-danger', method: :delete
