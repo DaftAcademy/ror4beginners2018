@@ -18,10 +18,14 @@
           <td class="text-center">
             <%= track.artist.name %>
           </td>
-          <td class="text-center"></td>
+          <td class="text-center">
+            <% track.playlists.each do |playlist| %>
+              <%= link_to playlist.title, playlist %>
+            <% end %>
+          </td>
           <td class="text-right">
-            <%= link_to 'edit', '#', class: 'btn btn-warning' %>
-            <%= link_to 'remove', '#', class: 'btn btn-danger'  %>
+            <%= link_to 'edit', edit_track_url(track), class: 'btn btn-warning' %>
+            <%= link_to 'remove', track_url(track), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'  %>
           </td>
         </tr>
       <% end %>
