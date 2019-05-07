@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Customer Table</h2>
+  <%= link_to 'Add new Customer', new_customer_path, class: 'btn' %>
+  <table>
+    <thead>
+      <tr>
+        <th>Customer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @customers.each do |c| %>
+        <tr>
+          <td><%= link_to c.name, customer_products_path(c) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
