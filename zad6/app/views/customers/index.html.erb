@@ -1,0 +1,15 @@
+<h1>Customers</h1>
+<div class="container">
+  <table>
+      <th>Identification</th>
+      <th>Name</th>
+      <th>Email</th>
+      <% @customers.each do |customer| %>
+        <tr>
+          <td><%= customer.id %></td>
+          <td><%= customer.name %></td>
+          <td><%= customer.email %></td>
+        </tr>
+      <% end %>
+    </table>
+</div>

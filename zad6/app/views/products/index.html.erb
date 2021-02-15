@@ -1,0 +1,17 @@
+<h1>Products</h1>
+<div class="container">
+  <table>
+    <thead>
+      <th>Price</th>
+      <th>Name</th>
+      <th>Category</th>
+    </thead>
+    <tbody>
+      <% @products.each do |product| %>
+        <td><%= product.price %></td>
+        <td><%= product.name %></td>
+        <td><%= product.category %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>
