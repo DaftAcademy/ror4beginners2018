@@ -1,0 +1,21 @@
+<div class="container">
+  <h2>Customers Table</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @customers.each do |customer| %>
+        <tr>
+          <td><%= customer.name %></td>
+          <td class="text-right">
+            <%= link_to 'show', customer %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
