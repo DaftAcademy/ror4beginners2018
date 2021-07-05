@@ -3,3 +3,6 @@
   <%= f.input :artist_id, collection: @artists %>
   <%= f.button :submit, class: 'btn btn-primary' %>
 <% end %>
+<% @track.errors.full_messages.each do |error| %>
+  <%= error %>
+<% end %>
