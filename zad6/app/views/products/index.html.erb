@@ -1,0 +1,28 @@
+<h2 class="header"> <%= @customer.name %> Products</h2>
+<%= form_tag customer_products_path(@customer), method: :get do %>
+  <label>
+    Max price:
+    <%= number_field_tag :price %>
+  </label>
+  <%= submit_tag 'Search' %>
+<% end %>
+<table>
+  <thead>
+    <tr>
+      <th>Price</th>
+      <th>Category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.price %></td>
+        <td>
+          <% product.categories.each do |category| %>
+            <%= category.name %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
